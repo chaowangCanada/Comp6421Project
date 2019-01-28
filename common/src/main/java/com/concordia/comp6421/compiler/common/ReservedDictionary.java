@@ -26,6 +26,7 @@ public interface ReservedDictionary {
     );
 
     List<Character> WAIT_FURTHER = Arrays.asList(
-        '=', '<', '>', ':', '/', '*'
+        '=', '<', '>', ':'
+        // these pairs are removed due to comment is regex replaced All , '/', '*'
     );
 }

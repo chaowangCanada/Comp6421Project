@@ -17,4 +17,8 @@ public class Token {
     @Getter
     @Setter
     private int location;
+
+    @Getter
+    @Setter
+    private int lineNum;
 }

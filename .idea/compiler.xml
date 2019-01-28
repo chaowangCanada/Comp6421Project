@@ -6,10 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="common" />
+        <module name="lexical-analyzer" />
         <module name="LexicalAnalyzer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="common" target="1.5" />
+      <module name="lexical-analyzer" target="1.8" />
       <module name="LexicalAnalyzer" target="1.5" />
       <module name="Project" target="1.5" />
     </bytecodeTargetLevel>

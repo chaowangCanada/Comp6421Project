@@ -34,11 +34,11 @@ public class CompilerFileReader {
             // replace /*  */ type of comment
             content = content.replaceAll("(?:/\\*(?:[^*]|(?:\\*+[^*/]))*\\*+/)|(?://.*)","");
             // replace all line separator by $
-            content = content.replaceAll("(\\t|\\r?\\n)+", "\\$");
-            // remove all tabs and whitespaces
-            content = content.replaceAll("\\s+","")
-                                .replaceAll("\t","");
-            outputList = new ArrayList<>(Arrays.asList(content.split("\\$")));
+            content = content.replaceAll("(\\t|\\r?\\n)+", "uFFFF");
+//            // remove all tabs and whitespaces
+//            content = content.replaceAll("\\s+","")
+//                                .replaceAll("\t","");
+            outputList = new ArrayList<>(Arrays.asList(content.split("uFFFF")));
         } catch (IOException e) {
             System.err.println("Cannot find content from file: "+ file.toPath());
             e.printStackTrace();

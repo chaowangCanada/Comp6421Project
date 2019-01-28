@@ -1,0 +1,4 @@
+andnot
+and not or
+if then else for class int float get put return
+ifabc
