@@ -42,7 +42,7 @@ public class IntegrationTest
         List<Token> tokenList = driver.getTokenList();
         List<Token> errorList = driver.getErrorTokenList();
         assertNotEquals(tokenList.size(), 0 );
-        assertNotEquals(errorList.size(), 0 );
+        assertEquals(errorList.size(), 0 );
     }
 
     @Test

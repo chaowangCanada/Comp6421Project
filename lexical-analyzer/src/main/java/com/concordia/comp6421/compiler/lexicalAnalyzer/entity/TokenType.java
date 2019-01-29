@@ -1,7 +1,7 @@
 package com.concordia.comp6421.compiler.lexicalAnalyzer.entity;
 
 public enum TokenType {
-    INTEGER, FLOAT, IDENTIFIER, ERROR,
+    INT, INTEGER, FLOAT, IDENTIFIER, ERROR,
 
     EQEQ, LTGT, LT, GT,LEQ, GEQ,
     SEMICOLON, COMMA, DOT, COLON, COLONCOLON,

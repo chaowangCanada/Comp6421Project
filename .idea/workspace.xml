@@ -2,25 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5c10714-11ac-4369-8886-89e8fe1b3d17" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/utils/StringBuilderRemember.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalCase.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalComment.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalIdentifier.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalKeyword.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalNumber.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalOptorAndDemter.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalValidProgram.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lexical-analyzer/src/test/java/IntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/concordia/comp6421/compiler/common/ReservedDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/concordia/comp6421/compiler/common/ReservedDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lexical-analyzer/lexical-analyzer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lexical-analyzer/lexical-analyzer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzerDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzerDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/entity/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/entity/Token.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/utils/CompilerFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/utils/CompilerFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lexical-analyzer/src/test/java/LexicalAnalyzerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lexical-analyzer/src/test/java/LexicalAnalyzerTest.java" afterDir="false" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/src/main/java/com/concordia/comp6421/compiler/common/ReservedDictionary.java" afterPath="$PROJECT_DIR$/common/src/main/java/com/concordia/comp6421/compiler/common/ReservedDictionary.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexical-analyzer/output.log" afterPath="$PROJECT_DIR$/lexical-analyzer/output.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/Application.java" afterPath="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/Application.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzerDriver.java" afterPath="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzerDriver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/entity/TokenType.java" afterPath="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/entity/TokenType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexical-analyzer/src/test/java/IntegrationTest.java" afterPath="$PROJECT_DIR$/lexical-analyzer/src/test/java/IntegrationTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,6 +16,7 @@
     <ignored path="$PROJECT_DIR$/common/target/" />
     <ignored path="$PROJECT_DIR$/lexical-analyzer/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,11 +60,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="LexicalAnalyzerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/test/java/LexicalAnalyzerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="721">
-              <caret line="193" column="9" lean-forward="true" selection-start-line="193" selection-start-column="9" selection-end-line="193" selection-end-column="9" />
+            <state relative-caret-position="252">
+              <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,94 +72,92 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/test/java/IntegrationTest.java">
+      <file leaf-file-name="LexicalCase.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalCase.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="92" column="20" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="355">
+              <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzer.java">
+      <file leaf-file-name="LexicalNumber.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalNumber.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="243" column="76" lean-forward="true" selection-start-line="243" selection-start-column="76" selection-end-line="243" selection-end-column="76" />
-              <folding>
-                <element signature="e#1642#1643#0" expanded="true" />
-                <element signature="e#1679#1680#0" expanded="true" />
-                <element signature="e#2299#2300#0" expanded="true" />
-                <element signature="e#2379#2380#0" expanded="true" />
-                <element signature="e#14469#14470#0" expanded="true" />
-                <element signature="e#14500#14501#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="342">
+              <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="LexicalValidProgram.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalValidProgram.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            <state relative-caret-position="355">
+              <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalOptorAndDemter.txt">
+      <file leaf-file-name="ReaderTest1.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/ReaderTest1.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            <state relative-caret-position="22">
+              <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/concordia/comp6421/compiler/common/ReservedDictionary.java">
+      <file leaf-file-name="IntegrationTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/test/java/IntegrationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="29" column="68" selection-start-line="29" selection-start-column="68" selection-end-line="29" selection-end-column="68" />
+            <state relative-caret-position="0">
+              <caret line="0" column="49" lean-forward="false" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="88">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="LexicalComment.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalComment.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+            <state relative-caret-position="88">
+              <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzerDriver.java">
+      <file leaf-file-name="LexicalOptorAndDemter.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalOptorAndDemter.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="44">
+              <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/utils/CompilerFileReader.java">
+      <file leaf-file-name="LexicalKeyword.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalKeyword.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="36" column="68" lean-forward="true" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
+            <state relative-caret-position="66">
+              <caret line="3" column="5" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -203,11 +190,19 @@
       <find>ot Supported Lexical Symbol</find>
       <find>Supported Lexical Symbol</find>
       <find>Support</find>
+      <find>NoSuchLexElemException</find>
+      <find>inva</find>
+      <find>nots</find>
+      <find>lexicalN</find>
     </findStrings>
     <replaceStrings>
       <replace>if (ch != null, ch ==</replace>
       <replace>if (ch != null &amp;&amp; ch ==</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>E:\Concordia\Comp6421\Project\lexical-analyzer\src\main\java\com\concordia\comp6421\compiler\lexicalAnalyzer\application</dir>
+      <dir>E:\Concordia\Comp6421\Project\lexical-analyzer\src\main\java\com\concordia\comp6421\compiler\lexicalAnalyzer</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -220,7 +215,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/lexical-analyzer/pom.xml" />
         <option value="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/PackageInfo.java" />
-        <option value="$PROJECT_DIR$/lexical-analyzer/src/test/java/LexicalAnalyzerTest.java" />
         <option value="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/entity/Token.java" />
         <option value="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/utils/StringBuilderRemember.java" />
         <option value="$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalComment.txt" />
@@ -228,13 +222,16 @@
         <option value="$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalKeyword.txt" />
         <option value="$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalNumber.txt" />
         <option value="$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalCase.txt" />
-        <option value="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzerDriver.java" />
         <option value="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/utils/CompilerFileReader.java" />
         <option value="$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalValidProgram.txt" />
-        <option value="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzer.java" />
-        <option value="$PROJECT_DIR$/lexical-analyzer/src/test/java/IntegrationTest.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/concordia/comp6421/compiler/common/ReservedDictionary.java" />
         <option value="$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalOptorAndDemter.txt" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/concordia/comp6421/compiler/common/ReservedDictionary.java" />
+        <option value="$PROJECT_DIR$/lexical-analyzer/src/test/java/LexicalAnalyzerTest.java" />
+        <option value="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/entity/TokenType.java" />
+        <option value="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzer.java" />
+        <option value="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/Application.java" />
+        <option value="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzerDriver.java" />
+        <option value="$PROJECT_DIR$/lexical-analyzer/src/test/java/IntegrationTest.java" />
       </list>
     </option>
   </component>
@@ -244,90 +241,125 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Comp6421Compiler" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Comp6421Compiler" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="lexcial-analyzer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="lexcial-analyzer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Comp6421Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Comp6421Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Comp6421Project" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Comp6421Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Comp6421Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Comp6421Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Comp6421Project" type="462c0819:PsiDirectoryNode" />
-              <item name="lexical-analyzer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Comp6421Project" type="462c0819:PsiDirectoryNode" />
-              <item name="lexical-analyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Comp6421Project" type="462c0819:PsiDirectoryNode" />
-              <item name="lexical-analyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Comp6421Project" type="462c0819:PsiDirectoryNode" />
-              <item name="lexical-analyzer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Comp6421Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="lexical-analyzer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="lexical-analyzer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="lexical-analyzer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="lexical-analyzer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
               <item name="lexical-analyzer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -336,7 +368,7 @@
             </path>
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Comp6421Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
               <item name="lexical-analyzer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -346,7 +378,7 @@
             </path>
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Comp6421Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
               <item name="lexical-analyzer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -356,7 +388,17 @@
             </path>
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Comp6421Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="lexical-analyzer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lexicalAnalyzer" type="462c0819:PsiDirectoryNode" />
+              <item name="Exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
               <item name="lexical-analyzer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -366,7 +408,7 @@
             </path>
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Comp6421Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
               <item name="lexical-analyzer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -374,14 +416,14 @@
             </path>
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Comp6421Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
               <item name="lexical-analyzer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Comp6421Project" type="462c0819:PsiDirectoryNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
               <item name="lexical-analyzer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
@@ -391,6 +433,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -419,113 +464,219 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.IntegrationTest.readLexicalOptorAndDemterFile">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IntegrationTest.readLexicalIdentifierFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.IntegrationTest.readLexicalCommentFile">
+    <configuration name="IntegrationTest.readLexicalCaseFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="lexical-analyzer" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="IntegrationTest" />
-      <option name="METHOD_NAME" value="readLexicalIdentifierFile" />
+      <option name="METHOD_NAME" value="readLexicalCaseFile" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
-    <configuration name="IntegrationTest.readLexicalKeywordFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntegrationTest.readLexicalCommentFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="lexical-analyzer" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="IntegrationTest" />
-      <option name="METHOD_NAME" value="readLexicalKeywordFile" />
+      <option name="METHOD_NAME" value="readLexicalCommentFile" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration name="IntegrationTest.readLexicalNumberFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="lexical-analyzer" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="IntegrationTest" />
       <option name="METHOD_NAME" value="readLexicalNumberFile" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
-    <configuration name="IntegrationTest.readLexicalOptorAndDemterFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LexicalAnalyzerTest.errorIntegerIdentifierTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="lexical-analyzer" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest" />
-      <option name="METHOD_NAME" value="readLexicalOptorAndDemterFile" />
+      <option name="MAIN_CLASS_NAME" value="LexicalAnalyzerTest" />
+      <option name="METHOD_NAME" value="errorIntegerIdentifierTest" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
-    <configuration name="IntegrationTest.readLexicalValidProgramFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LexicalAnalyzerTest.integerFloatTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="lexical-analyzer" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest" />
-      <option name="METHOD_NAME" value="readLexicalValidProgramFile" />
+      <option name="MAIN_CLASS_NAME" value="LexicalAnalyzerTest" />
+      <option name="METHOD_NAME" value="integerFloatTest2" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="com.concordia.comp6421.compiler.lexicalAnalyzer.application.Application" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="LexicalCase.txt atocc" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="lexical-analyzer" />
+      <envs />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Project" />
+      <envs />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
-    <list>
-      <item itemvalue="JUnit.IntegrationTest.readLexicalIdentifierFile" />
-      <item itemvalue="JUnit.IntegrationTest.readLexicalKeywordFile" />
-      <item itemvalue="JUnit.IntegrationTest.readLexicalNumberFile" />
-      <item itemvalue="JUnit.IntegrationTest.readLexicalOptorAndDemterFile" />
-      <item itemvalue="JUnit.IntegrationTest.readLexicalValidProgramFile" />
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.errorIntegerIdentifierTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.integerFloatTest2" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.IntegrationTest.readLexicalNumberFile" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.IntegrationTest.readLexicalCommentFile" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.IntegrationTest.readLexicalCaseFile" />
     </list>
     <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.IntegrationTest.readLexicalOptorAndDemterFile" />
-        <item itemvalue="JUnit.IntegrationTest.readLexicalValidProgramFile" />
-        <item itemvalue="JUnit.IntegrationTest.readLexicalNumberFile" />
-        <item itemvalue="JUnit.IntegrationTest.readLexicalKeywordFile" />
-        <item itemvalue="JUnit.IntegrationTest.readLexicalIdentifierFile" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.IntegrationTest.readLexicalCommentFile" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.IntegrationTest.readLexicalCaseFile" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.IntegrationTest.readLexicalNumberFile" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.integerFloatTest2" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.LexicalAnalyzerTest.errorIntegerIdentifierTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -543,73 +694,70 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="IntegrationTest_readLexicalOptorAndDemterFile - 2019.01.28 at 18h 32m 45s.xml">
-      <configuration name="IntegrationTest.readLexicalOptorAndDemterFile" configurationId="JUnit" />
+    <history-entry file="IntegrationTest_readLexicalCaseFile - 2019.01.28 at 21h 39m 50s.xml">
+      <configuration name="IntegrationTest.readLexicalCaseFile" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntegrationTest_readLexicalValidProgramFile - 2019.01.28 at 18h 33m 18s.xml">
+    <history-entry file="IntegrationTest_readLexicalCommentFile - 2019.01.28 at 21h 37m 53s.xml">
+      <configuration name="IntegrationTest.readLexicalCommentFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IntegrationTest_readLexicalCommentFile - 2019.01.28 at 21h 57m 54s.xml">
+      <configuration name="IntegrationTest.readLexicalCommentFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IntegrationTest_readLexicalNumberFile - 2019.01.28 at 21h 35m 18s.xml">
+      <configuration name="IntegrationTest.readLexicalNumberFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IntegrationTest_readLexicalValidProgramFile - 2019.01.28 at 20h 53m 05s.xml">
       <configuration name="IntegrationTest.readLexicalValidProgramFile" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntegrationTest_readLexicalValidProgramFile - 2019.01.28 at 18h 33m 30s.xml">
+    <history-entry file="IntegrationTest_readLexicalValidProgramFile - 2019.01.28 at 20h 56m 35s.xml">
       <configuration name="IntegrationTest.readLexicalValidProgramFile" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntegrationTest_readLexicalValidProgramFile - 2019.01.28 at 18h 34m 19s.xml">
+    <history-entry file="IntegrationTest_readLexicalValidProgramFile - 2019.01.28 at 20h 59m 09s.xml">
       <configuration name="IntegrationTest.readLexicalValidProgramFile" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntegrationTest_readLexicalValidProgramFile - 2019.01.28 at 18h 42m 54s.xml">
-      <configuration name="IntegrationTest.readLexicalValidProgramFile" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest - 2019.01.28 at 20h 56m 22s.xml">
+      <configuration name="LexicalAnalyzerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntegrationTest_readLexicalOptorAndDemterFile - 2019.01.28 at 18h 45m 43s.xml">
-      <configuration name="IntegrationTest.readLexicalOptorAndDemterFile" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_errorIntegerIdentifierTest - 2019.01.28 at 21h 32m 20s.xml">
+      <configuration name="LexicalAnalyzerTest.errorIntegerIdentifierTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntegrationTest_readLexicalOptorAndDemterFile - 2019.01.28 at 18h 47m 35s.xml">
-      <configuration name="IntegrationTest.readLexicalOptorAndDemterFile" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IntegrationTest_readLexicalOptorAndDemterFile - 2019.01.28 at 18h 47m 58s.xml">
-      <configuration name="IntegrationTest.readLexicalOptorAndDemterFile" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IntegrationTest_readLexicalOptorAndDemterFile - 2019.01.28 at 18h 51m 55s.xml">
-      <configuration name="IntegrationTest.readLexicalOptorAndDemterFile" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="IntegrationTest_readLexicalOptorAndDemterFile - 2019.01.28 at 18h 52m 41s.xml">
-      <configuration name="IntegrationTest.readLexicalOptorAndDemterFile" configurationId="JUnit" />
+    <history-entry file="LexicalAnalyzerTest_integerFloatTest2 - 2019.01.28 at 21h 33m 29s.xml">
+      <configuration name="LexicalAnalyzerTest.integerFloatTest2" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31920000" />
+    <option name="totallyTimeSpent" value="37783000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" weight="0.329718" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3991323" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.48789713" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31502423" sideWeight="0.87367624" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.49394855" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3343419" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20355412" sideWeight="0.49092284" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -618,15 +766,13 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Assignment 1 upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assignment 1 upload" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexical-analyzer/src/test/java/LexicalAnalyzerTest.java</url>
-          <line>63</line>
-          <properties />
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/lexical-analyzer/src/test/java/LexicalAnalyzerTest.java</url>
           <line>99</line>
@@ -639,24 +785,6 @@
           <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzerDriver.java</url>
-          <line>63</line>
-          <properties />
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzer.java</url>
-          <line>63</line>
-          <properties />
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzer.java</url>
-          <line>59</line>
-          <properties />
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/lexical-analyzer/src/test/java/LexicalAnalyzerTest.java</url>
           <line>80</line>
@@ -666,7 +794,9 @@
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
+      <option name="time" value="1" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -683,78 +813,211 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.iml" />
-    <entry file="file://$PROJECT_DIR$/LexicalAnalyzer/src/main/java/Util/Add.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/util/ArrayDeque.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        <state relative-caret-position="22">
+          <caret line="205" column="0" lean-forward="true" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+          <folding>
+            <element signature="e#6490#6491#0" expanded="false" />
+            <element signature="e#6531#6532#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/package-info.java">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/concordia/comp6421/compiler/common/ReservedDictionary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="154">
+          <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="3798" column="30" lean-forward="false" selection-start-line="3798" selection-start-column="30" selection-end-line="3798" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/util/stream/Collectors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="103" column="19" lean-forward="false" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/entity/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lexical-analyzer/lexical-analyzer.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="92" selection-start-line="13" selection-start-column="92" selection-end-line="13" selection-end-column="92" />
+        <state relative-caret-position="154">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/pom.xml">
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        <state relative-caret-position="88">
+          <caret line="30" column="52" lean-forward="false" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+          <folding>
+            <marker date="1548727122452" expanded="false" signature="14716:14727" ph="&lt;~&gt;" />
+            <marker date="1548727122452" expanded="false" signature="14926:14937" ph=" { " />
+            <marker date="1548727122452" expanded="false" signature="14953:14959" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/StringBuilder.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="135" column="21" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
+        <state relative-caret-position="266">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/test/java/CompilerFileReaderTest.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/nio/file/Files.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+        <state relative-caret-position="130">
+          <caret line="3150" column="25" lean-forward="false" selection-start-line="3150" selection-start-column="25" selection-end-line="3150" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="9" column="62" lean-forward="false" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="53" column="173" lean-forward="false" selection-start-line="53" selection-start-column="173" selection-end-line="53" selection-end-column="173" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/ReaderTest2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="2" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/ReaderTest3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/utils/CompilerFileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalKeyword.txt">
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzerDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="5" lean-forward="true" selection-end-line="3" selection-end-column="5" />
+        <state relative-caret-position="110">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalNumber.txt">
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        <state relative-caret-position="220">
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/utils/StringBuilderRemember.java">
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="198">
+          <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/entity/Token.java">
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/test/java/CompilerFileReaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="198">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#333#334#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/test/java/LexicalAnalyzerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LexicalAnalyzer.iml" />
+    <entry file="file://$PROJECT_DIR$/LexicalAnalyzer/src/main/java/Util/Add.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/lexical-analyzer.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="92" lean-forward="false" selection-start-line="13" selection-start-column="92" selection-end-line="13" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/StringBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/test/java/CompilerFileReaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#333#334#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -767,113 +1030,206 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="176">
+          <caret line="9" column="62" lean-forward="false" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="208" selection-start-line="208" selection-end-line="208" />
+        <state relative-caret-position="115">
+          <caret line="53" column="173" lean-forward="false" selection-start-line="53" selection-start-column="173" selection-end-line="53" selection-end-column="173" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalCase.txt">
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/Exception/NoSuchLexElemException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+        <state relative-caret-position="37">
+          <caret line="2" column="35" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="35" />
+          <folding>
+            <element signature="e#242#243#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalComment.txt">
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/concordia/comp6421/compiler/common/ReservedDictionary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+        <state relative-caret-position="220">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/utils/StringBuilderRemember.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/utils/CompilerFileReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="36" column="68" lean-forward="true" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
+        <state relative-caret-position="122">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/test/java/LexicalAnalyzerTest.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/lang/Enum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="193" column="9" lean-forward="true" selection-start-line="193" selection-start-column="9" selection-end-line="193" selection-end-column="9" />
+        <state relative-caret-position="86">
+          <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/entity/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/entity/TokenType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzerDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding>
+            <marker date="1548727122452" expanded="false" signature="14716:14727" ph="&lt;~&gt;" />
+            <marker date="1548727122452" expanded="false" signature="14926:14937" ph=" { " />
+            <marker date="1548727122452" expanded="false" signature="14953:14959" ph=" }" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalIdentifier.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="88">
           <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalValidProgram.txt">
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalComment.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="88">
+          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzerDriver.java">
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalKeyword.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="66">
+          <caret line="3" column="5" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/concordia/comp6421/compiler/common/ReservedDictionary.java">
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalNumber.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="29" column="68" selection-start-line="29" selection-start-column="68" selection-end-line="29" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="243" column="76" lean-forward="true" selection-start-line="243" selection-start-column="76" selection-end-line="243" selection-end-column="76" />
-          <folding>
-            <element signature="e#1642#1643#0" expanded="true" />
-            <element signature="e#1679#1680#0" expanded="true" />
-            <element signature="e#2299#2300#0" expanded="true" />
-            <element signature="e#2379#2380#0" expanded="true" />
-            <element signature="e#14469#14470#0" expanded="true" />
-            <element signature="e#14500#14501#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="342">
+          <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalOptorAndDemter.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        <state relative-caret-position="44">
+          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalValidProgram.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/test/java/LexicalAnalyzerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/error.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/ReaderTest1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalCase.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/test/java/IntegrationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="92" column="20" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="49" lean-forward="false" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -929,7 +1285,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>LexicalAnalyzer</last-edited>
+          <last-edited>common</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -954,6 +1310,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: org.projectlombok:lombok:1.16.18</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

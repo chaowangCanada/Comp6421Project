@@ -15,6 +15,7 @@ public class LexicalAnalyzerDriver {
 
     public final String error_file = "error.log";
     public final String token_file = "output.log";
+    public final String token_AtoCC_file = "output.atocc";
     @Getter
     private List<Token> tokenList;
     @Getter
@@ -37,10 +38,19 @@ public class LexicalAnalyzerDriver {
                 fileErrorWriter.write(System.lineSeparator());
             }
 
-            fileTokenWriter = new FileWriter(token_file);
-            for (Token token : tokenList){
-                fileTokenWriter.write(token.toString());
-                fileTokenWriter.write(System.lineSeparator());
+            if(Application.option.equalsIgnoreCase("AtoCC")){
+                fileTokenWriter = new FileWriter(token_AtoCC_file);
+                for (Token token : tokenList){
+                    fileTokenWriter.write(token.getTokenType().name());
+                    fileTokenWriter.write(" ");
+                }
+            }
+            else {
+                fileTokenWriter = new FileWriter(token_file);
+                for (Token token : tokenList){
+                    fileTokenWriter.write(token.toString());
+                    fileTokenWriter.write(System.lineSeparator());
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
