@@ -1,12 +1,11 @@
 package com.concordia.comp6421.compiler.syntacticAnalyzer.application;
 
-import main.lexical.LexicalAnalyzer;
 
-import java.io.File;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.LexicalAnalyzer;
 import java.io.IOException;
 
-import static main.config.Default.GRAMMAR_FILE;
-import static main.config.Default.TEST_ROOT_PATH;
+import static com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Default.GRAMMAR_FILE;
+import static com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Default.TEST_ROOT_PATH;
 
 public class SyntacticAnalyzerDriver {
     private static SyntacticAnalyzer syntacticAnalyzer;
@@ -22,7 +21,7 @@ public class SyntacticAnalyzerDriver {
     }
 
     public static boolean parseFile(String fileName) throws IOException {
-        LexicalAnalyzer lexical = new LexicalAnalyzer(new File(TEST_ROOT_PATH, fileName));
+        LexicalAnalyzer lexical = new LexicalAnalyzer(fileName);
         return syntacticAnalyzer.parse(lexical);
     }
 }

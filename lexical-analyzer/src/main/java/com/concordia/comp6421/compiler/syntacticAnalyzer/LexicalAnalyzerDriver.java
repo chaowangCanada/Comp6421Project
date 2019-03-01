@@ -10,6 +10,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class LexicalAnalyzerDriver {
 
@@ -76,12 +77,12 @@ public class LexicalAnalyzerDriver {
             String lineContent = output.get(lineNum-1);
             lexicalAnalyzer.setLineInfo(lineContent, lineNum);
             while(lexicalAnalyzer.hasNext()){
-                Token token = lexicalAnalyzer.nextToken();
-                if(token != null) {
-                    if(token.getTokenType() == TokenType.ERROR)
-                        errorTokenList.add(token);
+                Optional<Token> token = lexicalAnalyzer.nextToken();
+                if(token.isPresent()) {
+                    if(token.get().getTokenType() == TokenType.ERROR)
+                        errorTokenList.add(token.get());
                     else if(token != null)
-                        tokenList.add(token);
+                        tokenList.add(token.get());
                 }
             }
         }

@@ -2,7 +2,7 @@ package com.concordia.comp6421.compiler.syntacticAnalyzer.application;
 
 import java.util.*;
 
-import static main.config.Default.EPSILON;
+import static com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Default.EPSILON;
 
 public class NonTerminal extends Symbol {
     private List<Alpha> alphas;

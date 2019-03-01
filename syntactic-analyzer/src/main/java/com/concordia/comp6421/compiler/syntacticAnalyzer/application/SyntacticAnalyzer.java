@@ -1,14 +1,15 @@
 package com.concordia.comp6421.compiler.syntacticAnalyzer.application;
 
-import main.lexical.LexicalAnalyzer;
-import main.model.Token;
+
+
+import com.concordia.comp6421.compiler.syntacticAnalyzer.LexicalAnalyzer;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.Token;
 
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
-
-import static main.config.Default.DOLLAR;
-import static main.config.Default.EPSILON;
+import static com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Default.DOLLAR;
+import static com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Default.EPSILON;
 
 public class SyntacticAnalyzer {
     private Grammar grammar;
@@ -39,7 +40,7 @@ public class SyntacticAnalyzer {
             if (x.isEpsilon()) {
                 stack.pop();
             } else if (x.isTerminal()) {
-                if (x.symbol.equals(token.getType().toString())) {
+                if (x.symbol.equals(token.getTokenType().toString())) {
                     stack.pop();
                     updateDerivation(x.symbol, Collections.singletonList(token.getValue()));
                     lookahead = lex.nextToken();
@@ -89,7 +90,7 @@ public class SyntacticAnalyzer {
     }
 
     private Optional<Token> skipErrors(Token token) throws IOException {
-        System.out.println("syntax error at " + token.getIdx());
+        System.out.println("syntax error at " + token.getLocation());
         NonTerminal top = topNonterminal();
         Optional<Token> lookahead = Optional.of(token);
         if (top == null) {
@@ -112,7 +113,6 @@ public class SyntacticAnalyzer {
     }
 
     private void reset() {
-        lex.close();
         lex = null;
     }
 

@@ -1,10 +1,11 @@
 package com.concordia.comp6421.compiler.syntacticAnalyzer.application;
 
-import main.model.Token;
+
+import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.Token;
 
 import java.util.*;
 
-import static main.config.Default.*;
+import static com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Default.*;
 
 class Grammar {
     private Map<String, Symbol> symbolMap;
@@ -70,6 +71,6 @@ class Grammar {
     }
 
     Rule getRule(String nt, Token t){
-        return ruleTable.get(TableKey.of(nt, t.getType().toString()));
+        return ruleTable.get(TableKey.of(nt, t.getTokenType().toString()));
     }
 }

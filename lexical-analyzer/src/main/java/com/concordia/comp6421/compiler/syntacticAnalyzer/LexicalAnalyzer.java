@@ -8,6 +8,7 @@ import com.concordia.comp6421.compiler.syntacticAnalyzer.utils.StringBuilderReme
 import lombok.Getter;
 import java.util.ArrayDeque;
 import java.util.List;
+import java.util.Optional;
 import java.util.Queue;
 import java.util.stream.Collectors;
 
@@ -52,7 +53,7 @@ public class LexicalAnalyzer {
         buffer = new ArrayDeque<Character>();
     }
 
-    public Token nextToken() {
+    public Optional<Token> nextToken() {
         Token token = null;
         tokenBuilder.setLength(0);
         try {
@@ -60,7 +61,7 @@ public class LexicalAnalyzer {
         } catch (NoSuchLexElemException e) {
             e.printStackTrace();
         }
-        return token;
+        return Optional.of(token);
     }
 
     public boolean hasNext(){
