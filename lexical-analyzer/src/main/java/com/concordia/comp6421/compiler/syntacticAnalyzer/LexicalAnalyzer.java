@@ -1,13 +1,12 @@
-package com.concordia.comp6421.compiler.lexicalAnalyzer.application;
+package com.concordia.comp6421.compiler.syntacticAnalyzer;
 
 import com.concordia.comp6421.compiler.common.ReservedDictionary;
-import com.concordia.comp6421.compiler.lexicalAnalyzer.Exception.NoSuchLexElemException;
-import com.concordia.comp6421.compiler.lexicalAnalyzer.entity.Token;
-import com.concordia.comp6421.compiler.lexicalAnalyzer.entity.TokenType;
-import com.concordia.comp6421.compiler.lexicalAnalyzer.utils.StringBuilderRemember;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.Exception.NoSuchLexElemException;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.Token;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.TokenType;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.utils.StringBuilderRemember;
 import lombok.Getter;
 import java.util.ArrayDeque;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Queue;
 import java.util.stream.Collectors;

@@ -1,4 +1,5 @@
-package com.concordia.comp6421.compiler.lexicalAnalyzer.entity;
+package com.concordia.comp6421.compiler.syntacticAnalyzer.entity;
+import jdk.nashorn.internal.objects.NativeNumber;
 import lombok.*;
 
 @ToString
@@ -21,4 +22,5 @@ public class Token {
     @Getter
     @Setter
     private int lineNum;
+
 }

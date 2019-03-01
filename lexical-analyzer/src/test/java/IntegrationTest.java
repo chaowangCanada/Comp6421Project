@@ -1,8 +1,5 @@
-import com.concordia.comp6421.compiler.lexicalAnalyzer.application.LexicalAnalyzer;
-import com.concordia.comp6421.compiler.lexicalAnalyzer.application.LexicalAnalyzerDriver;
-import com.concordia.comp6421.compiler.lexicalAnalyzer.entity.Token;
-import com.concordia.comp6421.compiler.lexicalAnalyzer.entity.TokenType;
-import com.concordia.comp6421.compiler.lexicalAnalyzer.utils.CompilerFileReader;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.LexicalAnalyzerDriver;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.Token;
 import org.junit.Before;
 import org.junit.Test;
 import java.io.File;

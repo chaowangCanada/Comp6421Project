@@ -1,4 +1,4 @@
-package com.concordia.comp6421.compiler.lexicalAnalyzer.utils;
+package com.concordia.comp6421.compiler.syntacticAnalyzer.utils;
 import lombok.*;
 
 public class StringBuilderRemember

@@ -1,4 +1,4 @@
-import com.concordia.comp6421.compiler.lexicalAnalyzer.utils.CompilerFileReader;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.utils.CompilerFileReader;
 import org.junit.Before;
 import org.junit.Test;
 

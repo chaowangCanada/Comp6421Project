@@ -1,4 +1,4 @@
-package com.concordia.comp6421.compiler.lexicalAnalyzer.Exception;
+package com.concordia.comp6421.compiler.syntacticAnalyzer.Exception;
 
 public class NoSuchLexElemException extends Exception {
 

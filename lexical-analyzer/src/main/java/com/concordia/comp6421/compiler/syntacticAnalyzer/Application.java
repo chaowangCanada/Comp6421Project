@@ -1,4 +1,4 @@
-package com.concordia.comp6421.compiler.lexicalAnalyzer.application;
+package com.concordia.comp6421.compiler.syntacticAnalyzer;
 
 import java.io.File;
 

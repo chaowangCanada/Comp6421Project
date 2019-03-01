@@ -1,12 +1,10 @@
-package com.concordia.comp6421.compiler.lexicalAnalyzer.utils;
+package com.concordia.comp6421.compiler.syntacticAnalyzer.utils;
 
 import java.io.*;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.ListIterator;
 
 public class CompilerFileReader {
 

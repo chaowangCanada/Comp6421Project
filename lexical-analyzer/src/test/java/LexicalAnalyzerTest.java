@@ -1,6 +1,6 @@
-import com.concordia.comp6421.compiler.lexicalAnalyzer.application.LexicalAnalyzer;
-import com.concordia.comp6421.compiler.lexicalAnalyzer.entity.Token;
-import com.concordia.comp6421.compiler.lexicalAnalyzer.entity.TokenType;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.LexicalAnalyzer;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.Token;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.TokenType;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
