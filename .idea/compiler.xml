@@ -9,6 +9,7 @@
         <module name="common" />
         <module name="lexical-analyzer" />
         <module name="LexicalAnalyzer" />
+        <module name="syntactic-analyzer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +17,7 @@
       <module name="lexical-analyzer" target="1.8" />
       <module name="LexicalAnalyzer" target="1.5" />
       <module name="Project" target="1.5" />
+      <module name="syntactic-analyzer" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
