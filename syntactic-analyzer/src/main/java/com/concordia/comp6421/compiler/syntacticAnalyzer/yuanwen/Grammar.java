@@ -1,4 +1,4 @@
-package com.concordia.comp6421.compiler.syntacticAnalyzer.application;
+package com.concordia.comp6421.compiler.syntacticAnalyzer.yuanwen;
 
 
 import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.Token;

@@ -1,11 +1,10 @@
-package com.concordia.comp6421.compiler.syntacticAnalyzer.application;
+package com.concordia.comp6421.compiler.syntacticAnalyzer.yuanwen;
 
 
 import com.concordia.comp6421.compiler.syntacticAnalyzer.LexicalAnalyzer;
 import java.io.IOException;
 
 import static com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Default.GRAMMAR_FILE;
-import static com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Default.TEST_ROOT_PATH;
 
 public class SyntacticAnalyzerDriver {
     private static SyntacticAnalyzer syntacticAnalyzer;

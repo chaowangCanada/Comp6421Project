@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class LexicalAnalyzerDriver {
+public class SyntacticAnalyzerDriver {
 
     public final String error_file = "error.log";
     public final String token_file = "output.log";
@@ -23,7 +23,7 @@ public class LexicalAnalyzerDriver {
     private List<Token> errorTokenList;
     private LexicalAnalyzer lexicalAnalyzer;
 
-    public LexicalAnalyzerDriver(){
+    public SyntacticAnalyzerDriver(){
         tokenList = new ArrayList<>();
         errorTokenList = new ArrayList<>();
         lexicalAnalyzer = new LexicalAnalyzer("");
@@ -71,7 +71,7 @@ public class LexicalAnalyzerDriver {
         }
     }
 
-    public void run(File file) throws java.lang.Exception {
+    public void run(File file) throws Exception {
         List<String> output = CompilerFileReader.readAllLines(file);
         for(int lineNum = 1; lineNum <= output.size(); lineNum ++){
             String lineContent = output.get(lineNum-1);

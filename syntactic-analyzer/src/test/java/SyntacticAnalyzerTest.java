@@ -1,6 +1,6 @@
 package test;
 
-import com.concordia.comp6421.compiler.syntacticAnalyzer.application.SyntacticAnalyzerDriver;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.yuanwen.SyntacticAnalyzerDriver;
 import org.junit.Assert;
 import org.junit.Test;
 
