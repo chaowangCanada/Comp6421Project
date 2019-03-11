@@ -1,4 +1,4 @@
-package com.concordia.comp6421.compiler.syntacticAnalyzer.yuanwen;
+package yuanwen;
 
 public class Rule {
     NonTerminal lhs;

@@ -1,12 +1,13 @@
-package com.concordia.comp6421.compiler.syntacticAnalyzer.yuanwen;
+package com.concordia.comp6421.compiler.syntacticAnalyzer.entity;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 public class Alpha {
-    List<Symbol> symbolSeq;
-    List<Symbol> first;
+
+    public List<Symbol> symbolSeq;
+    public List<Symbol> first;
 
     public static Alpha of(Collection<Symbol> symbolSeq) {
         return new Alpha(symbolSeq);

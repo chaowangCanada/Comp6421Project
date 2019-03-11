@@ -1,21 +1,27 @@
-package com.concordia.comp6421.compiler.syntacticAnalyzer.yuanwen;
+package yuanwen;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class Terminal extends Symbol {
-    Terminal(String symbol) {
-        super(symbol);
+public class Epsilon extends Symbol{
+    private static Epsilon epsilon = new Epsilon();
+
+    private Epsilon() {
+        super("EPSILON");
+    }
+
+    public static Symbol get() {
+        return epsilon;
     }
 
     @Override
     boolean isTerminal() {
-        return true;
+        return false;
     }
 
     @Override
     boolean isEpsilon() {
-        return false;
+        return true;
     }
 
     @Override

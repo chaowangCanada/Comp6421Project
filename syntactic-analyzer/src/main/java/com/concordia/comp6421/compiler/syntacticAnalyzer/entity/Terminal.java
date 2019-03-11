@@ -10,9 +10,25 @@ public class Terminal extends Symbol {
     }
 
     @Override
+    boolean isTerminal() {
+        return true;
+    }
+
+    @Override
+    boolean isEpsilon() {
+        return false;
+    }
+
+    @Override
+    boolean isNonTerminal() {
+        return false;
+    }
+
+    @Override
     public Set<Symbol> getFirst() {
         HashSet<Symbol> tmp = new HashSet<>();
         tmp.add(this);
         return tmp;
     }
+
 }

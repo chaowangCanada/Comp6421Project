@@ -1,8 +1,8 @@
-package com.concordia.comp6421.compiler.syntacticAnalyzer.yuanwen;
+package yuanwen;
 
 import java.util.*;
 
-import static com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Default.EPSILON;
+import static main.config.Default.EPSILON;
 
 public class NonTerminal extends Symbol {
     private List<Alpha> alphas;

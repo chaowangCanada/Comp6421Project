@@ -1,12 +1,12 @@
-package com.concordia.comp6421.compiler.syntacticAnalyzer.yuanwen;
+package yuanwen;
 
-import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.Token;
-import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.TokenType;
+import main.enums.TokenType;
+import main.model.Token;
 
 import java.util.Objects;
 import java.util.Set;
 
-import static com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Default.EPSILON;
+import static main.config.Default.EPSILON;
 
 public abstract class Symbol {
     String symbol;
@@ -51,6 +51,6 @@ public abstract class Symbol {
     }
 
     public boolean matchToken(Token t){
-        return symbol.equals(t.getTokenType().toString());
+        return symbol.equals(t.getType().toString());
     }
 }

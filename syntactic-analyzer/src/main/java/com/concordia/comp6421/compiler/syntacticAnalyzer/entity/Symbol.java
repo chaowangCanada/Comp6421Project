@@ -12,19 +12,28 @@ import java.util.Set;
 @EqualsAndHashCode
 public abstract class Symbol{
 
-    @Generated
-    String symbol;
 
-    public static Symbol getSymbol(String name){
+    public String symbol;
+
+    public static Symbol of(String name){
         if (name.equalsIgnoreCase("EPSILON"))
-            return new Epsilon();
+            return new Epsilon("EPSILON");
         else if(TokenType.lookup(name) == null )
             return new Terminal(name);
         else
             return new NonTerminal(name);
     }
 
+    public abstract boolean isTerminal();
+
+    public abstract boolean isEpsilon();
+
+    public abstract boolean isNonTerminal();
+
     public abstract Set<Symbol> getFirst();
 
+    public boolean matchToken(Token t){
+        return symbol.equals(t.getTokenType().toString());
+    }
 
 }

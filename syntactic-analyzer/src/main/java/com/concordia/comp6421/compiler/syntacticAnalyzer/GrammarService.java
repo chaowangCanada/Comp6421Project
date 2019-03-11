@@ -1,23 +1,29 @@
-package com.concordia.comp6421.compiler.syntacticAnalyzer.yuanwen;
+package com.concordia.comp6421.compiler.syntacticAnalyzer;
+
+import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.Alpha;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.Grammar;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.NonTerminal;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.Symbol;
 
 import java.io.*;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class GrammarReader {
-    private BufferedReader br;
-    private Grammar grammar;
+public class GrammarService {
+    BufferedReader br;
+    Grammar grammar;
 
-    public GrammarReader(File f) throws FileNotFoundException {
-        br = new BufferedReader(new FileReader(f));
+    public GrammarService(File file) throws FileNotFoundException {
+        br = new BufferedReader(new FileReader(file));
     }
+
 
     public void process() throws IOException {
         String line;
         grammar = new Grammar();
         while ((line = br.readLine()) != null) {
-            if (line.isEmpty()){
+            if (line.isEmpty()) {
                 continue;
             }
             String a = line.split("->")[0].trim();
@@ -31,7 +37,8 @@ public class GrammarReader {
     }
 
     private Alpha parseProd(String rhs) {
-        List<Symbol> symbols = Stream.of(rhs.trim().split("\\s+"))
+        List<Symbol> symbols = Stream
+                .of(rhs.trim().split("\\s+"))
                 .map(s -> grammar.getOrElseAdd(s))
                 .collect(Collectors.toList());
         return Alpha.of(symbols);
@@ -40,4 +47,6 @@ public class GrammarReader {
     public Grammar getGrammar() {
         return grammar;
     }
+
+
 }

@@ -1,8 +1,9 @@
 package com.concordia.comp6421.compiler.syntacticAnalyzer.utils;
 
-import com.concordia.comp6421.compiler.syntacticAnalyzer.yuanwen.Epsilon;
-import com.concordia.comp6421.compiler.syntacticAnalyzer.yuanwen.Symbol;
-import com.concordia.comp6421.compiler.syntacticAnalyzer.yuanwen.Terminal;
+
+import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.Epsilon;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.Symbol;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.Terminal;
 
 import java.io.File;
 

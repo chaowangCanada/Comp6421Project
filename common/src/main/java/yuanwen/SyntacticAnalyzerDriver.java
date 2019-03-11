@@ -1,10 +1,12 @@
-package com.concordia.comp6421.compiler.syntacticAnalyzer.yuanwen;
+package yuanwen;
 
+import main.lexical.LexicalAnalyzer;
 
-import com.concordia.comp6421.compiler.syntacticAnalyzer.LexicalAnalyzer;
+import java.io.File;
 import java.io.IOException;
 
-import static com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Default.GRAMMAR_FILE;
+import static main.config.Default.GRAMMAR_FILE;
+import static main.config.Default.TEST_ROOT_PATH;
 
 public class SyntacticAnalyzerDriver {
     private static SyntacticAnalyzer syntacticAnalyzer;
@@ -20,7 +22,7 @@ public class SyntacticAnalyzerDriver {
     }
 
     public static boolean parseFile(String fileName) throws IOException {
-        LexicalAnalyzer lexical = new LexicalAnalyzer(fileName);
+        LexicalAnalyzer lexical = new LexicalAnalyzer(new File(TEST_ROOT_PATH, fileName));
         return syntacticAnalyzer.parse(lexical);
     }
 }

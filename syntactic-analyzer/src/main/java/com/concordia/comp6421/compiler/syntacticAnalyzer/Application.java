@@ -8,9 +8,9 @@ public class Application {
     public static void main(String[] args) {
         File inFile = null;
         if (0 < args.length) {
-            LexicalAnalyzerDriver driver = new LexicalAnalyzerDriver();
             try {
                 inFile = new File(args[0]);
+                SyntacticAnalyzerDriver driver = new SyntacticAnalyzerDriver();
                 option = args[1];
                 driver.run(inFile);
             } catch (Exception e) {
