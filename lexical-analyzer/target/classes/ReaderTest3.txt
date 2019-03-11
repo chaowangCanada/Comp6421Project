@@ -1,0 +1,6 @@
+ABC
+/**
+ * First comment
+ */
+def
+ghi

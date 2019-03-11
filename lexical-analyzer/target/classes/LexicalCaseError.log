@@ -1,0 +1,6 @@
+Token(tokenType=ERROR, value=Not supported Lexical Symbol %, location=1, lineNum=15)
+Token(tokenType=ERROR, value=Not supported Lexical Symbol $, location=1, lineNum=16)
+Token(tokenType=ERROR, value=Not supported Lexical Symbol #, location=1, lineNum=17)
+Token(tokenType=ERROR, value=Not supported Lexical Symbol @, location=1, lineNum=18)
+Token(tokenType=ERROR, value=Not Supported Lexical Symbol  , location=4, lineNum=19)
+Token(tokenType=ERROR, value=Not supported Lexical Symbol ~, location=5, lineNum=19)

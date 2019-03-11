@@ -1,0 +1,7 @@
+/* all of this should be captured as a comment. The following character sequence: * /
+should not be considered as the end marks of the comment.
+*/ foo // single line comment
+bar
+/* this 
+multi-line comment should 
+trigger an error as it is missing a closure

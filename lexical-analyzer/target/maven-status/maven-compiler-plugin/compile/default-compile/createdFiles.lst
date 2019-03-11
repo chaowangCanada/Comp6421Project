@@ -1,0 +1,9 @@
+com\concordia\comp6421\compiler\syntacticAnalyzer\LexicalAnalyzerDriver.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\utils\EnumUtils.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\entity\Token.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\utils\CompilerFileReader.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\Application.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\Exception\NoSuchLexElemException.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\entity\TokenType.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\utils\StringBuilderRemember.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\LexicalAnalyzer.class

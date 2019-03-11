@@ -13,19 +13,18 @@ public class Epsilon extends Symbol{
         return epsilon;
     }
 
-
     @Override
-    boolean isTerminal() {
+    public boolean isTerminal() {
         return false;
     }
 
     @Override
-    boolean isEpsilon() {
+    public boolean isEpsilon() {
         return true;
     }
 
     @Override
-    boolean isNonTerminal() {
+    public boolean isNonTerminal() {
         return false;
     }
 

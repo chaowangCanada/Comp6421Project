@@ -6,7 +6,7 @@ import static com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Default.*;
 
 public class Grammar {
     private Map<String, Symbol> symbolMap;
-    private List<NonTerminal> nonTerminals;
+    private List<NonTerminal>nonTerminals;
     private Map<TableKey, Rule> ruleTable;
 
     public Grammar() {
@@ -20,7 +20,7 @@ public class Grammar {
         if (symbolMap.get(s) != null) {
             return symbolMap.get(s);
         } else {
-            Symbol symbol = Symbol.of(s);
+            Symbol symbol = Symbol.getSymbol(s);
             symbolMap.put(s, symbol);
             if (!symbol.isTerminal() && !symbol.isEpsilon()){
                 nonTerminals.add((NonTerminal) symbol);

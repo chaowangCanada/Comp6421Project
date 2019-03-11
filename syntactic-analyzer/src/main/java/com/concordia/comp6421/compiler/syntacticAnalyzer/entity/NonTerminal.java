@@ -48,17 +48,17 @@ public class NonTerminal extends Symbol{
     }
 
     @Override
-    boolean isTerminal() {
+    public boolean isTerminal() {
         return false;
     }
 
     @Override
-    boolean isEpsilon() {
+    public boolean isEpsilon() {
         return false;
     }
 
     @Override
-    boolean isNonTerminal() {
+    public boolean isNonTerminal() {
         return true;
     }
 

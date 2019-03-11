@@ -10,17 +10,17 @@ public class Terminal extends Symbol {
     }
 
     @Override
-    boolean isTerminal() {
+    public boolean isTerminal() {
         return true;
     }
 
     @Override
-    boolean isEpsilon() {
+    public boolean isEpsilon() {
         return false;
     }
 
     @Override
-    boolean isNonTerminal() {
+    public boolean isNonTerminal() {
         return false;
     }
 

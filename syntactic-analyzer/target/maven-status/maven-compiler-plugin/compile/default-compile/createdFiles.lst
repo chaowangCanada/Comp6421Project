@@ -1,0 +1,12 @@
+com\concordia\comp6421\compiler\syntacticAnalyzer\application\SyntacticAnalyzerDriver.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\application\Rule.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\application\Epsilon.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\application\GrammarReader.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\utils\Default.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\application\SyntacticAnalyzer.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\application\Grammar.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\application\Terminal.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\application\NonTerminal.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\application\Symbol.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\application\Alpha.class
+com\concordia\comp6421\compiler\syntacticAnalyzer\application\TableKey.class

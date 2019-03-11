@@ -23,9 +23,9 @@ public class SyntacticAnalyzer {
         grammar.buildTable();
     }
 
-    public boolean parse(LexicalAnalyzer inputLex) throws IOException {
+    public boolean parse(LexicalAnalyzer input) throws IOException {
         boolean error = false;
-        this.lex = inputLex;
+        this.lex = input;
         stack.push(DOLLAR);
         stack.push(grammar.getStart());
         derivation.add(grammar.getStart().symbol);

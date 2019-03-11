@@ -15,7 +15,7 @@ public abstract class Symbol{
 
     public String symbol;
 
-    public static Symbol of(String name){
+    public static Symbol getSymbol(String name){
         if (name.equalsIgnoreCase("EPSILON"))
             return new Epsilon("EPSILON");
         else if(TokenType.lookup(name) == null )
