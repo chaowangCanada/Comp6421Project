@@ -35,9 +35,9 @@ public class SyntacticAnalyzer {
                 && !lookahead.get().getValue().equalsIgnoreCase("Not supported Lexical Symbol \uFFFF")) {
             Token token = lookahead.get();
             Symbol x = stack.peek();
-            if (x.isEpsilon()) {
+            if (x instanceof Epsilon) {
                 stack.pop();
-            } else if (x.isTerminal()) {
+            } else if (x instanceof Terminal) {
                 if (x.symbol.equals(token.getTokenType().toString())) {
                     stack.pop();
                     updateDerivation(x.symbol, Collections.singletonList(token.getValue()));
@@ -115,7 +115,7 @@ public class SyntacticAnalyzer {
     }
 
     private NonTerminal topNonterminal() {
-        while (!stack.peek().isNonTerminal() && stack.peek() != DOLLAR) {
+        while (!(stack.peek() instanceof NonTerminal) && stack.peek() != DOLLAR) {
             stack.pop();
         }
         if (stack.peek() == DOLLAR) {

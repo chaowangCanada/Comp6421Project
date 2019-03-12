@@ -15,21 +15,6 @@ public class Epsilon extends Symbol{
     }
 
     @Override
-    public boolean isTerminal() {
-        return false;
-    }
-
-    @Override
-    public boolean isEpsilon() {
-        return true;
-    }
-
-    @Override
-    public boolean isNonTerminal() {
-        return false;
-    }
-
-    @Override
     public Set<Symbol> getFirst(){
         Set<Symbol> tmp = new HashSet<>();
         tmp.add(this);

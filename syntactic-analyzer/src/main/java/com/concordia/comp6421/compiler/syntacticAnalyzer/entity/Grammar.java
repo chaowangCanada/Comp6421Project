@@ -25,7 +25,7 @@ public class Grammar {
         } else {
             Symbol symbol = Symbol.getSymbol(s);
             symbolMap.put(s, symbol);
-            if (!symbol.isTerminal() && !symbol.isEpsilon()){
+            if ( !(symbol instanceof Terminal)  && !(symbol instanceof Epsilon)){
                 nonTerminals.add((NonTerminal) symbol);
             }
             return symbol;
@@ -85,11 +85,11 @@ public class Grammar {
             for (Alpha alpha : nt.getAlphas()){
                 Rule rule = Rule.of(nt, alpha);
                 for(Symbol f1 : alpha.getFirst()){
-                    if (f1.isTerminal()){
+                    if (f1 instanceof Terminal){
                         ruleTable.put(TableKey.of(nt.symbol, f1.symbol), rule);
                     }
 
-                    if (f1.isEpsilon()){
+                    if (f1 instanceof Epsilon){
                         for (Symbol f2 : nt.getFollow()){
                             ruleTable.put(TableKey.of(nt.symbol, f2.symbol), rule);
                         }

@@ -53,21 +53,6 @@ public class NonTerminal extends Symbol{
         follow.add(symbol);
     }
 
-    @Override
-    public boolean isTerminal() {
-        return false;
-    }
-
-    @Override
-    public boolean isEpsilon() {
-        return false;
-    }
-
-    @Override
-    public boolean isNonTerminal() {
-        return true;
-    }
-
     public static NonTerminal of(String symbol, List<Alpha> alphas) {
         return new NonTerminal(symbol, alphas);
     }
@@ -112,7 +97,7 @@ public class NonTerminal extends Symbol{
             Queue<Symbol> sQueue = new ArrayDeque<>(alpha.symbolSeq);
             while (!sQueue.isEmpty()) {
                 Symbol sym = sQueue.poll();
-                if (sym.isNonTerminal()) {
+                if (sym instanceof NonTerminal) {
                     NonTerminal ntTmp = NonTerminal.of("tmp", Collections.singletonList(Alpha.of(sQueue)));
                     ((NonTerminal) sym).addFollow(ntTmp.getFirst());
                     if (ntTmp.getFirst().contains(EPSILON) || sQueue.isEmpty()) {

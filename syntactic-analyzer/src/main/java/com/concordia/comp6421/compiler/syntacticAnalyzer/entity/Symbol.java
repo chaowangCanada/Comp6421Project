@@ -11,7 +11,6 @@ import java.util.Set;
 @EqualsAndHashCode
 public abstract class Symbol{
 
-
     public String symbol;
 
     public static Symbol getSymbol(String name){
@@ -22,12 +21,6 @@ public abstract class Symbol{
         else
             return new NonTerminal(name);
     }
-
-    public abstract boolean isTerminal();
-
-    public abstract boolean isEpsilon();
-
-    public abstract boolean isNonTerminal();
 
     public abstract Set<Symbol> getFirst();
 
