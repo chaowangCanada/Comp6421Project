@@ -31,7 +31,8 @@ public class SyntacticAnalyzer {
         derivation.add(grammar.getStart().symbol);
         printDerivation();
         Optional<Token> lookahead = lex.nextToken();
-        while (stack.peek() != DOLLAR && lookahead.isPresent()) {
+        while (stack.peek() != DOLLAR && lookahead.isPresent()
+                && !lookahead.get().getValue().equalsIgnoreCase("Not supported Lexical Symbol \uFFFF")) {
             Token token = lookahead.get();
             Symbol x = stack.peek();
             if (x.isEpsilon()) {

@@ -20,7 +20,7 @@ public class CompilerFileReaderTest {
     {
         String fileName = "ReaderTest1.txt";
         File file = new File(classLoader.getResource(fileName).getFile());
-        List<String> list = CompilerFileReader.readAllLines(file);
+        List<String> list = CompilerFileReader.readAllLines(file, false);
         assertEquals(list.size() , 2);
     }
 
@@ -29,7 +29,7 @@ public class CompilerFileReaderTest {
     {
         String fileName = "ReaderTest2.txt";
         File file = new File(classLoader.getResource(fileName).getFile());
-        List<String> list = CompilerFileReader.readAllLines(file);
+        List<String> list = CompilerFileReader.readAllLines(file, false);
         assertEquals(list.size() , 3);
     }
 
@@ -38,7 +38,7 @@ public class CompilerFileReaderTest {
     {
         String fileName = "ReaderTest3.txt";
         File file = new File(classLoader.getResource(fileName).getFile());
-        List<String> list = CompilerFileReader.readAllLines(file);
+        List<String> list = CompilerFileReader.readAllLines(file, false);
         assertEquals(list.size() , 3);
     }
 }

@@ -118,7 +118,7 @@ public class LexicalAnalyzer {
             ch = nextChar();
             if (ch != null && Character.isDigit(ch) && isZero) {
                 backupChar();
-                return new Token(TokenType.INTEGER, "0", handlingLocation, lineNum );
+                return new Token(TokenType.INT_NUM, "0", handlingLocation, lineNum );
             }
 
             while (ch != null && (Character.isDigit(ch) || ch == '.' || ch == 'e' ||
@@ -137,7 +137,7 @@ public class LexicalAnalyzer {
                         if (!Character.isDigit(ch)) {
                             // if the following character is not a number
                             addPrevCharBack('.',ch);
-                            return new Token(TokenType.INTEGER, tokenBuilder.toString(),location, lineNum );
+                            return new Token(TokenType.INT_NUM, tokenBuilder.toString(),location, lineNum );
                         } else {
                             isFloat = true;
                             tokenBuilder.append('.').append(ch);
@@ -148,7 +148,7 @@ public class LexicalAnalyzer {
                     else {
                         String str = tokenBuilder.toString();
                         backupChar();
-                        return new Token(TokenType.FLOAT, str, handlingLocation, lineNum );
+                        return new Token(TokenType.FLOAT_NUM, str, handlingLocation, lineNum );
                     }
                 }
                 else if (ch == 'e'){
@@ -159,7 +159,7 @@ public class LexicalAnalyzer {
                         if (!Character.isDigit(ch) && ch != '-' && ch !='+') {
                             // if the following character is not a number and not +/-
                             addPrevCharBack('e',ch);
-                            return new Token(TokenType.FLOAT, tokenBuilder.toString(), location, lineNum);
+                            return new Token(TokenType.FLOAT_NUM, tokenBuilder.toString(), location, lineNum);
                         } else {
                             if (hasDot)
                                 isFloat = true;
@@ -173,7 +173,7 @@ public class LexicalAnalyzer {
                     else {
                         String str = tokenBuilder.toString();
                         backupChar();
-                        return new Token(isFloat ? TokenType.FLOAT : TokenType.INTEGER, str, handlingLocation, lineNum );
+                        return new Token(isFloat ? TokenType.FLOAT_NUM : TokenType.INT_NUM, str, handlingLocation, lineNum );
                     }
                 }
                 else if (ch == '+' || ch == '-'){
@@ -185,7 +185,7 @@ public class LexicalAnalyzer {
                         if (!Character.isDigit(ch) ) {
                             // if the following character is not a number
                             addPrevCharBack(prevChar,ch);
-                            return new Token(TokenType.FLOAT, tokenBuilder.toString(),location, lineNum);
+                            return new Token(TokenType.FLOAT_NUM, tokenBuilder.toString(),location, lineNum);
                         } else {
                             if (hasDot)
                                 hasSign = true;
@@ -199,7 +199,7 @@ public class LexicalAnalyzer {
                     else {
                         String str = tokenBuilder.toString();
                         backupChar();
-                        return new Token(isFloat ? TokenType.FLOAT : TokenType.INTEGER, str, handlingLocation, lineNum);
+                        return new Token(isFloat ? TokenType.FLOAT_NUM : TokenType.INT_NUM, str, handlingLocation, lineNum);
                     }
                 }
             }
@@ -210,7 +210,7 @@ public class LexicalAnalyzer {
             String num = tokenBuilder.toString();
             if(!Character.isDigit(backupCharacter))
                 backupChar();
-            token = new Token(isFloat ? TokenType.FLOAT: TokenType.INTEGER, num, handlingLocation, lineNum);
+            token = new Token(isFloat ? TokenType.FLOAT_NUM: TokenType.INT_NUM, num, handlingLocation, lineNum);
         }
         // if the first character is neither a letter nor a number
         else {
@@ -243,7 +243,7 @@ public class LexicalAnalyzer {
                         if (ch == '=') {
                             token = new Token(TokenType.LEQ, "<=", location, lineNum );
                         } else if (ch == '>') {
-                            token = new Token(TokenType.LTGT, "<>", location, lineNum );
+                            token = new Token(TokenType.NEQ, "<>", location, lineNum );
                         } else if (ch == '\uffff') {
                             token = new Token(TokenType.EQ, "=", location, lineNum);
                         }else {
@@ -254,7 +254,7 @@ public class LexicalAnalyzer {
                     case ':':
                         ch = nextChar();
                         if (ch == ':') {
-                            token = new Token(TokenType.COLONCOLON, "::", location, lineNum );
+                            token = new Token(TokenType.SR, "::", location, lineNum );
                         } else if (ch == '\uffff') {
                             token = new Token(TokenType.EQ, "=", location, lineNum);
                         } else {
@@ -314,7 +314,7 @@ public class LexicalAnalyzer {
                     case '&':
                         ch = nextChar();
                         if (ch == '&') {
-                            token = new Token(TokenType.ANDAND, "&&", location, lineNum );
+                            token = new Token(TokenType.AND, "&&", location, lineNum );
                         } else {
                             token = new Token(TokenType.ERROR, "Not Supported Lexical Symbol " + backupCharacter, location, lineNum );
                         }
@@ -322,7 +322,7 @@ public class LexicalAnalyzer {
                     case '|':
                         ch = nextChar();
                         if (ch == '|') {
-                            token = new Token(TokenType.OROR, "||", location, lineNum );
+                            token = new Token(TokenType.OR, "||", location, lineNum );
                         } else {
                             token = new Token(TokenType.ERROR, "Not Supported Lexical Symbol " + backupCharacter, location, lineNum );
                         }

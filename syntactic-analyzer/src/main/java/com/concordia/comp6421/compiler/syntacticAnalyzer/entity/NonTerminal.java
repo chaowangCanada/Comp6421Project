@@ -12,6 +12,8 @@ public class NonTerminal extends Symbol{
     @Getter
     private List<Alpha> alphas;
 
+    @Setter
+    @Getter
     private Set<Symbol> first;
 
     @Setter
@@ -47,6 +49,10 @@ public class NonTerminal extends Symbol{
         follow.remove(EPSILON);
     }
 
+    void addFollow(Symbol symbol) {
+        follow.add(symbol);
+    }
+
     @Override
     public boolean isTerminal() {
         return false;
@@ -67,7 +73,7 @@ public class NonTerminal extends Symbol{
     }
 
     public void generateFirst() {
-        if(first != null)
+        if(first == null)
             first = new HashSet<>();
 
         for (Alpha alpha : alphas) {

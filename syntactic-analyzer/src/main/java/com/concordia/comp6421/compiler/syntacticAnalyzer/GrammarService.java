@@ -16,6 +16,13 @@ public class GrammarService {
 
     public GrammarService(File file) throws FileNotFoundException {
         br = new BufferedReader(new FileReader(file));
+        try
+        {
+            process();
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 
 
@@ -28,7 +35,7 @@ public class GrammarService {
             }
             String a = line.split("->")[0].trim();
             String rhs = line.split("->")[1].trim();
-            ((NonTerminal) grammar.getOrElseAdd(a))
+            ((NonTerminal) grammar.getOrAdd(a))
                     .setAlphas(
                             Stream.of(rhs.split("\\|"))
                                     .map(this::parseProd)
@@ -39,7 +46,7 @@ public class GrammarService {
     private Alpha parseProd(String rhs) {
         List<Symbol> symbols = Stream
                 .of(rhs.trim().split("\\s+"))
-                .map(s -> grammar.getOrElseAdd(s))
+                .map(s -> grammar.getOrAdd(s))
                 .collect(Collectors.toList());
         return Alpha.of(symbols);
     }

@@ -8,7 +8,7 @@ public interface ReservedDictionary {
     List<String> KEY_WORDS = Arrays.asList(
             "if", "then", "else", "for", "class",
             "int", "float", "read", "write",
-            "return", "main"
+            "return", "main", "integer", "float"
     );
 
     List<String> OPERATORS = Arrays.asList(

@@ -1,0 +1,2 @@
+class InheritedUtility {
+    integer member1 ; } ;

@@ -23,7 +23,7 @@ public class CompilerFileReader {
      * @param file
      * @return
      */
-    public static List<String> readAllLines(File file){
+    public static List<String> readAllLines(File file, boolean removeLineSep){
         List<String> outputList = new ArrayList<>();
         try {
             String content = new String(Files.readAllBytes(file.toPath()));
@@ -32,10 +32,13 @@ public class CompilerFileReader {
             // replace /*  */ type of comment
             content = content.replaceAll("(?:/\\*(?:[^*]|(?:\\*+[^*/]))*\\*+/)|(?://.*)","");
             // replace all line separator by $
-            content = content.replaceAll("(\\t|\\r?\\n)+", "uFFFF");
+            if (removeLineSep)
+                content = content.replaceAll(System.lineSeparator(),"");
+            else
+                content = content.replaceAll("(\\t|\\r?\\n)+", "uFFFF");
 //            // remove all tabs and whitespaces
-//            content = content.replaceAll("\\s+","")
-//                                .replaceAll("\t","");
+            content = content.replaceAll("\\s+"," ")
+                                .replaceAll("\t"," ");
             outputList = new ArrayList<>(Arrays.asList(content.split("uFFFF")));
         } catch (IOException e) {
             System.err.println("Cannot find content from file: "+ file.toPath());

@@ -1,25 +1,68 @@
-package test;
-
-import com.concordia.comp6421.compiler.syntacticAnalyzer.yuanwen.SyntacticAnalyzerDriver;
-import org.junit.Assert;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.SyntacticAnalyzerDriver;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.File;
-import java.io.IOException;
+import java.io.FileNotFoundException;
 
 public class SyntacticAnalyzerTest {
-    private static final String FOLDER = "syntactic";
+//    private static final String FOLDER = ".\\src\\test\\resources\\syntactic";
+    private ClassLoader classLoader;
+    private SyntacticAnalyzerDriver syntacticAnalyzerDriver;
 
-    @Test
-    public void testAnalyzer() throws IOException {
-        String fileName = FOLDER + File.separator +  "test_program.txt";
-        boolean sucess = SyntacticAnalyzerDriver.parseFile(fileName);
-        Assert.assertTrue(sucess);
+
+    @Before
+    public void executeBeforeEach() throws FileNotFoundException
+    {
+        classLoader = new SyntacticAnalyzerTest().getClass().getClassLoader();
+        syntacticAnalyzerDriver = new SyntacticAnalyzerDriver();
     }
 
     @Test
-    public void testErrorRecover() throws IOException {
-        String fileName = FOLDER + File.separator +  "error_test.txt";
-        boolean sucess = SyntacticAnalyzerDriver.parseFile(fileName);
+    public void testAnalyzer1() throws Exception
+    {
+        String fileName = "test_program_1.txt";
+        File file = new File(classLoader.getResource(fileName).getFile());
+        syntacticAnalyzerDriver.run(file);
     }
+
+    @Test
+    public void testAnalyzer2() throws Exception
+    {
+        String fileName = "test_program_2.txt";
+        File file = new File(classLoader.getResource(fileName).getFile());
+        syntacticAnalyzerDriver.run(file);
+    }
+
+    @Test
+    public void testAnalyzer3() throws Exception
+    {
+        String fileName = "test_program_3.txt";
+        File file = new File(classLoader.getResource(fileName).getFile());
+        syntacticAnalyzerDriver.run(file);
+    }
+
+    @Test
+    public void testAnalyzer4() throws Exception
+    {
+        String fileName = "test_program_4.txt";
+        File file = new File(classLoader.getResource(fileName).getFile());
+        syntacticAnalyzerDriver.run(file);
+    }
+    @Test
+    public void testAnalyzer5() throws Exception
+    {
+        String fileName = "test_program_5.txt";
+        File file = new File(classLoader.getResource(fileName).getFile());
+        syntacticAnalyzerDriver.run(file);
+    }
+
+    @Test
+    public void testErrorRecover() throws Exception
+    {
+        String fileName = "error_test.txt";
+        File file = new File(classLoader.getResource(fileName).getFile());
+        syntacticAnalyzerDriver.run(file);
+    }
+
 }

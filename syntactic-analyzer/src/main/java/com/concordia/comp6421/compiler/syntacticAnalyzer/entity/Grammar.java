@@ -1,6 +1,9 @@
 package com.concordia.comp6421.compiler.syntacticAnalyzer.entity;
 
+import java.io.*;
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Default.*;
 
@@ -16,7 +19,7 @@ public class Grammar {
         ruleTable = new HashMap<>();
     }
 
-    public Symbol getOrElseAdd(String s) {
+    public Symbol getOrAdd(String s) {
         if (symbolMap.get(s) != null) {
             return symbolMap.get(s);
         } else {
@@ -30,14 +33,51 @@ public class Grammar {
     }
 
     public void buildFirst(){
+//        buildSets(FIRST_SET);
+
         nonTerminals.forEach(NonTerminal::getFirst);
+    }
+
+
+    private void buildSets(File setFile){
+        BufferedReader br = null;
+        String line;
+        try
+        {
+            br = new BufferedReader(new FileReader(setFile));
+
+            while ((line = br.readLine()) != null) {
+                if (line.isEmpty()) {
+                    continue;
+                }
+                String a = line.split("->")[0].trim();
+                String rhs = line.split("->")[1].trim();
+                for(Symbol symbol : nonTerminals) {
+                    if(symbol.toString().equalsIgnoreCase(a)){
+                        Set<Symbol> first = new HashSet<>();
+                        String[] tmpArr = rhs.split(", ");
+                        for (String str : tmpArr)
+                            first.add(new NonTerminal(str));
+                        ((NonTerminal)symbol).setFirst(first);
+                    }
+                }
+            }
+
+            if(br != null)
+                br.close();
+
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 
     public void buildFollow(){
         NonTerminal start = (NonTerminal) symbolMap.get(START);
-        start.addFollow((Collection<Symbol>) DOLLAR);
+        start.addFollow(DOLLAR);
         nonTerminals.forEach(NonTerminal::buildFollow);
         nonTerminals.forEach(NonTerminal::unionFollowSets);
+//        buildSets(SECOND_SET);
     }
 
     public void buildTable() {

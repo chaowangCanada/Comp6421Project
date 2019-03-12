@@ -72,7 +72,7 @@ public class LexicalAnalyzerDriver {
     }
 
     public void run(File file) throws java.lang.Exception {
-        List<String> output = CompilerFileReader.readAllLines(file);
+        List<String> output = CompilerFileReader.readAllLines(file,false);
         for(int lineNum = 1; lineNum <= output.size(); lineNum ++){
             String lineContent = output.get(lineNum-1);
             lexicalAnalyzer.setLineInfo(lineContent, lineNum);

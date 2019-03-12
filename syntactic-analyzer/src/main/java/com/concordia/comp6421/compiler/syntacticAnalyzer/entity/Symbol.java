@@ -7,7 +7,6 @@ import lombok.ToString;
 
 import java.util.Set;
 
-@ToString
 @AllArgsConstructor
 @EqualsAndHashCode
 public abstract class Symbol{
@@ -18,7 +17,7 @@ public abstract class Symbol{
     public static Symbol getSymbol(String name){
         if (name.equalsIgnoreCase("EPSILON"))
             return new Epsilon("EPSILON");
-        else if(TokenType.lookup(name) == null )
+        else if(TokenType.lookup(name) != null )
             return new Terminal(name);
         else
             return new NonTerminal(name);
@@ -34,6 +33,11 @@ public abstract class Symbol{
 
     public boolean matchToken(Token t){
         return symbol.equals(t.getTokenType().toString());
+    }
+
+    @Override
+    public String toString(){
+        return symbol;
     }
 
 }
