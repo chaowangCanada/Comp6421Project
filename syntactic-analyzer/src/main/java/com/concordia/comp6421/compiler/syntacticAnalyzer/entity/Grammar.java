@@ -11,6 +11,7 @@ public class Grammar {
     private Map<String, Symbol> symbolMap;
     private List<NonTerminal>nonTerminals;
     private Map<TableKey, Rule> ruleTable;
+    Symbol start ;
 
     public Grammar() {
         symbolMap = new LinkedHashMap<>();
@@ -20,21 +21,22 @@ public class Grammar {
     }
 
     public Symbol getOrAdd(String s) {
-        if (symbolMap.get(s) != null) {
-            return symbolMap.get(s);
-        } else {
+        if(symbolMap.get(s)== null ) {
             Symbol symbol = Symbol.getSymbol(s);
-            symbolMap.put(s, symbol);
-            if ( !(symbol instanceof Terminal)  && !(symbol instanceof Epsilon)){
+            symbolMap.put(s,symbol );
+            if(symbol instanceof NonTerminal) {
                 nonTerminals.add((NonTerminal) symbol);
             }
             return symbol;
         }
+        else {
+            return symbolMap.get(s);
+        }
+
     }
 
     public void buildFirst(){
-//        buildSets(FIRST_SET);
-
+        //        buildSets(FIRST_SET);
         nonTerminals.forEach(NonTerminal::getFirst);
     }
 
@@ -73,10 +75,10 @@ public class Grammar {
     }
 
     public void buildFollow(){
-        NonTerminal start = (NonTerminal) symbolMap.get(START);
-        start.addFollow(DOLLAR);
-        nonTerminals.forEach(NonTerminal::buildFollow);
+        FOLLOW_REF_SYMBOL_MAP.clear();
+        nonTerminals.forEach(NonTerminal::generateFollow);
         nonTerminals.forEach(NonTerminal::unionFollowSets);
+        FOLLOW_REF_SYMBOL_MAP.clear();
 //        buildSets(SECOND_SET);
     }
 
@@ -101,10 +103,6 @@ public class Grammar {
 
     public Symbol getStart(){
         return symbolMap.get(START);
-    }
-
-    public Rule getRule(String nt, String t){
-        return ruleTable.get(TableKey.of(nt, t));
     }
 
     public Rule getRule(String nt, Token t){

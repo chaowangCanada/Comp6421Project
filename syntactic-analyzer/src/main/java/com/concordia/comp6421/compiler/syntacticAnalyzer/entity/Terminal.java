@@ -11,7 +11,7 @@ public class Terminal extends Symbol {
 
     @Override
     public Set<Symbol> getFirst() {
-        HashSet<Symbol> tmp = new HashSet<>();
+        Set<Symbol> tmp = new HashSet<>();
         tmp.add(this);
         return tmp;
     }

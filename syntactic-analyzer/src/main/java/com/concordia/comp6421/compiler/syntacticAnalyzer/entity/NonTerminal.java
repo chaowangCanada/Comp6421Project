@@ -53,28 +53,28 @@ public class NonTerminal extends Symbol{
         follow.add(symbol);
     }
 
-    public static NonTerminal of(String symbol, List<Alpha> alphas) {
-        return new NonTerminal(symbol, alphas);
-    }
 
     public void generateFirst() {
         if(first == null)
             first = new HashSet<>();
 
         for (Alpha alpha : alphas) {
-            List<Symbol> symbolSeq = alpha.symbolSeq;
+            List<Symbol> alphaSeq = alpha.symbolSeq;
             Set<Symbol> firstAlpha = new HashSet<>();
-            boolean allEpsilon = true;
-            for (Symbol currSym : symbolSeq) {
-                List<Symbol> firstTmp = new ArrayList<>(currSym.getFirst());
-                firstAlpha.addAll(firstTmp);
-                if (!currSym.getFirst().contains(EPSILON)) {
-                    allEpsilon = false;
-                    break;
+            boolean allHasEpsilon = true;
+            for (Symbol eachAlphaSym : alphaSeq) {
+                Set<Symbol> eachAlphaSymbolsFirst = new HashSet<>(eachAlphaSym.getFirst());
+                if(!eachAlphaSymbolsFirst.contains(EPSILON)) {
+                    allHasEpsilon = false;
                 }
+                else {
+                    eachAlphaSymbolsFirst.remove(EPSILON);
+                }
+                firstAlpha.addAll(eachAlphaSymbolsFirst);
+                if(!allHasEpsilon)
+                    break;
             }
-            firstAlpha.remove(EPSILON);
-            if (allEpsilon) {
+            if(allHasEpsilon) {
                 firstAlpha.add(EPSILON);
             }
             alpha.addFirst(firstAlpha);
@@ -82,37 +82,58 @@ public class NonTerminal extends Symbol{
         }
     }
 
+//    void unionFollowSets() {
+//        follow.addAll(extractFollows(this, new HashSet<>()));
+//    }
+
     void unionFollowSets() {
-        follow.addAll(extractFollows(this, new HashSet<>()));
+        FOLLOW_REF_SYMBOL_MAP.add(this);
+        Set<Symbol> set = new HashSet<>(this.follow);
+        for (NonTerminal nonTerminal : this.followRef) {
+            set.addAll(addEachNtFollowSet(nonTerminal));
+        }
+        follow.addAll(set);
+    }
+
+    public Set<Symbol> addEachNtFollowSet(NonTerminal nt){
+        FOLLOW_REF_SYMBOL_MAP.add(nt);
+        Set<Symbol> set = new HashSet<>(nt.follow);
+        for (NonTerminal nonTerminal : this.followRef) {
+            if(!FOLLOW_REF_SYMBOL_MAP.contains(nonTerminal)){
+                FOLLOW_REF_SYMBOL_MAP.add(nonTerminal);
+                set.addAll(nonTerminal.follow);
+                set.addAll(addEachNtFollowSet(nonTerminal));
+            }
+        }
+        return set;
     }
 
     void addFollowRef(NonTerminal nt) {
         if (nt != this) {
             followRef.add(nt);
+
         }
     }
 
-    void buildFollow() {
+    void generateFollow() {
+        if (this.symbol.equals(START)) {
+            this.follow.add(DOLLAR);
+        }
+
         for (Alpha alpha : getAlphas()) {
             Queue<Symbol> sQueue = new ArrayDeque<>(alpha.symbolSeq);
             while (!sQueue.isEmpty()) {
-                Symbol sym = sQueue.poll();
-                if (sym instanceof NonTerminal) {
-                    NonTerminal ntTmp = NonTerminal.of("tmp", Collections.singletonList(Alpha.of(sQueue)));
-                    ((NonTerminal) sym).addFollow(ntTmp.getFirst());
-                    if (ntTmp.getFirst().contains(EPSILON) || sQueue.isEmpty()) {
-                        ((NonTerminal) sym).addFollowRef(this);
+                Symbol symbol = sQueue.poll();
+                if (symbol instanceof NonTerminal) {
+                    NonTerminal ntTmp = new NonTerminal("tmp", Collections.singletonList(Alpha.of(sQueue)));
+                    ((NonTerminal) symbol).addFollow(ntTmp);
+//                    NonTerminal ntTmp = (NonTerminal) sQueue.peek();
+                    ((NonTerminal) symbol).addFollow(ntTmp.getFirst());
+                    if (ntTmp.getFirst().contains(EPSILON)) {
+                        ((NonTerminal) symbol).addFollowRef(this);
                     }
                 }
             }
         }
     }
-
-    private static Set<Symbol> extractFollows(NonTerminal nt, Set<Symbol> visited) {
-        visited.add(nt);
-        Set<Symbol> set = new HashSet<>(nt.follow);
-        nt.followRef.stream().filter(e -> !visited.contains(e)).forEach(e -> set.addAll(extractFollows(e, visited)));
-        return set;
-    }
-
 }

@@ -25,7 +25,7 @@ public abstract class Symbol{
     public abstract Set<Symbol> getFirst();
 
     public boolean matchToken(Token t){
-        return symbol.equals(t.getTokenType().toString());
+        return this.symbol.equalsIgnoreCase(t.getTokenType().toString());
     }
 
     @Override
