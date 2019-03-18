@@ -113,6 +113,10 @@ public class SyntacticAnalyzer {
             derivation.remove(symbolStr);
             derivation.add(index, replacement);
         }
+
+        if(!lex.hasNext()) {
+            derivation.subList(index+1, derivation.size()).clear();
+        }
         printDerivation();
     }
 
@@ -129,7 +133,7 @@ public class SyntacticAnalyzer {
     }
 
     private Optional<Token> skipErrors(Token token) throws IOException {
-        System.out.println("syntax error at " + token.getLocation());
+        System.out.println("syntax error at " + token.getLocation() + " token value : " + token.getValue());
         NonTerminal top;
         while (!(stack.peek() instanceof NonTerminal) && stack.peek() != DOLLAR) {
             stack.pop();
