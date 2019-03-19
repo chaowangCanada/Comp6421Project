@@ -20,8 +20,8 @@ restOfStatment -> IF LP expr RP THEN statBlock ELSE statBlock SEMICOLON | FOR LP
 assignStat -> variable assignOp expr
 statBlock -> LCP statement_list RCP  | statement | EPSILON
 expr -> arithExpr expr_prime
-expr_prime -> relOp arithExpr | EPSILON
-relExpr -> arithExpr relOp arithExpr
+expr_prime -> relOp ACT_relOp arithExpr | EPSILON
+relExpr -> arithExpr relOp ACT_relOp arithExpr
 arithExpr -> term arithExpr_prime
 arithExpr_prime -> addOp term arithExpr_prime | EPSILON
 sign -> ADDITION | SUBTRACTION

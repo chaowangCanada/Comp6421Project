@@ -4,10 +4,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Epsilon extends Symbol{
-    private static Epsilon epsilon = new Epsilon("EPSILON");
+    private static Epsilon epsilon = new Epsilon("Epsilon");
 
     public Epsilon(String symbol) {
-        super("EPSILON");
+        super("Epsilon");
     }
 
     public static Symbol get() {

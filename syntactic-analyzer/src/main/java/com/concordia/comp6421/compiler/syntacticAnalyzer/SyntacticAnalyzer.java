@@ -28,6 +28,7 @@ public class SyntacticAnalyzer {
         grammar.buildFirst();
         grammar.buildFollow();
         grammar.buildTable();
+        grammar.writeFirstFollowSets();
     }
 
     public boolean parse(LexicalAnalyzer input) throws IOException {
@@ -51,7 +52,7 @@ public class SyntacticAnalyzer {
                         lookahead = lex.nextToken();
 
                         tokenBST = token;
-                        takeAction(tokenBST);
+                        takeTerminalAction(tokenBST);
                     } else {
                         lookahead = skipErrors(token);
                         error = true;
@@ -63,6 +64,9 @@ public class SyntacticAnalyzer {
                     stack.pop();
                     inverseRHSMultiplePush(rule);
                     updateDerivation(((NonTerminal)symbol).symbol, rule.rhs.symbolSeq);
+
+                    tokenBST = token;
+                    takeNonTerminalAction(tokenBST);
                 }
                 else {
                     lookahead = skipErrors(token);
@@ -77,8 +81,27 @@ public class SyntacticAnalyzer {
             return true;
     }
 
-    private void takeAction(Token tokenBST) {
+    private void takeNonTerminalAction(Token tokenBST) {
+        switch (tokenBST.getValue()) {
+            case "prog":
+                Node prog = Node.makeNode(NodeType.prog, "prog");
+                prog.adoptChildren(new ArrayList<>(nodeStack));
+                nodeStack.push(prog);
+                break;
+            case "=":
+                break;
+
+        }
+    }
+
+    private void takeTerminalAction(Token tokenBST) {
         switch (tokenBST.getTokenType()) {
+            case INTEGER:
+                nodeStack.push(Node.makeNode(NodeType.integer_, tokenBST.getValue()));
+                break;
+            case FLOAT:
+                nodeStack.push(Node.makeNode(NodeType.float_, tokenBST.getValue()));
+                break;
             case INT_NUM:
                 nodeStack.push(Node.makeNode(NodeType.intNum, tokenBST.getValue()));
                 break;
@@ -90,7 +113,6 @@ public class SyntacticAnalyzer {
                 break;
             case EQ:
                 nodeStack.push(Node.makeNode(NodeType.op, tokenBST.getValue()));
-
         }
     }
 

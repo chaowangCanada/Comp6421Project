@@ -12,6 +12,7 @@
     <modules>
         <module>lexical-analyzer</module>
         <module>syntactic-analyzer</module>
+        <module>semantic-analyzer</module>
         <module>common</module>
     </modules>
 

@@ -1,0 +1,8 @@
+main {
+integer a ;
+integer b ;
+integer c ;
+a = 1 ;
+b = 2 ;
+c = a + b ;
+} ;

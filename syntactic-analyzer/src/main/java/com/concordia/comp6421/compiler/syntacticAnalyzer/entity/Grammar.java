@@ -101,6 +101,36 @@ public class Grammar {
         }
     }
 
+    public void writeFirstFollowSets(){
+        File firstSetFile = new File(TEST_ROOT_PATH + "FirstSet.out");
+        File SecondSetFile = new File(TEST_ROOT_PATH + "SecondSet.out");
+
+        List<String> firstSet = new ArrayList<>();
+        for (NonTerminal nt : nonTerminals) {
+            firstSet.add(nt.symbol + " -> " + nt.getFirst().stream().map(Object::toString).collect(Collectors.joining(",")) + "\n");
+        }
+
+        List<String> secondSet = new ArrayList<>();
+        for (NonTerminal nt : nonTerminals) {
+            secondSet.add(nt.symbol + " -> " + nt.getFollow().stream().map(Object::toString).collect(Collectors.joining(",")) + "\n");
+        }
+
+        try (BufferedWriter wr = new BufferedWriter(new FileWriter(firstSetFile))) {
+            for(String str : firstSet)
+                wr.write(str);
+        } catch (IOException e){
+            throw new RuntimeException(e);
+        }
+
+        try (BufferedWriter wr = new BufferedWriter(new FileWriter(SecondSetFile))) {
+            for(String str : secondSet)
+                wr.write(str);
+        } catch (IOException e){
+            throw new RuntimeException(e);
+        }
+
+    }
+
     public Symbol getStart(){
         return symbolMap.get(START);
     }

@@ -63,7 +63,7 @@ public class NonTerminal extends Symbol{
             Set<Symbol> firstAlpha = new HashSet<>();
             boolean allHasEpsilon = true;
             for (Symbol eachAlphaSym : alphaSeq) {
-                Set<Symbol> eachAlphaSymbolsFirst = new HashSet<>(eachAlphaSym.getFirst());
+                List<Symbol> eachAlphaSymbolsFirst = new ArrayList<>(eachAlphaSym.getFirst());
                 if(!eachAlphaSymbolsFirst.contains(EPSILON)) {
                     allHasEpsilon = false;
                 }
@@ -74,19 +74,30 @@ public class NonTerminal extends Symbol{
                 if(!allHasEpsilon)
                     break;
             }
+            ArrayList<Symbol> firstAlphaArr = new ArrayList<>(firstAlpha);
+            Collections.reverse(firstAlphaArr);
+
             if(allHasEpsilon) {
-                firstAlpha.add(EPSILON);
+                firstAlphaArr.add(EPSILON);
             }
-            alpha.addFirst(firstAlpha);
-            first.addAll(firstAlpha);
+
+            alpha.addFirst(firstAlphaArr);
+            first.addAll(firstAlphaArr);
         }
     }
 
-//    void unionFollowSets() {
-//        follow.addAll(extractFollows(this, new HashSet<>()));
-//    }
-
     void unionFollowSets() {
+        follow.addAll(extractFollows(this, new HashSet<>()));
+    }
+
+    private static Set<Symbol> extractFollows(NonTerminal nt, Set<Symbol> visited) {
+        visited.add(nt);
+        Set<Symbol> set = new HashSet<>(nt.follow);
+        nt.followRef.stream().filter(e -> !visited.contains(e)).forEach(e -> set.addAll(extractFollows(e, visited)));
+        return set;
+    }
+
+    void unionFollowSets_() {
         FOLLOW_REF_SYMBOL_MAP.add(this);
         Set<Symbol> set = new HashSet<>(this.follow);
         for (NonTerminal nonTerminal : this.followRef) {
@@ -126,7 +137,7 @@ public class NonTerminal extends Symbol{
                 Symbol symbol = sQueue.poll();
                 if (symbol instanceof NonTerminal) {
                     NonTerminal ntTmp = new NonTerminal("tmp", Collections.singletonList(Alpha.of(sQueue)));
-                    ((NonTerminal) symbol).addFollow(ntTmp);
+//                    ((NonTerminal) symbol).addFollow(ntTmp);
 //                    NonTerminal ntTmp = (NonTerminal) sQueue.peek();
                     ((NonTerminal) symbol).addFollow(ntTmp.getFirst());
                     if (ntTmp.getFirst().contains(EPSILON)) {

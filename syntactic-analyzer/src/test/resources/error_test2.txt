@@ -1,12 +1,21 @@
+class InheritedUtility {
+    integer member1 ; } ;
+
+class Utility : InheritedUtility {
+    integer var1 [4][5][7][8][9][1][0] ;
+    float var2 ;
+    integer findMax ( integer array [ 100  ) ;
+    integer findMin ( integer array [ 100 ] ) ; } ;
+
 main {
     integer sample [ 100 ] ;
     integer idx ;
-    integer maxValue ;
+    integer maxValue - 1 ;
     integer minValue ;
     Utility utility ;
     Utility arrayUtility [2][3][6][7] ;
     for ( integer t = 0; t <= 100 ; t = t + 1 ) {
-        read(sample [ t ] ) ;
+        read ( sample [ +t+ ] ) ;
         sample [ t ] = ( sample [ t ] * randomize ( ) ) ;
     } ;
     maxValue = utility . findMax ( sample ) ;
@@ -14,4 +23,4 @@ main {
     utility . var1 [4][1][0][0][0][0][0] = 10;
     arrayUtility [ utility . var1 [1][2][3][4][5][6][ idx + maxValue ]][1][1][1] . var2 = 2.5;
     write ( maxValue ) ;
-    write ( minValue ) ; } ;
+    write ( + minValue ) ; } ;

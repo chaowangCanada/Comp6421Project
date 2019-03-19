@@ -65,4 +65,20 @@ public class SyntacticAnalyzerTest {
         syntacticAnalyzerDriver.run(file);
     }
 
+    @Test
+    public void testErrorRecover2() throws Exception
+    {
+        String fileName = "error_test2.txt";
+        File file = new File(classLoader.getResource(fileName).getFile());
+        syntacticAnalyzerDriver.run(file);
+    }
+
+    @Test
+    public void testTree() throws Exception
+    {
+        String fileName = "test_tree.txt";
+        File file = new File(classLoader.getResource(fileName).getFile());
+        syntacticAnalyzerDriver.run(file);
+    }
+
 }
