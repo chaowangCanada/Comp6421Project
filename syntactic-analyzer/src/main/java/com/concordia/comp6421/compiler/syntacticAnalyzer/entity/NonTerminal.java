@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.*;
+import java.util.stream.Collectors;
+
 import static com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Default.*;
 
 public class NonTerminal extends Symbol{
@@ -59,7 +61,7 @@ public class NonTerminal extends Symbol{
             first = new HashSet<>();
 
         for (Alpha alpha : alphas) {
-            List<Symbol> alphaSeq = alpha.symbolSeq;
+            List<Symbol> alphaSeq = alpha.symbolSeq.stream().filter(symbol1 -> !(symbol1 instanceof Action)).collect(Collectors.toList());
             Set<Symbol> firstAlpha = new HashSet<>();
             boolean allHasEpsilon = true;
             for (Symbol eachAlphaSym : alphaSeq) {

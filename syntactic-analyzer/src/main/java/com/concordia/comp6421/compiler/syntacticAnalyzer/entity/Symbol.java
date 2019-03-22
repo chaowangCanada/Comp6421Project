@@ -7,6 +7,8 @@ import lombok.ToString;
 
 import java.util.Set;
 
+import static com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Default.ACTION_PREFIX;
+
 @AllArgsConstructor
 @EqualsAndHashCode
 public abstract class Symbol{
@@ -18,6 +20,8 @@ public abstract class Symbol{
             return new Epsilon("EPSILON");
         else if(TokenType.lookup(name) != null )
             return new Terminal(name);
+        else if (name.contains(ACTION_PREFIX))
+            return new Action(name.replaceAll(ACTION_PREFIX, ""));
         else
             return new NonTerminal(name);
     }

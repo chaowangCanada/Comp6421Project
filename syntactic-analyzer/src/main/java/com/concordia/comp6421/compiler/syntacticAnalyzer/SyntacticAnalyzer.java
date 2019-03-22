@@ -121,7 +121,8 @@ public class SyntacticAnalyzer {
         if(index >= 0 ) {
             derivation.remove(index);
             List<String> symbolSeqStr = symbolSeq.stream().
-                    filter(symbol -> !symbol.symbol.equalsIgnoreCase(EPSILON.symbol)).
+                    filter(symbol -> !symbol.symbol.equalsIgnoreCase(EPSILON.symbol) &&
+                           !(symbol instanceof  Action)).
                     map(Symbol::toString).
                     collect(Collectors.toList());
             derivation.addAll(index, symbolSeqStr);
