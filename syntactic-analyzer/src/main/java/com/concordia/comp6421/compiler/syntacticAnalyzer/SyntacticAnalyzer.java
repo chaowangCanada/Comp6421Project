@@ -39,7 +39,7 @@ public class SyntacticAnalyzer {
         derivation.add(grammar.getStart().symbol);
         printDerivation();
         Optional<Token> lookahead = lex.nextToken();
-        Token tokenBST;
+        Token leafToken = lookahead.get();
         while (stack.peek() != DOLLAR && lookahead.isPresent()
                 && !lookahead.get().getValue().equalsIgnoreCase("Not supported Lexical Symbol \uFFFF")) {
             Token token = lookahead.get();
@@ -49,29 +49,30 @@ public class SyntacticAnalyzer {
                 if(symbol instanceof Terminal) {
                     if (symbol.symbol.equals(token.getTokenType().toString())) {
                         updateDerivation(symbol.symbol, token.getValue());
+                        leafToken = token;
+                        takeTerminalAction(leafToken);
                         lookahead = lex.nextToken();
-
-                        tokenBST = token;
-                        takeTerminalAction(tokenBST);
                     } else {
                         lookahead = skipErrors(token);
                         error = true;
                     }
                 }
-            } else {
+            } else if (symbol instanceof NonTerminal){
                 Rule rule = grammar.getRule(symbol.symbol, token);
                 if(rule != null) {
                     stack.pop();
                     inverseRHSMultiplePush(rule);
                     updateDerivation(((NonTerminal)symbol).symbol, rule.rhs.symbolSeq);
-
-                    tokenBST = token;
-                    takeNonTerminalAction(tokenBST);
                 }
                 else {
                     lookahead = skipErrors(token);
                     error = true;
                 }
+            } else if (symbol instanceof Action) {
+                stack.pop();
+                takeNonTerminalAction((Action)symbol, leafToken.getValue());
+            } else {
+                stack.pop();
             }
         }
         if( lookahead.get().getTokenType().toString().equalsIgnoreCase(DOLLAR.symbol) ||
