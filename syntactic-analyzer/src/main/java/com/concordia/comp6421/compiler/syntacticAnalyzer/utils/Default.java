@@ -12,7 +12,7 @@ import java.util.Set;
 public class Default {
     public static final String TEST_ROOT_PATH = "./src/test/resources/";
 
-    public static final File GRAMMAR_FILE = new File("./src/main/config/grammar.txt");
+    public static final File GRAMMAR_FILE = new File("./src/main/config/grammar_AST.txt");
 
     public static final File FIRST_SET = new File("./src/main/config/firstSet.txt");
 

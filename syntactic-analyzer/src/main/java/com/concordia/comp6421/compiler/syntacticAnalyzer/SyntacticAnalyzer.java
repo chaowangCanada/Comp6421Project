@@ -50,7 +50,7 @@ public class SyntacticAnalyzer {
                     if (symbol.symbol.equals(token.getTokenType().toString())) {
                         updateDerivation(symbol.symbol, token.getValue());
                         leafToken = token;
-                        takeTerminalAction(leafToken);
+                        takeLeafAction(leafToken);
                         lookahead = lex.nextToken();
                     } else {
                         lookahead = skipErrors(token);
@@ -70,38 +70,123 @@ public class SyntacticAnalyzer {
                 }
             } else if (symbol instanceof Action) {
                 stack.pop();
-                takeNonTerminalAction((Action)symbol, leafToken.getValue());
+                takeInternalAction((Action)symbol, leafToken.getValue());
             } else {
                 stack.pop();
             }
         }
+
+        tree = nodeStack.pop();
+
         if( lookahead.get().getTokenType().toString().equalsIgnoreCase(DOLLAR.symbol) ||
                 error)
             return false;
         else
             return true;
+
+
     }
 
-    private void takeNonTerminalAction(Token tokenBST) {
-        switch (tokenBST.getValue()) {
-            case "prog":
+    private void takeInternalAction(Action actionSymbol, String value) {
+        switch (actionSymbol.nodeType) {
+            case prog:
                 Node prog = Node.makeNode(NodeType.prog, "prog");
                 prog.adoptChildren(new ArrayList<>(nodeStack));
                 nodeStack.push(prog);
                 break;
-            case "=":
+            case relOp:
                 break;
+            case assignStat:
+                Node p2 = nodeStack.pop();
+                Node op = nodeStack.pop();
+                Node p1 = nodeStack.pop();
+                nodeStack.push(Node.makeFamiliy(NodeType.assignStat, (String)op.getData(), p1, p2));
+                break;
+            case fParam:
+                makeNodeFromTypeIdSubtree(NodeType.fParam, "fparam", NodeType.type, NodeType.id, NodeType.dimList);
+                break;
+            case funcDecl:
+                makeNodeFromTypeIdSubtree(NodeType.funcDecl, "funcDecl", NodeType.type, NodeType.id, NodeType.fParamList);
+                break;
+            case dimList:
+                makeNodeFromListSubtrees(NodeType.dimList, "dimList", NodeType.integer_, NodeType.float_);
+                break;
+            case fParamList:
+                Node parent = Node.makeNode(NodeType.fParamList, NodeType.fParamList.name());
+                List<Node> children = new ArrayList<>();
+                while(!nodeStack.isEmpty() && (nodeStack.peek().getNodeType() == NodeType.fParam
+                                              ||nodeStack.peek().getNodeType() == NodeType.fParamList)) {
+                    children.add(0, nodeStack.pop());
+                }
 
+                for (Node node : children) {
+                    if(node.getNodeType() == NodeType.fParamList)
+                        parent.adoptChildren(node.leftMostChild);
+                    else
+                        parent.adoptChildren(node);
+                }
+
+                if(parent.leftMostChild != null)
+                    nodeStack.push(parent);
+                break;
+            case indexList:
+                makeNodeFromListSubtrees(NodeType.indexList, "indexList", NodeType.addOp, NodeType.multOp, NodeType.var, NodeType.floatNum,
+                        NodeType.intNum);
+                break;
+            case dataMember:
+                makeNodeFromTypeIdSubtree(NodeType.dataMember,"dataMember", NodeType.id, NodeType.indexList);
+                break;
+            case var:
+                makeNodeFromListSubtrees(NodeType.var,"var", NodeType.dataMember);
+                break;
+            case statBlock:
+                makeNodeFromListSubtrees(NodeType.statBlock, "statBlock", NodeType.fParamList, NodeType.assignStat);
+                break;
+            default:
+                break;
         }
     }
 
-    private void takeTerminalAction(Token tokenBST) {
+    private void makeNodeFromTypeIdSubtree(NodeType rootNodeType, String rootNodeVal, NodeType... childrenTypes) {
+        Node parent = Node.makeNode(rootNodeType, rootNodeVal);
+        List<Node> children = new ArrayList<>();
+        Stack<NodeType> nodeTypeStack = new Stack<>();
+        nodeTypeStack.addAll(Arrays.asList(childrenTypes));
+        while(!nodeTypeStack.isEmpty() && !nodeStack.empty()&& nodeTypeStack.peek() == nodeStack.peek().getNodeType()) {
+            children.add(0, nodeStack.pop());
+            nodeTypeStack.pop();
+        }
+        children.forEach(parent::adoptChildren);
+        if(parent.leftMostChild != null)
+            nodeStack.push(parent);
+    }
+
+    public void makeNodeFromListSubtrees(NodeType rootNodeType, String rootNodeVal, NodeType... childNodeTypes) {
+        Node parent = Node.makeNode(rootNodeType, rootNodeVal);
+        List<Node> children = new ArrayList<>();
+        while(!nodeStack.isEmpty() && ( Arrays.asList(childNodeTypes).contains(nodeStack.peek().getNodeType())
+                                       ||nodeStack.peek().getNodeType() == rootNodeType)) {
+            children.add(0, nodeStack.pop());
+        }
+
+        for (Node node : children) {
+            if(node.getNodeType() == rootNodeType)
+                parent.adoptChildren(node.leftMostChild);
+            else
+                parent.adoptChildren(node);
+        }
+
+        if(parent.leftMostChild != null)
+            nodeStack.push(parent);
+    }
+
+    private void takeLeafAction(Token tokenBST) {
         switch (tokenBST.getTokenType()) {
             case INTEGER:
-                nodeStack.push(Node.makeNode(NodeType.integer_, tokenBST.getValue()));
+                nodeStack.push(Node.makeNode(NodeType.type, tokenBST.getValue()));
                 break;
             case FLOAT:
-                nodeStack.push(Node.makeNode(NodeType.float_, tokenBST.getValue()));
+                nodeStack.push(Node.makeNode(NodeType.type, tokenBST.getValue()));
                 break;
             case INT_NUM:
                 nodeStack.push(Node.makeNode(NodeType.intNum, tokenBST.getValue()));
@@ -113,7 +198,7 @@ public class SyntacticAnalyzer {
                 nodeStack.push(Node.makeNode(NodeType.id, tokenBST.getValue()));
                 break;
             case EQ:
-                nodeStack.push(Node.makeNode(NodeType.op, tokenBST.getValue()));
+                nodeStack.push(Node.makeNode(NodeType.assignOp, tokenBST.getValue()));
         }
     }
 

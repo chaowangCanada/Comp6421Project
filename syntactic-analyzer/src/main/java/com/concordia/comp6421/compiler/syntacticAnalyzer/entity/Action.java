@@ -6,7 +6,7 @@ import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.NodeType;
 import java.util.Set;
 
 public class Action extends Symbol{
-    NodeType nodeType;
+    public NodeType nodeType;
 
     public Action(String symbol) {
         super(symbol);

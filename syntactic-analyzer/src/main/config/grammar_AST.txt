@@ -10,13 +10,13 @@ funcHead -> type IDENTIFIER srId_op LP fParams RP
 srId_op -> SR IDENTIFIER | EPSILON
 funcDef -> funcHead funcBody SEMICOLON
 funcBody -> LCP funcBody_ RCP
-funcBody_ -> typeNumeric IDENTIFIER arraySize_list SEMICOLON funcBody_ | IDENTIFIER varDeclStatement_tail | restOfStatment statement_list | EPSILON
-varDeclStatement_tail -> IDENTIFIER arraySize_list SEMICOLON funcBody_ | indiceIdnestList_tail assignOp expr SEMICOLON statement_list
+funcBody_ -> typeNumeric IDENTIFIER arraySize_list ACT_dimList ACT_fParam ACT_fParamList SEMICOLON funcBody_ | IDENTIFIER varDeclStatement_tail | restOfStatment statement_list | EPSILON
+varDeclStatement_tail -> IDENTIFIER arraySize_list ACT_dimList ACT_fParam ACT_fParamList SEMICOLON funcBody_ | indiceIdnestList_tail assignOp expr SEMICOLON ACT_assignOp statement_list
 indiceIdnestList_tail -> DOT IDENTIFIER indiceIdnestList_tail | LSP arithExpr RSP indiceIdnestList_tail | LP aParams RP DOT IDENTIFIER indiceIdnestList_tail | EPSILON
 statement_list -> statement statement_list | EPSILON
 arraySize_list -> arraySize arraySize_list | EPSILON
-statement -> assignStat SEMICOLON | restOfStatment
-restOfStatment -> IF LP expr RP THEN statBlock ELSE statBlock SEMICOLON | FOR LP type IDENTIFIER assignOp expr SEMICOLON relExpr SEMICOLON assignStat RP statBlock SEMICOLON | READ LP variable RP SEMICOLON |  WRITE LP expr RP SEMICOLON | RETURN LP expr RP SEMICOLON
+statement -> assignStat ACT_assignOp SEMICOLON | restOfStatment
+restOfStatment -> IF LP expr RP THEN statBlock ELSE statBlock SEMICOLON | FOR LP type IDENTIFIER assignOp expr ACT_assignOp SEMICOLON relExpr SEMICOLON assignStat ACT_assignOp RP statBlock SEMICOLON | READ LP variable RP SEMICOLON |  WRITE LP expr RP SEMICOLON | RETURN LP expr RP SEMICOLON
 assignStat -> variable assignOp expr
 statBlock -> LCP statement_list RCP  | statement | EPSILON
 expr -> arithExpr expr_prime
@@ -38,8 +38,8 @@ indice -> LSP arithExpr RSP
 arraySize -> LSP INT_NUM RSP
 type -> IDENTIFIER | typeNumeric
 typeNumeric -> FLOAT | INTEGER
-fParams -> type IDENTIFIER arraySize_list fParamsTail_list | EPSILON
-fParamsTail_list -> fParamsTail fParamsTail_list | EPSILON
+fParams -> type IDENTIFIER arraySize_list fParamsTail_list ACT_dimList ACT_fParam| EPSILON
+fParamsTail_list -> fParamsTail fParamsTail_list ACT_dimList ACT_fParam | EPSILON
 aParams -> expr aParamsTail_list | EPSILON
 aParamsTail_list -> aParamsTail aParamsTail_list | EPSILON
 fParamsTail -> COMMA type IDENTIFIER arraySize_list

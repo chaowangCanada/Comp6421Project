@@ -51,28 +51,21 @@ public class Node {
     }
 
     public Node makeSiblings(Node y) {
-        Node rightmostSib = this;
-        while(this.rightSib != null) {
-            rightmostSib = rightmostSib.rightSib;
+        Node xsibs = this;
+        while(xsibs.rightSib != null) {
+            xsibs = xsibs.rightSib;
         }
 
-        if(y.leftMostSib != null) {
-            rightmostSib.rightSib=y.leftMostSib;
-            y.leftMostSib.leftMostSib=this.leftMostSib;
-            y.leftMostSib.parent = this.parent;
-            y.parent = this.parent;
-        }
-        else {
-            rightmostSib.rightSib = y;
-            y.leftMostSib=this.leftMostSib;
-            y.parent = this.parent;
-        }
+        Node ysibs = y.leftMostSib == null ? y : y.leftMostSib;
+        xsibs.rightSib = ysibs;
 
-        Node nodeTmp = y.rightSib;
-        while (nodeTmp != null){
-            nodeTmp.leftMostSib = this.leftMostSib;
-            nodeTmp.parent = this.parent;
-            nodeTmp = nodeTmp.rightSib;
+        ysibs.leftMostSib = xsibs.leftMostSib;
+        ysibs.parent = xsibs.parent;
+
+        while (ysibs.rightSib != null ) {
+            ysibs = ysibs.rightSib;
+            ysibs.leftMostSib = xsibs.leftMostSib;
+            ysibs.parent = xsibs.parent;
         }
         return this;
     }
@@ -82,11 +75,11 @@ public class Node {
             this.leftMostChild.makeSiblings(y);
         }
         else {
-            this.leftMostChild = y.leftMostChild !=null ? y.leftMostChild : y;
-            Node nodeTmp = y.leftMostChild !=null ? y.leftMostChild : y;
-            while(nodeTmp != null) {
-                nodeTmp.parent = this ;
-                nodeTmp = nodeTmp.rightSib;
+            Node ysibs = y.leftMostSib !=null ? y.leftMostChild : y;
+            this.leftMostChild = ysibs;
+            while(ysibs != null) {
+                ysibs.parent = this ;
+                ysibs = ysibs.rightSib;
             }
         }
         return this;
