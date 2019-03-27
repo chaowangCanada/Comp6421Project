@@ -1,0 +1,7 @@
+class MyClass {
+     integer x [3][8] ;
+     integer addNum ( ){
+        integer x ;
+        return ( x ) ;
+     } ;
+} ;
