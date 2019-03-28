@@ -19,6 +19,8 @@ public class SyntacticAnalyzerDriver {
 
     public final String error_file = "error.log";
     public final String token_file = "output.log";
+
+    @Getter
     private SyntacticAnalyzer syntacticAnalyzer;
     private LexicalAnalyzer lexicalAnalyzer;
 

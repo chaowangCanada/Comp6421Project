@@ -4,6 +4,7 @@ import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.*;
 import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.Node;
 import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.NodeType;
 import com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Util;
+import lombok.Getter;
 
 import java.io.IOException;
 import java.util.*;
@@ -18,6 +19,7 @@ public class SyntacticAnalyzer {
     private List<String> derivation;
     private LexicalAnalyzer lex;
     private Stack<Node> nodeStack;
+    @Getter
     private Node tree;
 
 
