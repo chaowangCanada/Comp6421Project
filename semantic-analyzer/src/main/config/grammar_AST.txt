@@ -7,7 +7,7 @@ commaId_list -> COMMA IDENTIFIER commaId_list | EPSILON
 varDeclFuncDecl_list -> type IDENTIFIER varDeclFuncDeclTail | EPSILON
 varDeclFuncDeclTail -> arraySize_list ACT_dimList SEMICOLON ACT_varDecl varDeclFuncDecl_list | LP fParams ACT_fParamList RP SEMICOLON varDeclFuncDecl_list
 funcHead -> type IDENTIFIER srId_op LP fParams RP
-srId_op -> SR IDENTIFIER | EPSILON
+srId_op -> SR IDENTIFIER ACT_scopeSpec | EPSILON
 funcDef -> funcHead funcBody SEMICOLON
 funcBody -> LCP funcBody_ ACT_statBlock RCP
 funcBody_ -> typeNumeric IDENTIFIER arraySize_list ACT_dimList ACT_varDecl SEMICOLON funcBody_ | IDENTIFIER ACT_indexList ACT_dataMember ACT_var varDeclStatement_tail | restOfStatment statement_list | EPSILON

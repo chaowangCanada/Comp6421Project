@@ -24,7 +24,10 @@ public class SemanticAnalyzerTest {
         String fileName = "test_program_1.txt";
         File file = new File(classLoader.getResource(fileName).getFile());
         semanticAnalyzerDriver.run(file);
+
         Util.printLevelOrder(semanticAnalyzerDriver.getSemanticAnalyzer().getTree());
+
+        Util.printSymbolTable(semanticAnalyzerDriver.getSemanticAnalyzer().getTree());
     }
 
 }

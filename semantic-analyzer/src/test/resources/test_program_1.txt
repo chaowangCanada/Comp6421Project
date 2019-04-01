@@ -1,7 +1,5 @@
-class MyClass {
-     integer x [3][8] ;
-     integer addNum ( ){
-        integer x ;
-        return ( x ) ;
-     } ;
-} ;
+main {
+ integer m1 ;
+ float m2 [2][3];
+ integer m3 [2];
+ } ;

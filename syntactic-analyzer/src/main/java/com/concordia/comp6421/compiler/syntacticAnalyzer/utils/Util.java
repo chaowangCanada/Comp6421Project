@@ -4,6 +4,24 @@ import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.Node;
 
 public class Util {
 
+    public static void printSymbolTable(Node aNode) {
+        if (aNode == null) {
+            return ;
+        }
+
+        aNode.printTable();
+
+        while (aNode.leftMostChild != null) {
+            aNode = aNode.leftMostChild;
+            aNode.printTable();
+
+            while (aNode.rightSib != null ) {
+                aNode = aNode.rightSib;
+                aNode.printTable();
+            }
+        }
+    }
+
     public static void printLevelOrder(Node root)
     {
         int h = Util.height(root);
@@ -21,7 +39,7 @@ public class Util {
         if (root == null)
             return;
         if (level == 1) {
-            System.out.print(root.getData().toString() + "     ");
+            System.out.print(root.data.toString() + "     ");
         }
         else if (level > 1)
         {

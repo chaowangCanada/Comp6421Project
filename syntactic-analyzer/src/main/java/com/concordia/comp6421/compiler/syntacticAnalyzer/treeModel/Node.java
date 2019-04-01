@@ -1,31 +1,33 @@
 package com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.visitorModel.Visitor;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
-import java.util.stream.Stream;
+import java.util.*;
 
 public class Node {
 
-    @Getter
-    @Setter
-    private NodeType nodeType;
-    @Getter
-    @Setter
-    private Object data = null;
 
+    public NodeType nodeType;
+    public Object data = null;
     public Node leftMostChild;
     public Node rightSib;
     public Node leftMostSib;
     public Node parent;
 
+    //attribute for SymbolTable
+    public SymTab symTab;
+    public SymTabEntry symTabEntry;
+    public boolean isAtomic = false;
+
     public Node(NodeType type, Object data) {
         this.nodeType = type;
         this.data = data;
+    }
+
+    public Node(NodeType type, Object data, boolean isAtomic) {
+        this.nodeType = type;
+        this.data = data;
+        this.isAtomic = isAtomic;
     }
 
     public Node() {
@@ -40,6 +42,18 @@ public class Node {
         }
         else {
             return new Node(type,value);
+        }
+    }
+
+    public static Node makeNode(NodeType type, String value, boolean isAtomic){
+        if(type == NodeType.intNum){
+            return new Node(type, Integer.valueOf(value), isAtomic);
+        }
+        else if(type == NodeType.floatNum) {
+            return new Node(type, Float.valueOf(value), isAtomic);
+        }
+        else {
+            return new Node(type,value, isAtomic);
         }
     }
 
@@ -89,5 +103,45 @@ public class Node {
         children.forEach(this::adoptChildren);
         return this;
     }
+
+    public List<Node> getChildren(){
+        List<Node> children = new ArrayList<>();
+        if(this.leftMostChild == null )
+            return null;
+        else {
+            children.add(this.leftMostChild);
+            Node tmp = this.leftMostChild;
+            while(tmp.rightSib != null) {
+                tmp = tmp.rightSib;
+                children.add(tmp);
+            }
+        }
+        return children;
+    }
+
+    public void accept(Visitor visitor) {
+        if(this.isAtomic)
+            visitor.visit(this);
+        else {
+            for (Node child : this.getChildren()){
+                child.accept(visitor);
+            }
+            visitor.visit(this);
+        }
+    }
+
+    public void printTable() {
+        if(this.symTab == null || this.symTab.symList.size() == 0)
+            return ;
+
+        System.out.println("=====================================================================");
+        System.out.println("Symbol table :  " + this.symTab.name);
+        System.out.println(" | name     |     kind     |  type  |     link    |");
+        for (SymTabEntry row : this.symTab.symList) {
+            System.out.println(" | " + row.name + " | " + row.kind + " | " + row.type + " | " + row.offset + " | " + (row.thisTable == null ? "null" : row.thisTable.size));
+        }
+        System.out.println("=====================================================================");
+    }
+
 
 }

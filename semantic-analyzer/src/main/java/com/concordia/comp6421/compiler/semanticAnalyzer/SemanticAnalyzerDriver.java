@@ -20,6 +20,6 @@ public class SemanticAnalyzerDriver {
     }
     public void run(File inFile) throws Exception {
         syntacticAnalyzerDriver.run(inFile);
-        semanticAnalyzer.setTree(syntacticAnalyzerDriver.getSyntacticAnalyzer().getTree());
+        semanticAnalyzer.validate(syntacticAnalyzerDriver.getSyntacticAnalyzer().getTree());
     }
 }

@@ -1,4 +1,4 @@
-package com.concordia.comp6421.compiler.semanticAnalyzer.model;
+package com.concordia.comp6421.compiler.syntacticAnalyzer.visitorModel;
 
 import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.Node;
 

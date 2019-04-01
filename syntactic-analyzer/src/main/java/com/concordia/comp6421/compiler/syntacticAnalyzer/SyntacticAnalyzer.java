@@ -123,7 +123,7 @@ public class SyntacticAnalyzer {
                 Node p2 = nodeStack.pop();
                 Node op = nodeStack.pop();
                 Node p1 = nodeStack.pop();
-                nodeStack.push(Node.makeFamiliy(NodeType.assignStat, (String)op.getData(), p1, p2));
+                nodeStack.push(Node.makeFamiliy(NodeType.assignStat, (String)op.data, p1, p2));
                 break;
             case fParam:
                 makeNodeFromTypeIdSubtree(NodeType.fParam, "fparam", NodeType.type, NodeType.id, NodeType.dimList);
@@ -151,7 +151,10 @@ public class SyntacticAnalyzer {
                 makeNodeFromListSubtrees(NodeType.var,"var", NodeType.dataMember);
                 break;
             case statBlock:
-                makeNodeFromListSubtrees(NodeType.statBlock, "statBlock", NodeType.fParamList, NodeType.assignStat);
+                NodeType[] childTypes = Arrays.copyOf(NodeType.statTypes, NodeType.statTypes.length + 2);
+                childTypes[NodeType.statTypes.length] = NodeType.varDecl;
+                childTypes[NodeType.statTypes.length + 1] = NodeType.fParamList;
+                makeNodeFromListSubtrees(NodeType.statBlock, "statBlock", childTypes);
                 break;
             default:
                 break;
@@ -161,40 +164,40 @@ public class SyntacticAnalyzer {
     private void takeLeafAction(Token tokenBST) {
         switch (tokenBST.getTokenType()) {
             case INTEGER:
-                nodeStack.push(Node.makeNode(NodeType.type, tokenBST.getValue()));
+                nodeStack.push(Node.makeNode(NodeType.type, tokenBST.getValue(), true));
                 break;
             case FLOAT:
-                nodeStack.push(Node.makeNode(NodeType.type, tokenBST.getValue()));
+                nodeStack.push(Node.makeNode(NodeType.type, tokenBST.getValue(), true));
                 break;
             case INT_NUM:
-                nodeStack.push(Node.makeNode(NodeType.intNum, tokenBST.getValue()));
+                nodeStack.push(Node.makeNode(NodeType.intNum, tokenBST.getValue(), true));
                 break;
             case FLOAT_NUM:
-                nodeStack.push(Node.makeNode(NodeType.floatNum, tokenBST.getValue()));
+                nodeStack.push(Node.makeNode(NodeType.floatNum, tokenBST.getValue(), true));
                 break;
             case IDENTIFIER:
-                nodeStack.push(Node.makeNode(NodeType.id, tokenBST.getValue()));
+                nodeStack.push(Node.makeNode(NodeType.id, tokenBST.getValue(), true));
                 break;
             case EQ:
-                nodeStack.push(Node.makeNode(NodeType.assignOp, tokenBST.getValue()));
-                break;
-            case ADDITION:
-            case SUBTRACTION:
-            case MULTIPLICATION:
-            case DIVISION:
-                nodeStack.push(Node.makeNode(NodeType.op, tokenBST.getValue()));
+                nodeStack.push(Node.makeNode(NodeType.assignOp, tokenBST.getValue(), true));
                 break;
         }
     }
 
     private void makeNodeFromTypeIdSubtree(NodeType rootNodeType, String rootNodeVal, NodeType... childrenTypes) {
-        Node parent = Node.makeNode(rootNodeType, rootNodeVal);
+        Node parent;
+
+        if(Arrays.asList(NodeType.atomicTypes).contains(rootNodeType))
+            parent = Node.makeNode(rootNodeType, rootNodeVal, true);
+        else
+            parent = Node.makeNode(rootNodeType, rootNodeVal);
+
         List<Node> children = new ArrayList<>();
         Stack<NodeType> nodeTypeStack = new Stack<>();
         nodeTypeStack.addAll(Arrays.asList(childrenTypes));
-        if(nodeTypeStack.peek() != nodeStack.peek().getNodeType())
+        if(nodeTypeStack.peek() != nodeStack.peek().nodeType)
             nodeTypeStack.pop();
-        while(!nodeTypeStack.isEmpty() && !nodeStack.empty()&& nodeTypeStack.peek() == nodeStack.peek().getNodeType()) {
+        while(!nodeTypeStack.isEmpty() && !nodeStack.empty()&& nodeTypeStack.peek() == nodeStack.peek().nodeType) {
             children.add(0, nodeStack.pop());
             nodeTypeStack.pop();
         }
@@ -204,15 +207,21 @@ public class SyntacticAnalyzer {
     }
 
     public void makeNodeFromListSubtrees(NodeType rootNodeType, String rootNodeVal, NodeType... childNodeTypes) {
-        Node parent = Node.makeNode(rootNodeType, rootNodeVal);
+        Node parent;
+
+        if(Arrays.asList(NodeType.atomicTypes).contains(rootNodeType))
+            parent = Node.makeNode(rootNodeType, rootNodeVal, true);
+        else
+            parent = Node.makeNode(rootNodeType, rootNodeVal);
+
         List<Node> children = new ArrayList<>();
-        while(!nodeStack.isEmpty() && ( Arrays.asList(childNodeTypes).contains(nodeStack.peek().getNodeType())
-                                       ||nodeStack.peek().getNodeType() == rootNodeType)) {
+        while(!nodeStack.isEmpty() && ( Arrays.asList(childNodeTypes).contains(nodeStack.peek().nodeType)
+                                       ||nodeStack.peek().nodeType == rootNodeType)) {
             children.add(0, nodeStack.pop());
         }
 
         for (Node node : children) {
-            if(node.getNodeType() == rootNodeType)
+            if(node.nodeType == rootNodeType)
                 parent.adoptChildren(node.leftMostChild);
             else
                 parent.adoptChildren(node);
