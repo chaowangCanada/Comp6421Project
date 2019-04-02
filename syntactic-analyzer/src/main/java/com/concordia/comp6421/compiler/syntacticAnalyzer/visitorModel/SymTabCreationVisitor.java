@@ -17,18 +17,20 @@ public class SymTabCreationVisitor extends Visitor{
     {
         if(node.nodeType == NodeType.prog)
             visitProgNode(node);
-        else if(Arrays.asList(NodeType.listPatternNodeType).contains(node.nodeType)) {
+        else if(Arrays.asList(NodeType.ListPatternNodeType).contains(node.nodeType)) {
             if (node.nodeType == NodeType.statBlock)
                 visitListPatternNode(node, "program");
             else
                 visitListPatternNode(node, node.nodeType.toString());
         }
-        else if(Arrays.asList(NodeType.idListPattenNodeType).contains(node.nodeType))
+        else if(Arrays.asList(NodeType.IdListPattenNodeType).contains(node.nodeType))
             visitListPatternNode(node, node.nodeType.toString());
-        else if(Arrays.asList(NodeType.typeIdListPattenNodeType).contains(node.nodeType))
+        else if(Arrays.asList(NodeType.TypeIdListPattenNodeType).contains(node.nodeType))
             visitTypeIdListPattern(node);
         else if(Arrays.asList(NodeType.IdListPattenNodeType).contains(node.nodeType))
             visitIdListPattern(node);
+        else if(Arrays.asList(NodeType.TypeListIdListPatternNodeType).contains(node.nodeType))
+            visitTypeListIdListPattern(node);
 
 
 
@@ -104,6 +106,29 @@ public class SymTabCreationVisitor extends Visitor{
 //        }
     }
 
+    private void visitTypeListIdListPattern(Node node) {
+
+        String funcName = node.getChildren().get(0).data.toString();
+        node.symTab = new SymTab(funcName);
+
+        node.symTab = new SymTab("");
+        for (Node child : node.getChildren()) {
+            if(child.nodeType == NodeType.type) {
+                node.symTab.name += child.data.toString();
+            }
+            else if(child.nodeType == NodeType.funcDefList) {
+                for (Node func : child.getChildren())
+                    node.symTab.addEntry(func.symTabEntry);
+            }
+            else if(child.nodeType == NodeType.statBlock) {
+                SymTab table = child.symTab;
+                table.name = "statement";
+                node.symTab.addEntry(new SymTabEntry(table.name, "function" ,"",0 , table));
+            }
+        }
+        node.symTabEntry = new SymTabEntry(funcName, "class" ,"",0 , node.symTab);
+    }
+
     private void visitIdListPattern(Node node) {
         String className = node.getChildren().get(0).data.toString();
         node.symTab = new SymTab(className);
@@ -143,6 +168,7 @@ public class SymTabCreationVisitor extends Visitor{
         }
     }
 
+    // Like varDecl
     public void visitTypeIdListPattern(Node node) {
         String kind = node.nodeType.toString();
         String type = node.getChildren().get(0).data.toString() + " : ";

@@ -1,7 +1,5 @@
 class MyClass1 {
-  int mc1v1 [2][4];
-  float mc1v2;
-  MyClass2 mc1v3 [3];
+  float mc1v2 ;
   integer mc1f1 ( integer p1 , MyClass2 p2 [ 3 ] ) ;
   integer f1 ( MyClass1 f2p1 [ 3 ] ) ;
 } ;
