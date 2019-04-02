@@ -53,8 +53,8 @@ public class SyntacticAnalyzer {
                     if (symbol.symbol.equals(token.getTokenType().toString())) {
                         updateDerivation(symbol.symbol, token.getValue());
                         leafToken = token;
-                        takeLeafAction(leafToken);
                         lookahead = lex.nextToken();
+                        takeLeafAction(leafToken, lookahead);
                     } else {
                         lookahead = skipErrors(token);
                         error = true;
@@ -108,6 +108,23 @@ public class SyntacticAnalyzer {
             case classDecl:
                 makeNodeFromTypeIdSubtree(NodeType.classDecl, "classDecl", NodeType.id, NodeType.inherList, NodeType.membList);
                 break;
+            case inherList:
+                Node inherList = Node.makeNode(NodeType.inherList, "inherList");
+                while (!nodeStack.isEmpty() && nodeStack.peek().nodeType == NodeType.id) {
+                    Node tmp = nodeStack.pop();
+                    if (nodeStack.isEmpty() || nodeStack.peek().nodeType == NodeType.id) {
+                        nodeStack.push(tmp);
+                        break;
+                    }
+                    inherList.adoptChildren(tmp);
+                }
+                if (inherList.leftMostChild != null) {
+                    nodeStack.push(inherList);
+                }
+                break;
+            case membList:
+                makeNodeFromListSubtrees(NodeType.membList, "memberList", NodeType.varDecl, NodeType.funcDecl);
+                break;
             case funcDef:
                 makeNodeFromTypeIdSubtree(NodeType.funcDef, "funcDef",
                         NodeType.type, NodeType.scopeSpec, NodeType.id, NodeType.fParamList, NodeType.statBlock);
@@ -144,14 +161,14 @@ public class SyntacticAnalyzer {
             case dataMember:
                 makeNodeFromTypeIdSubtree(NodeType.dataMember,"dataMember", NodeType.id, NodeType.indexList);
                 break;
-            case membList:
-                makeNodeFromListSubtrees(NodeType.membList, "memblist", NodeType.dataMember);
-                break;
+//            case membList:
+//                makeNodeFromListSubtrees(NodeType.membList, "memblist", NodeType.dataMember);
+//                break;
             case var:
                 makeNodeFromListSubtrees(NodeType.var,"var", NodeType.dataMember);
                 break;
             case statBlock:
-                NodeType[] childTypes = Arrays.copyOf(NodeType.statTypes, NodeType.statTypes.length + 2);
+                NodeType[] childTypes = Arrays.copyOf(NodeType.statTypes, NodeType.statTypes.length + 3);
                 childTypes[NodeType.statTypes.length] = NodeType.varDecl;
                 childTypes[NodeType.statTypes.length + 1] = NodeType.fParamList;
                 makeNodeFromListSubtrees(NodeType.statBlock, "statBlock", childTypes);
@@ -161,7 +178,7 @@ public class SyntacticAnalyzer {
         }
     }
 
-    private void takeLeafAction(Token tokenBST) {
+    private void takeLeafAction(Token tokenBST, Optional<Token> lookahead) {
         switch (tokenBST.getTokenType()) {
             case INTEGER:
                 nodeStack.push(Node.makeNode(NodeType.type, tokenBST.getValue(), true));
@@ -176,7 +193,10 @@ public class SyntacticAnalyzer {
                 nodeStack.push(Node.makeNode(NodeType.floatNum, tokenBST.getValue(), true));
                 break;
             case IDENTIFIER:
-                nodeStack.push(Node.makeNode(NodeType.id, tokenBST.getValue(), true));
+                if(lookahead.isPresent() && lookahead.get().getTokenType() == TokenType.IDENTIFIER)
+                    nodeStack.push(Node.makeNode(NodeType.type, tokenBST.getValue(), true));
+                else
+                    nodeStack.push(Node.makeNode(NodeType.id, tokenBST.getValue(), true));
                 break;
             case EQ:
                 nodeStack.push(Node.makeNode(NodeType.assignOp, tokenBST.getValue(), true));

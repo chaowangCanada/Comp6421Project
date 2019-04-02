@@ -1,11 +1,11 @@
 prog -> classDecl_list ACT_classList funcDef_list ACT_funcDefList MAIN funcBody ACT_prog SEMICOLON
 classDecl_list -> classDecl ACT_classDecl classDecl_list | EPSILON
 funcDef_list -> funcDef ACT_funcDef funcDef_list | EPSILON
-classDecl -> CLASS IDENTIFIER colonIdCommaIdList_op LCP varDeclFuncDecl_list RCP SEMICOLON
-colonIdCommaIdList_op -> COLON IDENTIFIER commaId_list | EPSILON
+classDecl -> CLASS IDENTIFIER colonIdCommaIdList_op LCP varDeclFuncDecl_list RCP ACT_membList SEMICOLON
+colonIdCommaIdList_op -> COLON IDENTIFIER commaId_list ACT_inherList | EPSILON
 commaId_list -> COMMA IDENTIFIER commaId_list | EPSILON
 varDeclFuncDecl_list -> type IDENTIFIER varDeclFuncDeclTail | EPSILON
-varDeclFuncDeclTail -> arraySize_list ACT_dimList SEMICOLON ACT_varDecl varDeclFuncDecl_list | LP fParams ACT_fParamList RP SEMICOLON varDeclFuncDecl_list
+varDeclFuncDeclTail -> arraySize_list ACT_dimList SEMICOLON ACT_varDecl varDeclFuncDecl_list | LP fParams ACT_fParamList RP SEMICOLON ACT_funcDecl varDeclFuncDecl_list
 funcHead -> type IDENTIFIER srId_op LP fParams RP
 srId_op -> SR IDENTIFIER ACT_scopeSpec | EPSILON
 funcDef -> funcHead funcBody SEMICOLON
@@ -39,7 +39,7 @@ arraySize -> LSP INT_NUM RSP
 type -> IDENTIFIER | typeNumeric
 typeNumeric -> FLOAT | INTEGER
 fParams -> type IDENTIFIER arraySize_list ACT_dimList ACT_fParam fParamsTail_list | EPSILON
-fParamsTail_list -> fParamsTail ACT_fParam fParamsTail_list | EPSILON
+fParamsTail_list -> fParamsTail ACT_dimList ACT_fParam fParamsTail_list | EPSILON
 aParams -> expr aParamsTail_list | EPSILON
 aParamsTail_list -> aParamsTail aParamsTail_list | EPSILON
 fParamsTail -> COMMA type IDENTIFIER arraySize_list

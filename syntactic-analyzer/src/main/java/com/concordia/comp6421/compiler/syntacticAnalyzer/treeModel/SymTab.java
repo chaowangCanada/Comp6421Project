@@ -7,12 +7,12 @@ public class SymTab {
     public String name;
     public ArrayList<SymTabEntry> symList;
     public int size;
-    public SymTab upperTable;
+//    public SymTab upperTable;
 
-    public SymTab(String name, SymTab uppertable){
+    public SymTab(String name){
         this.name = name;
         symList = new ArrayList<SymTabEntry>();
-        this.upperTable = uppertable;
+//        this.upperTable = uppertable;
     }
 
     public void addEntry(SymTabEntry entry){
@@ -20,24 +20,6 @@ public class SymTab {
             symList.add(entry);
             size = symList.size();
         }
-    }
-
-    public SymTabEntry lookupName(String tolookup) {
-        SymTabEntry returnvalue = new SymTabEntry();
-        boolean found = false;
-        for( SymTabEntry rec : symList) {
-            System.out.println(rec.name);
-            if (rec.name.equals(tolookup)) {
-                returnvalue = rec;
-                found = true;
-            }
-        }
-        if (!found) {
-            if (upperTable != null) {
-                returnvalue = upperTable.lookupName(tolookup);
-            }
-        }
-        return returnvalue;
     }
 
 }

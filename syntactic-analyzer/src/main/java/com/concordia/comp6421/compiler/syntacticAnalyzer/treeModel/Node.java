@@ -136,7 +136,7 @@ public class Node {
 
         System.out.println("=====================================================================");
         System.out.println("Symbol table :  " + this.symTab.name);
-        System.out.println(" | name     |     kind     |  type  |     link    |");
+        System.out.println(" | name     |     kind     |   type   | offset |   link    |");
         for (SymTabEntry row : this.symTab.symList) {
             System.out.println(" | " + row.name + " | " + row.kind + " | " + row.type + " | " + row.offset + " | " + (row.thisTable == null ? "null" : row.thisTable.size));
         }

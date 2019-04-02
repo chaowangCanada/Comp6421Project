@@ -27,6 +27,8 @@ public class SymTabCreationVisitor extends Visitor{
             visitListPatternNode(node, node.nodeType.toString());
         else if(Arrays.asList(NodeType.typeIdListPattenNodeType).contains(node.nodeType))
             visitTypeIdListPattern(node);
+        else if(Arrays.asList(NodeType.IdListPattenNodeType).contains(node.nodeType))
+            visitIdListPattern(node);
 
 
 
@@ -102,8 +104,19 @@ public class SymTabCreationVisitor extends Visitor{
 //        }
     }
 
+    private void visitIdListPattern(Node node) {
+        String className = node.getChildren().get(0).data.toString();
+        node.symTab = new SymTab(className);
+
+        for(Node member : node.getChildren()) {
+            if(member.symTabEntry != null)
+                node.symTab.addEntry(member.symTabEntry);
+        }
+        node.symTabEntry = new SymTabEntry(className, "class" ,"",0 , node.symTab);
+    }
+
     public void visitProgNode(Node node) {
-        node.symTab = new SymTab("global", null);
+        node.symTab = new SymTab("global");
         for (Node child : node.getChildren()) {
             if(child.nodeType == NodeType.classList) {
                 for (Node clas : child.getChildren())
@@ -122,13 +135,11 @@ public class SymTabCreationVisitor extends Visitor{
     }
 
     public void visitListPatternNode(Node node, String tableName) {
-        node.symTab = new SymTab(tableName, node.symTab);
+        node.symTab = new SymTab(tableName);
 
         for(Node stat : node.getChildren()) {
             if(stat.symTabEntry != null)
                 node.symTab.addEntry(stat.symTabEntry);
-//                stat.symTabEntry = new SymTabEntry(stat.leftMostChild.rightSib.toString(),
-//                        stat.data.toString() ,stat.leftMostChild.nodeType.toString(),0 , null);
         }
     }
 
