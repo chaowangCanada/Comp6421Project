@@ -1,7 +1,10 @@
-class MyClass1 {
-  float mc1v2 ;
-  integer mc1f1 ( integer p1 , MyClass2 p2 [ 3 ] ) ;
-  integer f1 ( MyClass1 f2p1 [ 3 ] ) ;
+integer MyClass1 :: mc1f1 ( integer p1 , MyClass2 p2 [ 3 ] ){
+    MyClass2 fv1 [3] ;
+    integer p1 ;
 } ;
 
-
+main {
+ integer m1 ;
+ float m2 [2][3];
+ MyClass2 m3 [2];
+} ;

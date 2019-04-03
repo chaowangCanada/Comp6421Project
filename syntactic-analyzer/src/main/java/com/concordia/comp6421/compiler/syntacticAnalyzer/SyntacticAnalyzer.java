@@ -125,6 +125,10 @@ public class SyntacticAnalyzer {
             case membList:
                 makeNodeFromListSubtrees(NodeType.membList, "memberList", NodeType.varDecl, NodeType.funcDecl);
                 break;
+            case scopeSpec:
+                if (nodeStack.peek().nodeType == NodeType.id)
+                    nodeStack.push(Node.makeNode(NodeType.type, nodeStack.pop().data.toString()));
+                break;
             case funcDef:
                 makeNodeFromTypeIdSubtree(NodeType.funcDef, "funcDef",
                         NodeType.type, NodeType.scopeSpec, NodeType.id, NodeType.fParamList, NodeType.statBlock);
@@ -168,9 +172,9 @@ public class SyntacticAnalyzer {
                 makeNodeFromListSubtrees(NodeType.var,"var", NodeType.dataMember);
                 break;
             case statBlock:
-                NodeType[] childTypes = Arrays.copyOf(NodeType.statTypes, NodeType.statTypes.length + 3);
-                childTypes[NodeType.statTypes.length] = NodeType.varDecl;
-                childTypes[NodeType.statTypes.length + 1] = NodeType.fParamList;
+                NodeType[] childTypes = Arrays.copyOf(NodeType.StatTypes, NodeType.StatTypes.length + 3);
+                childTypes[NodeType.StatTypes.length] = NodeType.varDecl;
+                childTypes[NodeType.StatTypes.length + 1] = NodeType.fParamList;
                 makeNodeFromListSubtrees(NodeType.statBlock, "statBlock", childTypes);
                 break;
             default:
@@ -207,7 +211,7 @@ public class SyntacticAnalyzer {
     private void makeNodeFromTypeIdSubtree(NodeType rootNodeType, String rootNodeVal, NodeType... childrenTypes) {
         Node parent;
 
-        if(Arrays.asList(NodeType.atomicTypes).contains(rootNodeType))
+        if(Arrays.asList(NodeType.AtomicTypes).contains(rootNodeType))
             parent = Node.makeNode(rootNodeType, rootNodeVal, true);
         else
             parent = Node.makeNode(rootNodeType, rootNodeVal);
@@ -217,8 +221,9 @@ public class SyntacticAnalyzer {
         nodeTypeStack.addAll(Arrays.asList(childrenTypes));
         if(nodeTypeStack.peek() != nodeStack.peek().nodeType)
             nodeTypeStack.pop();
-        while(!nodeTypeStack.isEmpty() && !nodeStack.empty()&& nodeTypeStack.peek() == nodeStack.peek().nodeType) {
-            children.add(0, nodeStack.pop());
+        while(!nodeTypeStack.isEmpty() && !nodeStack.empty()) {
+            if( nodeTypeStack.peek() == nodeStack.peek().nodeType)
+                children.add(0, nodeStack.pop());
             nodeTypeStack.pop();
         }
         children.forEach(parent::adoptChildren);
@@ -229,7 +234,7 @@ public class SyntacticAnalyzer {
     public void makeNodeFromListSubtrees(NodeType rootNodeType, String rootNodeVal, NodeType... childNodeTypes) {
         Node parent;
 
-        if(Arrays.asList(NodeType.atomicTypes).contains(rootNodeType))
+        if(Arrays.asList(NodeType.AtomicTypes).contains(rootNodeType))
             parent = Node.makeNode(rootNodeType, rootNodeVal, true);
         else
             parent = Node.makeNode(rootNodeType, rootNodeVal);

@@ -6,7 +6,7 @@ colonIdCommaIdList_op -> COLON IDENTIFIER commaId_list ACT_inherList | EPSILON
 commaId_list -> COMMA IDENTIFIER commaId_list | EPSILON
 varDeclFuncDecl_list -> type IDENTIFIER varDeclFuncDeclTail | EPSILON
 varDeclFuncDeclTail -> arraySize_list ACT_dimList SEMICOLON ACT_varDecl varDeclFuncDecl_list | LP fParams ACT_fParamList RP SEMICOLON ACT_funcDecl varDeclFuncDecl_list
-funcHead -> type IDENTIFIER srId_op LP fParams RP
+funcHead -> type IDENTIFIER srId_op LP fParams ACT_fParamList RP
 srId_op -> SR IDENTIFIER ACT_scopeSpec | EPSILON
 funcDef -> funcHead funcBody SEMICOLON
 funcBody -> LCP funcBody_ ACT_statBlock RCP

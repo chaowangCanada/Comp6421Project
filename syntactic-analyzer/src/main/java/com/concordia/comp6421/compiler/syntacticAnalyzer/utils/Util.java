@@ -1,24 +1,22 @@
 package com.concordia.comp6421.compiler.syntacticAnalyzer.utils;
 
 import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.Node;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.NodeType;
+
+import java.util.Arrays;
 
 public class Util {
 
     public static void printSymbolTable(Node aNode) {
-        if (aNode == null) {
+        if (aNode == null || aNode.getChildren() == null) {
             return ;
         }
 
-        aNode.printTable();
-
-        while (aNode.leftMostChild != null) {
-            aNode = aNode.leftMostChild;
+        if (Arrays.asList(NodeType.needTableType).contains(aNode.nodeType))
             aNode.printTable();
 
-            while (aNode.rightSib != null ) {
-                aNode = aNode.rightSib;
-                aNode.printTable();
-            }
+        for(Node child : aNode.getChildren()) {
+            printSymbolTable(child);
         }
     }
 

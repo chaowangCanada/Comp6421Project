@@ -7,9 +7,9 @@ class MyClass1 {
 } ;
 
 class MyClass2 {
- int mc1v1 [2][4];
- float fp1;
- MyClass2 m2 [3];
+ integer mc1v1 [2][4] ;
+ float fp1 ;
+ MyClass2 m2 [3] ;
 } ;
 
 integer MyClass1 :: mc1f1 ( integer p1 , MyClass2 p2 [ 3 ] ){
