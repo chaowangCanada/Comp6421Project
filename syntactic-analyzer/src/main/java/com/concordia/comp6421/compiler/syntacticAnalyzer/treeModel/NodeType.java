@@ -14,7 +14,7 @@ public enum  NodeType {
 
     public static NodeType[] TypeListIdListPatternNodeType = {funcDef} ;
 
-    public static NodeType[] AtomicTypes = {varDecl, fParam};
+    public static NodeType[] AtomicTypes = {varDecl, fParam, scopeSpec};
 
     public static NodeType[] needTableType = {prog, classDecl, funcDef, statBlock};
 

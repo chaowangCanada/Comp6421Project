@@ -127,7 +127,7 @@ public class SyntacticAnalyzer {
                 break;
             case scopeSpec:
                 if (nodeStack.peek().nodeType == NodeType.id)
-                    nodeStack.push(Node.makeNode(NodeType.type, nodeStack.pop().data.toString()));
+                    nodeStack.push(Node.makeNode(NodeType.scopeSpec, nodeStack.pop().data.toString(), true));
                 break;
             case funcDef:
                 makeNodeFromTypeIdSubtree(NodeType.funcDef, "funcDef",
@@ -174,7 +174,7 @@ public class SyntacticAnalyzer {
             case statBlock:
                 NodeType[] childTypes = Arrays.copyOf(NodeType.StatTypes, NodeType.StatTypes.length + 3);
                 childTypes[NodeType.StatTypes.length] = NodeType.varDecl;
-                childTypes[NodeType.StatTypes.length + 1] = NodeType.fParamList;
+//                childTypes[NodeType.StatTypes.length + 1] = NodeType.fParamList;
                 makeNodeFromListSubtrees(NodeType.statBlock, "statBlock", childTypes);
                 break;
             default:
