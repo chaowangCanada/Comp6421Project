@@ -144,7 +144,7 @@ public class SyntacticAnalyzer {
                 Node p2 = nodeStack.pop();
                 Node op = nodeStack.pop();
                 Node p1 = nodeStack.pop();
-                nodeStack.push(Node.makeFamiliy(NodeType.assignStat, (String)op.data, p1, p2));
+                nodeStack.push(Node.makeFamiliy(NodeType.assignStat, op.data.toString(), p1, p2));
                 break;
             case fParam:
                 makeNodeFromTypeIdSubtree(NodeType.fParam, "fparam", NodeType.type, NodeType.id, NodeType.dimList);

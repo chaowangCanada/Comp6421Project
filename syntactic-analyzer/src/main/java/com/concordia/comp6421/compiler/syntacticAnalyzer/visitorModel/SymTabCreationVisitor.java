@@ -18,7 +18,7 @@ public class SymTabCreationVisitor extends Visitor{
         if(node.nodeType == NodeType.prog)
             visitProgNode(node);
         else if(Arrays.asList(NodeType.ListPatternNodeType).contains(node.nodeType)) {
-            if (node.nodeType == NodeType.statBlock)
+            if (node.nodeType == NodeType.statBlock && node.parent.nodeType == NodeType.prog)
                 visitListPatternNode(node, "program");
             else
                 visitListPatternNode(node, node.nodeType.toString());
@@ -32,31 +32,43 @@ public class SymTabCreationVisitor extends Visitor{
     }
 
     private void visitTypeListIdListPattern(Node node) {
-        String funcName = node.getChildren().get(0).data.toString();
-        node.symTab = new SymTab(funcName);
-
+        StringBuilder name = new StringBuilder();
+        StringBuilder type = new StringBuilder();
         node.symTab = new SymTab("");
+
         for (Node child : node.getChildren()) {
             if(child.nodeType == NodeType.type) {
-                funcName += child.data.toString();
+                type.append(child.data.toString() + " : ");
+            }
+            else if(child.nodeType == NodeType.scopeSpec){
+                name.append(child.data.toString() + " : ");
             }
             else if(child.nodeType == NodeType.id) {
-                funcName += " : " + child.data.toString();
+                name.append(child.data.toString());
+                node.symTab.name = name.toString();
             }
             else if(child.nodeType == NodeType.scopeSpec) {
-                funcName += " : " + child.data.toString();
+                type.append(child.data.toString() );
             }
             else if(child.nodeType == NodeType.fParamList) {
-                for (Node fparam : child.getChildren())
+                for (Node fparam : child.getChildren()) {
                     node.symTab.addEntry(fparam.symTabEntry);
+                    type.append(getfParamString(fparam));
+                }
             }
             else if(child.nodeType == NodeType.statBlock) {
-                SymTab table = child.symTab;
-                table.name = "statement";
-                node.symTab.addEntry(new SymTabEntry(table.name, "function" ,"",0 , table));
+                node.symTab.symList.addAll(child.symTab.symList);
             }
         }
-        node.symTabEntry = new SymTabEntry(funcName, "function" ,"",0 , node.symTab);
+        node.symTabEntry = new SymTabEntry(name.toString(), "function" ,type.toString(),0 , node.symTab);
+    }
+
+    // add statblock vardecl to funcDef
+    public void addListPatternNode(Node node) {
+        for(Node stat : node.getChildren()) {
+            if(stat.symTabEntry != null)
+                node.symTab.addEntry(stat.symTabEntry);
+        }
     }
 
     private void visitIdListPattern(Node node) {
@@ -94,7 +106,7 @@ public class SymTabCreationVisitor extends Visitor{
             }
         }
     }
-
+    //statblock
     public void visitListPatternNode(Node node, String tableName) {
         node.symTab = new SymTab(tableName);
 
@@ -107,7 +119,7 @@ public class SymTabCreationVisitor extends Visitor{
     // Like varDecl
     public void visitTypeIdListPattern(Node node) {
         String kind = node.nodeType.toString();
-        StringBuilder type = new StringBuilder(node.getChildren().get(0).data.toString() + " : ");
+        StringBuilder type = new StringBuilder(node.getChildren().get(0).data.toString() + " :: ");
         if(node.getChildren().size() > 2 ) {
             for(Node listChild : node.getChildren().get(2).getChildren()) {
                 if(listChild.nodeType == NodeType.fParam)
@@ -120,10 +132,10 @@ public class SymTabCreationVisitor extends Visitor{
         node.symTabEntry = new SymTabEntry(name, kind, type.toString(), 0, null);
     }
 
-    public String getfParamString(Node node) {
-        String type = node.getChildren().get(0).data.toString() + " : ";
-        if(node.getChildren().size() > 2 )
-            type += node.getChildren().get(2).getChildren().stream().map(n -> n.data.toString()).collect(Collectors.joining(", "));
+    public String getfParamString(Node fParamNode) {
+        String type = fParamNode.getChildren().get(0).data.toString() + " : ";
+        if(fParamNode.getChildren().size() > 2 )
+            type += fParamNode.getChildren().get(2).getChildren().stream().map(n -> n.data.toString()).collect(Collectors.joining(", "));
         return type;
     }
 

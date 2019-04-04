@@ -42,13 +42,13 @@ public class SyntacticAnalyzerTest {
         syntacticAnalyzerDriver.run(file);
     }
 
-    @Test
-    public void testAnalyzer4() throws Exception
-    {
-        String fileName = "test_program_4.txt";
-        File file = new File(classLoader.getResource(fileName).getFile());
-        syntacticAnalyzerDriver.run(file);
-    }
+//    @Test
+//    public void testAnalyzer4() throws Exception
+//    {
+//        String fileName = "test_program_4.txt";
+//        File file = new File(classLoader.getResource(fileName).getFile());
+//        syntacticAnalyzerDriver.run(file);
+//    }
     @Test
     public void testAnalyzer5() throws Exception
     {
@@ -81,12 +81,12 @@ public class SyntacticAnalyzerTest {
         syntacticAnalyzerDriver.run(file);
     }
 
-    @Test
-    public void testAnalyzer6() throws Exception
-    {
-        String fileName = "test_program_6.txt";
-        File file = new File(classLoader.getResource(fileName).getFile());
-        syntacticAnalyzerDriver.run(file);
-    }
+//    @Test
+//    public void testAnalyzer6() throws Exception
+//    {
+//        String fileName = "test_program_6.txt";
+//        File file = new File(classLoader.getResource(fileName).getFile());
+//        syntacticAnalyzerDriver.run(file);
+//    }
 
 }

@@ -30,4 +30,17 @@ public class SemanticAnalyzerTest {
         Util.printSymbolTable(semanticAnalyzerDriver.getSemanticAnalyzer().getTree());
     }
 
+
+    @Test
+    public void testAnalyzer2() throws Exception
+    {
+        String fileName = "test_program_2.txt";
+        File file = new File(classLoader.getResource(fileName).getFile());
+        semanticAnalyzerDriver.run(file);
+
+        Util.printLevelOrder(semanticAnalyzerDriver.getSemanticAnalyzer().getTree());
+
+        Util.printSymbolTable(semanticAnalyzerDriver.getSemanticAnalyzer().getTree());
+    }
+
 }
