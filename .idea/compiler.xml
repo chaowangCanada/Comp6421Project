@@ -12,11 +12,11 @@
         <module name="syntactic-analyzer" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="common" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="common" target="8" />
+      <module name="Comp6421Compiler" target="1.5" />
       <module name="lexical-analyzer" target="1.8" />
-      <module name="LexicalAnalyzer" target="1.5" />
-      <module name="Project" target="1.5" />
+      <module name="Project" target="1.8" />
       <module name="syntactic-analyzer" target="1.8" />
     </bytecodeTargetLevel>
   </component>

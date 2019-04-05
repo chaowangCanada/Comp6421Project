@@ -2,13 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5c10714-11ac-4369-8886-89e8fe1b3d17" name="Default" comment="Assignment 2 update">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-generator/code-generator.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-generator/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code-generator/src/main/java/Register.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/visitorModel/ComputeMemSizeVisitor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/visitorModel/ConstructAssignmentAndExpressionStringVisitor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/visitorModel/StackBasedCodeGenerationVisitor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/visitorModel/TagsBasedCodeGenerationVisitor.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Project.iml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexical-analyzer/target/lexcial-analyzer-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/lexical-analyzer/target/lexcial-analyzer-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/syntactic-analyzer/target/classes/com/concordia/comp6421/compiler/syntacticAnalyzer/utils/Default.class" afterPath="$PROJECT_DIR$/syntactic-analyzer/target/classes/com/concordia/comp6421/compiler/syntacticAnalyzer/utils/Default.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/SyntacticAnalyzer.java" afterPath="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/SyntacticAnalyzer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Epsilon.java" afterPath="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Epsilon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Grammar.java" afterPath="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Grammar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/NonTerminal.java" afterPath="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/NonTerminal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Symbol.java" afterPath="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Symbol.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Terminal.java" afterPath="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Terminal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexical-analyzer/output.log" afterPath="$PROJECT_DIR$/lexical-analyzer/output.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexical-analyzer/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/lexical-analyzer/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexical-analyzer/target/surefire-reports/CompilerFileReaderTest.txt" afterPath="$PROJECT_DIR$/lexical-analyzer/target/surefire-reports/CompilerFileReaderTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexical-analyzer/target/surefire-reports/IntegrationTest.txt" afterPath="$PROJECT_DIR$/lexical-analyzer/target/surefire-reports/IntegrationTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexical-analyzer/target/surefire-reports/LexicalAnalyzerTest.txt" afterPath="$PROJECT_DIR$/lexical-analyzer/target/surefire-reports/LexicalAnalyzerTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexical-analyzer/target/surefire-reports/TEST-CompilerFileReaderTest.xml" afterPath="$PROJECT_DIR$/lexical-analyzer/target/surefire-reports/TEST-CompilerFileReaderTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexical-analyzer/target/surefire-reports/TEST-IntegrationTest.xml" afterPath="$PROJECT_DIR$/lexical-analyzer/target/surefire-reports/TEST-IntegrationTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lexical-analyzer/target/surefire-reports/TEST-LexicalAnalyzerTest.xml" afterPath="$PROJECT_DIR$/lexical-analyzer/target/surefire-reports/TEST-LexicalAnalyzerTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/syntactic-analyzer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/syntactic-analyzer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/syntactic-analyzer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/syntactic-analyzer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/syntactic-analyzer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="$PROJECT_DIR$/syntactic-analyzer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/syntactic-analyzer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/syntactic-analyzer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -16,6 +35,7 @@
     <ignored path="$PROJECT_DIR$/common/target/" />
     <ignored path="$PROJECT_DIR$/lexical-analyzer/target/" />
     <ignored path="$PROJECT_DIR$/syntactic-analyzer/target/" />
+    <ignored path="$PROJECT_DIR$/semantic-analyzer/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,36 +81,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Grammar.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Grammar.java">
+      <file leaf-file-name="semantic-analyzer.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/semantic-analyzer/semantic-analyzer.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
-              <folding>
-                <element signature="e#949#950#0" expanded="true" />
-                <element signature="e#1008#1009#0" expanded="true" />
-                <element signature="e#1959#1960#0" expanded="true" />
-                <element signature="e#2002#2003#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Iterable.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/lang/Iterable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="74" column="22" lean-forward="true" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
+            <state relative-caret-position="286">
+              <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NonTerminal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/NonTerminal.java">
+      <file leaf-file-name="ComputeMemSizeVisitor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/visitorModel/ComputeMemSizeVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
+            <state relative-caret-position="44">
+              <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConstructAssignmentAndExpressionStringVisitor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/visitorModel/ConstructAssignmentAndExpressionStringVisitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StackBasedCodeGenerationVisitor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/visitorModel/StackBasedCodeGenerationVisitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="44" lean-forward="false" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TagsBasedCodeGenerationVisitor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/visitorModel/TagsBasedCodeGenerationVisitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Register.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/code-generator/src/main/java/Register.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="47" column="24" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,78 +143,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Epsilon.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Epsilon.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code-generator/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            <state relative-caret-position="110">
+              <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Terminal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Terminal.java">
+      <file leaf-file-name="code-generator.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code-generator/code-generator.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="20" />
+            <state relative-caret-position="242">
+              <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Consumer.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/util/function/Consumer.java">
+      <file leaf-file-name="Comp6421Compiler.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Comp6421Compiler.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SyntacticAnalyzer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/SyntacticAnalyzer.java">
+      <file leaf-file-name="lexical-analyzer.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lexical-analyzer/lexical-analyzer.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Symbol.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Symbol.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-              <folding>
-                <element signature="e#817#818#0" expanded="true" />
-                <element signature="e#882#883#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SyntacticAnalyzerDriver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/SyntacticAnalyzerDriver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="error_test.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/test/resources/syntactic/error_test.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+            <state relative-caret-position="66">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="16" selection-end-column="107" />
               <folding />
             </state>
           </provider>
@@ -186,22 +194,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>NOTS</find>
-      <find>backupCharacter</find>
-      <find>a</find>
-      <find>append</find>
-      <find>.append(&quot;</find>
-      <find>hasNex</find>
-      <find>hasnx</find>
-      <find>if (ch ==</find>
-      <find>+ ch, location, lineNum</find>
-      <find>ot Supported Lexical Symbol</find>
-      <find>Supported Lexical Symbol</find>
-      <find>Support</find>
-      <find>NoSuchLexElemException</find>
-      <find>inva</find>
-      <find>nots</find>
-      <find>lexicalN</find>
       <find>TokenType</find>
       <find>first</find>
       <find>TableKey</find>
@@ -216,6 +208,22 @@
       <find>matcht</find>
       <find>lexicalAnalyzer</find>
       <find>symbolMap</find>
+      <find>needTableType</find>
+      <find>printSymbolTable</find>
+      <find>funcde</find>
+      <find>statBlock</find>
+      <find>isAtomic</find>
+      <find>fparam</find>
+      <find>visitListPatternNode</find>
+      <find>varDecl</find>
+      <find>visit</find>
+      <find>funcdef</find>
+      <find>visitTypeIdListPattern</find>
+      <find>accept</find>
+      <find>accep</find>
+      <find>:</find>
+      <find>funcdec</find>
+      <find>integer Utility</find>
     </findStrings>
     <replaceStrings>
       <replace>if (ch != null, ch ==</replace>
@@ -227,6 +235,8 @@
       <dir>E:\Concordia\Comp6421\Project</dir>
       <dir>E:\Concordia\Comp6421\Project\syntactic-analyzer\src\main\java\com\concordia\comp6421\compiler\syntacticAnalyzer\yuanwen</dir>
       <dir>E:\Concordia\Comp6421\Project\common\src\main\java\yuanwen</dir>
+      <dir>E:\Concordia\Comp6421\Project\syntactic-analyzer</dir>
+      <dir>E:\Concordia\Comp6421\Project\syntactic-analyzer\src\main\java\com\concordia\comp6421\compiler\syntacticAnalyzer</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -240,18 +250,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalCase.txt" />
-        <option value="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/utils/CompilerFileReader.java" />
-        <option value="$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalValidProgram.txt" />
-        <option value="$PROJECT_DIR$/lexical-analyzer/src/main/resources/LexicalOptorAndDemter.txt" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/concordia/comp6421/compiler/common/ReservedDictionary.java" />
-        <option value="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/entity/TokenType.java" />
-        <option value="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzer.java" />
-        <option value="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/Application.java" />
-        <option value="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/lexicalAnalyzer/application/LexicalAnalyzerDriver.java" />
-        <option value="$PROJECT_DIR$/lexical-analyzer/src/test/java/IntegrationTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/syntactic-analyzer/pom.xml" />
         <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/application/Alpha.java" />
         <option value="$PROJECT_DIR$/syntactic-analyzer/src/test/java/LexicalAnalyzerTest.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/concordia/comp6421/compiler/common/Default.java" />
@@ -270,7 +268,6 @@
         <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/application/SyntacticAnalyzer.java" />
         <option value="$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/LexicalAnalyzerDriver.java" />
         <option value="$PROJECT_DIR$/lexical-analyzer/src/test/java/LexicalAnalyzerTest.java" />
-        <option value="$PROJECT_DIR$/syntactic-analyzer/src/test/java/SyntacticAnalyzerTest.java" />
         <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/yuanwen/Terminal.java" />
         <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/utils/Default.java" />
         <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/yuanwen/Symbol.java" />
@@ -285,12 +282,25 @@
         <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/SyntacticAnalyzerDriver.java" />
         <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Alpha.java" />
         <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Rule.java" />
-        <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/SyntacticAnalyzer.java" />
         <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Symbol.java" />
         <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Grammar.java" />
         <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/NonTerminal.java" />
         <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Terminal.java" />
         <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Epsilon.java" />
+        <option value="$PROJECT_DIR$/semantic-analyzer/semantic-analyzer.iml" />
+        <option value="$PROJECT_DIR$/syntactic-analyzer/src/test/resources/test_program_6.txt" />
+        <option value="$PROJECT_DIR$/syntactic-analyzer/src/test/java/SyntacticAnalyzerTest.java" />
+        <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/SyntacticAnalyzer.java" />
+        <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/visitorModel/SymTabCreationVisitor.java" />
+        <option value="$PROJECT_DIR$/semantic-analyzer/src/test/resources/test_program_1.txt" />
+        <option value="$PROJECT_DIR$/semantic-analyzer/src/test/java/SemanticAnalyzerTest.java" />
+        <option value="$PROJECT_DIR$/semantic-analyzer/src/test/resources/test_program_2.txt" />
+        <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/treeModel/NodeType.java" />
+        <option value="$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/visitorModel/TypeCheckingVisitor.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/code-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/code-generator/code-generator.iml" />
+        <option value="$PROJECT_DIR$/code-generator/src/main/java/Register.java" />
       </list>
     </option>
   </component>
@@ -305,6 +315,15 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="semantic-analyzer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="semantic-analyzer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="syntactic-analyzer" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
@@ -317,10 +336,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="2046" />
-    <option name="height" value="1120" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="2064" />
+    <option name="height" value="1138" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -338,10 +357,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="syntactic-analyzer" type="cbb8eebc:String" user="syntactic-analyzer" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -352,28 +378,35 @@
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="code-generator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="code-generator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="code-generator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="code-generator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="code-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
@@ -413,6 +446,11 @@
             <path>
               <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
               <item name="Project" type="462c0819:PsiDirectoryNode" />
+              <item name="semantic-analyzer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Project" type="462c0819:PsiDirectoryNode" />
               <item name="syntactic-analyzer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -453,54 +491,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="syntacticAnalyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
-              <item name="syntactic-analyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="syntacticAnalyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
-              <item name="syntactic-analyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
-              <item name="syntactic-analyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
-              <item name="syntactic-analyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Comp6421Compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
-              <item name="syntactic-analyzer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="syntactic" type="462c0819:PsiDirectoryNode" />
+              <item name="visitorModel" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -512,6 +511,8 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/Concordia/Comp6421/Project/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/yuanwen/Terminal.java" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/code-generator" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -522,11 +523,11 @@
       <recent name="com.concordia.comp6421.compiler.syntacticAnalyzer" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Concordia\Comp6421\Project\code-generator" />
       <recent name="E:\Concordia\Comp6421\Project\common\src\main\java\yuanwen" />
       <recent name="E:\Concordia\Comp6421\Project\lexical-analyzer\src\main\java\com\concordia\comp6421\compiler\syntacticAnalyzer\utils" />
       <recent name="E:\Concordia\Comp6421\Project\syntactic-analyzer\src\main\java\com\concordia\comp6421\compiler\syntacticAnalyzer\application\util" />
       <recent name="E:\Concordia\Comp6421\Project\common\src\main\java\com\concordia\comp6421\compiler\common" />
-      <recent name="E:\Concordia\Comp6421\Project\syntactic-analyzer\src\main\java\com\concordia\comp6421\compiler\syntacticAnalyzer\application" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -541,15 +542,35 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.IntegrationTest.readLexicalValidProgramFile">
-    <configuration name="IntegrationTest.readLexicalIdentifierFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SemanticAnalyzerTest.testAnalyzer2">
+    <configuration name="SemanticAnalyzerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="lexical-analyzer" />
+      <module name="semantic-analyzer" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest" />
-      <option name="METHOD_NAME" value="readLexicalIdentifierFile" />
+      <option name="MAIN_CLASS_NAME" value="SemanticAnalyzerTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="SemanticAnalyzerTest.testAnalyzer1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="semantic-analyzer" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SemanticAnalyzerTest" />
+      <option name="METHOD_NAME" value="testAnalyzer1" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -562,14 +583,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="IntegrationTest.readLexicalKeywordFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SemanticAnalyzerTest.testAnalyzer2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="lexical-analyzer" />
+      <module name="semantic-analyzer" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest" />
-      <option name="METHOD_NAME" value="readLexicalKeywordFile" />
+      <option name="MAIN_CLASS_NAME" value="SemanticAnalyzerTest" />
+      <option name="METHOD_NAME" value="testAnalyzer2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -582,15 +603,15 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="IntegrationTest.readLexicalNumberFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SyntacticAnalyzerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="lexical-analyzer" />
+      <module name="syntactic-analyzer" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest" />
-      <option name="METHOD_NAME" value="readLexicalNumberFile" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="SyntacticAnalyzerTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -602,34 +623,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="IntegrationTest.readLexicalOptorAndDemterFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SyntacticAnalyzerTest.testAnalyzer4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="lexical-analyzer" />
+      <module name="syntactic-analyzer" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest" />
-      <option name="METHOD_NAME" value="readLexicalOptorAndDemterFile" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="IntegrationTest.readLexicalValidProgramFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="lexical-analyzer" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest" />
-      <option name="METHOD_NAME" value="readLexicalValidProgramFile" />
+      <option name="MAIN_CLASS_NAME" value="SyntacticAnalyzerTest" />
+      <option name="METHOD_NAME" value="testAnalyzer4" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -683,6 +684,18 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Project" />
+      <envs />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -723,32 +736,20 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Project" />
-      <envs />
-    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.IntegrationTest.readLexicalNumberFile" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.IntegrationTest.readLexicalIdentifierFile" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.IntegrationTest.readLexicalKeywordFile" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.IntegrationTest.readLexicalOptorAndDemterFile" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.IntegrationTest.readLexicalValidProgramFile" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.SyntacticAnalyzerTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.SyntacticAnalyzerTest.testAnalyzer4" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SemanticAnalyzerTest.testAnalyzer1" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.SemanticAnalyzerTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.SemanticAnalyzerTest.testAnalyzer2" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.IntegrationTest.readLexicalValidProgramFile" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.IntegrationTest.readLexicalOptorAndDemterFile" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.IntegrationTest.readLexicalNumberFile" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.IntegrationTest.readLexicalKeywordFile" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.IntegrationTest.readLexicalIdentifierFile" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SemanticAnalyzerTest.testAnalyzer2" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SemanticAnalyzerTest.testAnalyzer1" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SemanticAnalyzerTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SyntacticAnalyzerTest.testAnalyzer4" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SyntacticAnalyzerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -775,6 +776,8 @@
       <workItem from="1551045139315" duration="2899000" />
       <workItem from="1551414753433" duration="31814000" />
       <workItem from="1552266127961" duration="7730000" />
+      <workItem from="1554335848842" duration="1648000" />
+      <workItem from="1554337579119" duration="13925000" />
     </task>
     <task id="LOCAL-00001" summary="Assignment 1 update after demo">
       <created>1548731542896</created>
@@ -811,74 +814,90 @@
       <option name="project" value="LOCAL" />
       <updated>1552280819173</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Assignment 2 update">
+      <created>1554357363067</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1554357363067</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="IntegrationTest_readLexicalCaseFile - 2019.01.28 at 21h 39m 50s.xml">
-      <configuration name="IntegrationTest.readLexicalCaseFile" configurationId="JUnit" />
+    <history-entry file="SemanticAnalyzerTest_testAnalyzer1 - 2019.04.03 at 22h 36m 14s.xml">
+      <configuration name="SemanticAnalyzerTest.testAnalyzer1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntegrationTest_readLexicalCaseFile - 2019.01.28 at 22h 15m 38s.xml">
-      <configuration name="IntegrationTest.readLexicalCaseFile" configurationId="JUnit" />
+    <history-entry file="SemanticAnalyzerTest_testAnalyzer1 - 2019.04.03 at 22h 38m 21s.xml">
+      <configuration name="SemanticAnalyzerTest.testAnalyzer1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntegrationTest_readLexicalCommentFile - 2019.01.28 at 21h 37m 53s.xml">
-      <configuration name="IntegrationTest.readLexicalCommentFile" configurationId="JUnit" />
+    <history-entry file="SemanticAnalyzerTest_testAnalyzer1 - 2019.04.03 at 22h 38m 28s.xml">
+      <configuration name="SemanticAnalyzerTest.testAnalyzer1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntegrationTest_readLexicalCommentFile - 2019.01.28 at 21h 57m 54s.xml">
-      <configuration name="IntegrationTest.readLexicalCommentFile" configurationId="JUnit" />
+    <history-entry file="SemanticAnalyzerTest_testAnalyzer1 - 2019.04.03 at 22h 54m 47s.xml">
+      <configuration name="SemanticAnalyzerTest.testAnalyzer1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntegrationTest_readLexicalCommentFile - 2019.01.28 at 22h 16m 46s.xml">
-      <configuration name="IntegrationTest.readLexicalCommentFile" configurationId="JUnit" />
+    <history-entry file="SemanticAnalyzerTest_testAnalyzer1 - 2019.04.03 at 22h 57m 54s.xml">
+      <configuration name="SemanticAnalyzerTest.testAnalyzer1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntegrationTest_readLexicalIdentifierFile - 2019.01.28 at 22h 17m 16s.xml">
-      <configuration name="IntegrationTest.readLexicalIdentifierFile" configurationId="JUnit" />
+    <history-entry file="SemanticAnalyzerTest_testAnalyzer1 - 2019.04.03 at 22h 58m 02s.xml">
+      <configuration name="SemanticAnalyzerTest.testAnalyzer1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntegrationTest_readLexicalKeywordFile - 2019.01.28 at 22h 18m 04s.xml">
-      <configuration name="IntegrationTest.readLexicalKeywordFile" configurationId="JUnit" />
+    <history-entry file="SemanticAnalyzerTest_testAnalyzer1 - 2019.04.03 at 23h 03m 59s.xml">
+      <configuration name="SemanticAnalyzerTest.testAnalyzer1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntegrationTest_readLexicalNumberFile - 2019.01.28 at 22h 18m 32s.xml">
-      <configuration name="IntegrationTest.readLexicalNumberFile" configurationId="JUnit" />
+    <history-entry file="SemanticAnalyzerTest_testAnalyzer2 - 2019.04.03 at 23h 45m 14s.xml">
+      <configuration name="SemanticAnalyzerTest.testAnalyzer2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntegrationTest_readLexicalOptorAndDemterFile - 2019.01.28 at 22h 18m 51s.xml">
-      <configuration name="IntegrationTest.readLexicalOptorAndDemterFile" configurationId="JUnit" />
+    <history-entry file="SemanticAnalyzerTest_testAnalyzer2 - 2019.04.03 at 23h 46m 14s.xml">
+      <configuration name="SemanticAnalyzerTest.testAnalyzer2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="IntegrationTest_readLexicalValidProgramFile - 2019.01.28 at 22h 19m 12s.xml">
-      <configuration name="IntegrationTest.readLexicalValidProgramFile" configurationId="JUnit" />
+    <history-entry file="SemanticAnalyzerTest_testAnalyzer2 - 2019.04.03 at 23h 47m 10s.xml">
+      <configuration name="SemanticAnalyzerTest.testAnalyzer2" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84294000" />
+    <option name="totallyTimeSpent" value="100048000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="2064" height="1138" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2180937" sideWeight="0.36762482" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10665658" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2180937" sideWeight="0.6323752" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.49092284" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5121029" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19440243" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41774675" sideWeight="0.8895613" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41518578" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31543118" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33133733" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20355412" sideWeight="0.49092284" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32674298" sideWeight="0.49092284" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.48789713" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -910,16 +929,35 @@
           <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/utils/Util.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/visitorModel/SymTabCreationVisitor.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <condition expression="this.nodeType == NodeType.fParam" language="JAVA" />
+          <url>file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/treeModel/Node.java</url>
+          <line>122</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/lexical-analyzer/src/test/java/LexicalAnalyzerTest.java</url>
           <line>83</line>
-          <properties class="LexicalAnalyzerTest" method="errorIdentifierIntegerTest2">
+          <properties class="LexicalAnalyzerTest">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -938,303 +976,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/test/resources/lexical/op_punc" />
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/test/java/LexicalAnalyzerTest.java" />
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/concordia/comp6421/compiler/common/Default.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/util/Optional.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="132" column="13" lean-forward="false" selection-start-line="132" selection-start-column="13" selection-end-line="132" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/test/java/IntegrationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="45" column="20" lean-forward="false" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/test/java/LexicalAnalyzerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/test/java/SyntacticAnalyzerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/test/java/CompilerFileReaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/syntactic-analyzer.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/util/function/Function.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="48" column="6" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/utils/StringBuilderRemember.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/Exception/NoSuchLexElemException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/util/EnumSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="79" column="22" lean-forward="false" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/utils/EnumUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/TokenType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="24" column="41" lean-forward="true" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#738#739#0" expanded="false" />
-            <element signature="e#780#781#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/yuanwen/Alpha.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="26" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/yuanwen/Epsilon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="17" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/yuanwen/Terminal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="29" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/yuanwen/Symbol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/TableKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding>
-            <element signature="e#282#283#0" expanded="false" />
-            <element signature="e#324#325#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/yuanwen/Rule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/yuanwen/NonTerminal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/yuanwen/Grammar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/yuanwen/GrammarReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="42" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/GrammarService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1578#1579#0" expanded="true" />
-            <element signature="e#1608#1609#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/utils/Default.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/yuanwen/TableKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="29" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/yuanwen/SyntacticAnalyzerDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/yuanwen/SyntacticAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/utils/CompilerFileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/yuanwen/Alpha.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Alpha.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/yuanwen/Rule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/entity/Rule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lexical-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/LexicalAnalyzer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -1247,42 +988,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/test/resources/syntactic/test_program.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/test/resources/syntactic/error_test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/test/resources/syntactic/test_program.txt" />
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/test/resources/syntactic/error_test.txt" />
     <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/SyntacticAnalyzerDriver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/SyntacticAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1291,7 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1307,12 +1022,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
-          <folding>
-            <element signature="e#949#950#0" expanded="true" />
-            <element signature="e#1008#1009#0" expanded="true" />
-            <element signature="e#1959#1960#0" expanded="true" />
-            <element signature="e#2002#2003#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1321,7 +1031,7 @@
         <state relative-caret-position="40">
           <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1339,8 +1049,7 @@
         <state relative-caret-position="277">
           <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
           <folding>
-            <element signature="e#817#818#0" expanded="true" />
-            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1350,6 +1059,320 @@
         <state relative-caret-position="220">
           <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic-analyzer/src/main/config/grammar_AST.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/syntactic-analyzer.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project.iml" />
+    <entry file="file://$PROJECT_DIR$/semantic-analyzer/src/main/java/com/concordia/comp6421/compiler/semanticAnalyzer/SemanticAnalyzerDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/utils/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/treeModel/SymTab.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic-analyzer/src/main/java/com/concordia/comp6421/compiler/semanticAnalyzer/SemanticAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/SyntacticAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="222" column="24" lean-forward="false" selection-start-line="222" selection-start-column="24" selection-end-line="222" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/treeModel/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic-analyzer/src/test/resources/test_program_1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/test/resources/test_program.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/test/resources/test_tree.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/test/resources/test_program_6.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic-analyzer/src/test/java/SemanticAnalyzerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="36" column="36" lean-forward="false" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic-analyzer/src/test/resources/test_program_2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/test/resources/test_program_5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/test/resources/test_program_1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="25" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/test/resources/test_program_2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/test/resources/test_program_4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/test/resources/test_program_3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/visitorModel/SymTabCreationVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="19" column="83" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/treeModel/NodeType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/visitorModel/TypeCheckingVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/test/java/SyntacticAnalyzerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="40" column="39" lean-forward="false" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-generator/src/main/java/com/concordia/comp6421/compiler/common/ReservedDictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic-analyzer/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="9" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-generator/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexical-analyzer/lexical-analyzer.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="16" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-generator/code-generator.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Comp6421Compiler.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic-analyzer/semantic-analyzer.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/visitorModel/ComputeMemSizeVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/visitorModel/ConstructAssignmentAndExpressionStringVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/visitorModel/StackBasedCodeGenerationVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="44" lean-forward="false" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/syntactic-analyzer/src/main/java/com/concordia/comp6421/compiler/syntacticAnalyzer/visitorModel/TagsBasedCodeGenerationVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-generator/src/main/java/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="47" column="24" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1405,7 +1428,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>syntactic-analyzer</last-edited>
+          <last-edited>code-generator</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
