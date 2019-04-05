@@ -7,12 +7,12 @@ public class SymTab {
     public String name;
     public ArrayList<SymTabEntry> symList;
     public int size;
-//    public SymTab upperTable;
+    public int currentOffset;
 
     public SymTab(String name){
         this.name = name;
         symList = new ArrayList<SymTabEntry>();
-//        this.upperTable = uppertable;
+        this.currentOffset = 0;
     }
 
     public void addEntry(SymTabEntry entry){

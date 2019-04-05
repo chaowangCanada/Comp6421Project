@@ -27,4 +27,6 @@ public class Default {
     public static final String ACTION_PREFIX = "ACT_";
 
     public static Set<Symbol> FOLLOW_REF_SYMBOL_MAP = new HashSet<>();
+
+    public static StringBuilder MOON_DATA_CODE = new StringBuilder();
 }
