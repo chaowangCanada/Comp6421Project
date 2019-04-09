@@ -1,8 +1,10 @@
 package com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel;
 
 import com.concordia.comp6421.compiler.syntacticAnalyzer.visitorModel.Visitor;
+import javafx.util.Pair;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 public class Node {
 
@@ -64,6 +66,11 @@ public class Node {
         return parent;
     }
 
+    public static Node makeFamily(NodeType op, String value, Node kid1, Node... kids) {
+        Stream.of(kids).forEach(kid1::makeSiblings);
+        return Node.makeNode(op, value).adoptChildren(kid1);
+    }
+
     public Node makeSiblings(Node y) {
         Node xsibs = this;
         while(xsibs.rightSib != null) {
@@ -123,24 +130,39 @@ public class Node {
         if(this.isAtomic)
             visitor.visit(this);
         else {
-            for (Node child : this.getChildren()){
-                child.accept(visitor);
+            if(this.getChildren() != null){
+                for (Node child : this.getChildren()){
+                    child.accept(visitor);
+                }
             }
             visitor.visit(this);
         }
     }
 
+    public void _accept(Visitor visitor){
+        visitor.visit(this);
+    }
+
     public void printTable() {
         if(this.symTab == null || this.symTab.symList.size() == 0)
             return ;
-
-        System.out.println("=====================================================================");
-        System.out.println("Symbol table :  " + this.symTab.name);
-        System.out.println(" | name     |     kind     |   type   | offset |   link    |");
+        String frame = String.join("", Collections.nCopies(126, "#")) + "\n";
+        String line = "#" + String.join("", Collections.nCopies(125, "-")) + "#\n";
+        String headFormat = "#Symbol table: %-50s|%-60s#\n";
+        String rowFormat = "#%-20s|%-20s|%-20s|%-20s|%-20s|%-20s#\n";
+        StringBuilder sb = new StringBuilder();
+        sb.append(frame);
+        sb.append(String.format(headFormat, symTab.name, "size: " + Math.abs(symTab.size)));
+        sb.append(line);
+        sb.append(String.format(rowFormat, "name", "kind", "type", "size", "offset" ,"link"));
+        sb.append(line);
         for (SymTabEntry row : this.symTab.symList) {
-            System.out.println(" | " + row.name + " | " + row.kind + " | " + row.type + " | " + row.offset + " | " + (row.thisTable == null ? "null" : row.thisTable.size));
+            sb.append(String.format(rowFormat, row.name, row.kind, row.type, Math.abs(row.size), Math.abs(row.offset), (row.thisTable == null ? "null" : row.thisTable.name)));
+            sb.append(line);
         }
-        System.out.println("=====================================================================");
+        sb.append(frame);
+        sb.append("\n");
+        System.out.println(sb);
     }
 
 

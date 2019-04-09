@@ -1,0 +1,11 @@
+main {
+    integer x ;
+    integer y ;
+    x = 65 ;
+    if ( x == 1 ) then {
+        x = 65 ;
+    } else {
+        x = 66 ;
+    } ;
+    write ( x ) ;
+} ;

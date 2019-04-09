@@ -1,0 +1,9 @@
+main {
+    integer x ;
+    integer y ;
+    integer z ;
+    x  = 2 ;
+    y = 34 ;
+    z = x + y * x ;
+    write ( z - 8 ) ;
+} ;

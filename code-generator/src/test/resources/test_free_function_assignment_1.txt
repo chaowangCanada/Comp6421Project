@@ -1,0 +1,13 @@
+integer f1 ( integer p1 ) {
+    integer x ;
+    x = p1 + 1 ;
+    return ( x ) ;
+} ;
+
+main {
+    integer x ;
+    integer y ;
+    x = 64 ;
+    y = f1 ( x ) ;
+    write ( y ) ;
+} ;

@@ -5,7 +5,7 @@ classDecl -> CLASS IDENTIFIER colonIdCommaIdList_op LCP varDeclFuncDecl_list RCP
 colonIdCommaIdList_op -> COLON IDENTIFIER commaId_list ACT_inherList | EPSILON
 commaId_list -> COMMA IDENTIFIER commaId_list | EPSILON
 varDeclFuncDecl_list -> type IDENTIFIER varDeclFuncDeclTail | EPSILON
-varDeclFuncDeclTail -> arraySize_list ACT_dimList SEMICOLON ACT_varDecl varDeclFuncDecl_list | LP fParams ACT_fParamList RP SEMICOLON ACT_funcDecl varDeclFuncDecl_list
+varDeclFuncDeclTail -> arraySize_list ACT_dimList SEMICOLON ACT_varDecl varDeclFuncDecl_list | LP fParams ACT_fParamList ACT_fCall RP SEMICOLON ACT_funcDecl varDeclFuncDecl_list
 funcHead -> type IDENTIFIER ACT_scopeSpec srId_op LP fParams ACT_fParamList RP
 srId_op -> SR IDENTIFIER | EPSILON
 funcDef -> funcHead funcBody SEMICOLON
@@ -16,23 +16,23 @@ indiceIdnestList_tail -> DOT IDENTIFIER ACT_dataMember indiceIdnestList_tail | L
 statement_list -> statement statement_list | EPSILON
 arraySize_list -> arraySize arraySize_list | EPSILON
 statement -> assignStat ACT_assignStat SEMICOLON | restOfStatment
-restOfStatment -> IF LP expr RP THEN statBlock ELSE statBlock SEMICOLON | FOR LP type IDENTIFIER assignOp expr ACT_assignStat SEMICOLON relExpr SEMICOLON assignStat ACT_assignStat RP statBlock SEMICOLON | READ LP variable RP SEMICOLON |  WRITE LP expr RP SEMICOLON | RETURN LP expr RP SEMICOLON
+restOfStatment -> IF LP expr RP THEN statBlock ELSE statBlock SEMICOLON | FOR LP type IDENTIFIER assignOp expr ACT_assignStat SEMICOLON relExpr SEMICOLON assignStat ACT_assignStat RP ACT_statBlockStart statBlock SEMICOLON ACT_forStat | READ LP variable RP SEMICOLON ACT_getStat |  WRITE LP expr RP SEMICOLON ACT_putStat | RETURN LP expr RP SEMICOLON ACT_returnStat
 assignStat -> variable assignOp expr
 statBlock -> LCP statement_list RCP ACT_statBlock | statement | EPSILON
 expr -> arithExpr expr_prime
-expr_prime -> relOp ACT_relOp arithExpr | EPSILON
-relExpr -> arithExpr relOp ACT_relOp arithExpr
+expr_prime -> relOp ACT_relOp arithExpr ACT_relExpr| EPSILON
+relExpr -> arithExpr relOp ACT_relOp arithExpr ACT_relExpr
 arithExpr -> term arithExpr_prime
-arithExpr_prime -> addOp term ACT_addOp arithExpr_prime | EPSILON
+arithExpr_prime -> addOp ACT_assignOp term ACT_addOp arithExpr_prime | EPSILON
 sign -> ADDITION | SUBTRACTION
 term -> factor term_tail
-term_tail -> multOp factor ACT_multOp term_tail | EPSILON
-factor -> LP arithExpr RP | FLOAT_NUM | INT_NUM | NOT factor | variable | sign factor
+term_tail -> multOp ACT_assignOp factor ACT_multOp term_tail | EPSILON
+factor -> LP arithExpr RP | FLOAT_NUM | INT_NUM | NOT factor ACT_not | variable | sign ACT_assignOp factor ACT_sign
 variable -> IDENTIFIER variable_
-variable_ -> indice_list ACT_indexList ACT_dataMember idnest_list_ ACT_var | LP aParams RP idnest_list_ ACT_var
+variable_ -> indice_list ACT_indexList ACT_dataMember idnest_list_ ACT_var | LP aParams RP ACT_aParams ACT_fCall idnest_list_ ACT_var
 idnest_list_ -> idnest_ idnest_list_ | EPSILON
 idnest_ -> DOT IDENTIFIER idnest_prime_
-idnest_prime_ -> LSP arithExpr RSP indice_list | LP aParams RP | EPSILON
+idnest_prime_ -> LSP arithExpr RSP indice_list ACT_indexList ACT_dataMember | LP aParams RP ACT_aParams ACT_fCall | ACT_dataMember EPSILON
 indice_list -> indice indice_list | EPSILON
 indice -> LSP arithExpr RSP
 arraySize -> LSP INT_NUM RSP

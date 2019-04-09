@@ -4,9 +4,15 @@ package com.concordia.comp6421.compiler.syntacticAnalyzer.utils;
 import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.Epsilon;
 import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.Symbol;
 import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.Terminal;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.Node;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.NodeType;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.SymTab;
+import javafx.util.Pair;
 
 import java.io.File;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class Default {
@@ -28,5 +34,11 @@ public class Default {
 
     public static Set<Symbol> FOLLOW_REF_SYMBOL_MAP = new HashSet<>();
 
-    public static StringBuilder MOON_DATA_CODE = new StringBuilder();
+    public static Map<String, Node> CLASS_DEFINITION_MAP = new HashMap<>();
+
+    public static Map<String, Node> FUNCTION_DEFINITION_MAP = new HashMap<>();
+
+    public static Map<String, Node> VARIABLE_DEFINITION_MAP = new HashMap<>();
+
+    public static int tmpVarCount = 1;
 }

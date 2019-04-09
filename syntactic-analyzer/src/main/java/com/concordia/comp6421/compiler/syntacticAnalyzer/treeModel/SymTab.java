@@ -18,8 +18,11 @@ public class SymTab {
     public void addEntry(SymTabEntry entry){
         if(entry != null ) {
             symList.add(entry);
-            size = symList.size();
         }
+    }
+
+    public SymTabEntry lookUp(String entryName){
+        return symList.stream().filter(elm -> entryName.equalsIgnoreCase(elm.name)).findAny().orElse(null);
     }
 
 }

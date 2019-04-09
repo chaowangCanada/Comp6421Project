@@ -1,0 +1,19 @@
+class class1 {
+    float float1 ;
+    integer int1 ;
+} ;
+
+integer func1 ( integer int235 [2][3][5] , float float4 [10] ) {
+    float float7 ;
+} ;
+
+main {
+    integer int532 [5][3][2] ;
+    class1 class110 [10] ;
+    float float3 ;
+    integer int3 ;
+    integer a ;
+    integer b ;
+    integer c ;
+    int3 = a + b * c ;
+} ;

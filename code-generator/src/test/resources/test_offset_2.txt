@@ -1,0 +1,13 @@
+main {
+integer a ;
+integer b ;
+integer c ;
+a = 1 ;
+write ( a ) ;
+b = 2 ;
+write ( b );
+c = 3 ;
+write ( c ) ;
+a = a + b * c ;
+write ( a + 6 ) ;
+} ;

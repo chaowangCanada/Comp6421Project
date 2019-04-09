@@ -1,0 +1,11 @@
+class M {
+    integer x ;
+    integer y ;
+} ;
+
+main {
+    M m [3] ;
+    m [1] . x = 64 ;
+    m [1] . y = 1 ;
+    write ( m [1] . x + m [1] . y ) ;
+} ;
