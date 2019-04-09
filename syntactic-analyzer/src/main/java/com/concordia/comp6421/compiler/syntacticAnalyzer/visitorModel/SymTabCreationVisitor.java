@@ -46,10 +46,6 @@ public class SymTabCreationVisitor extends Visitor{
             visitTypeListIdListPattern(node);
     }
 
-    @Override
-    public void visit(Node node, SymTab symTab) {
-
-    }
 
     private void visitIntFloatNode(Node node) {
         if(node.nodeType == NodeType.intNum)

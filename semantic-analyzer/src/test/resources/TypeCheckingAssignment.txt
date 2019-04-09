@@ -1,0 +1,8 @@
+main {
+    integer x ;
+    float y ;
+    integer sum ;
+    x = 1 ;
+    y = 1.2 ;
+    sum = x + y * y ;
+} ;

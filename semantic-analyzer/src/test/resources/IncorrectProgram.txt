@@ -1,0 +1,45 @@
+class MyClass {
+    integer x ;
+    integer x ;
+    MyClass1 c ;
+    integer addNum( ) {
+        integer x ;
+    } ;
+} ;
+
+class MyClass1 {
+    MyClass myClass1 [6] ;
+} ;
+
+class MyClass {
+    MyClass myClass1 [6] ;
+} ;
+
+integer ff ( ) {
+    integer xx ;
+} ;
+
+integer x( MyClass p, float m ) {
+    MyClass myClass1 ;
+    integer yy ;
+} ;
+
+integer x( MyClass p, float m ) {
+    MyClass myClass1 ;
+    integer yy ;
+    integer yy ;
+} ;
+
+integer y( MyClass p [2] , float m [8] ) {
+    integer yy ;
+} ;
+
+main {
+    integer x ;
+    integer y ;
+    integer z ;
+
+    MyClass myClass ;
+    MyClass myClass1 ;
+} ;
+

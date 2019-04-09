@@ -3,6 +3,7 @@ package com.concordia.comp6421.compiler.syntacticAnalyzer.visitorModel;
 import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.Node;
 import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.NodeType;
 import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.SymTab;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.SymTabEntry;
 
 import java.util.Arrays;
 import java.util.Optional;
@@ -11,26 +12,22 @@ import static com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.NodeTy
 
 public class TypeCheckingVisitor extends Visitor
 {
-    @Override
+
     public void visit(Node node) {
-
-    }
-
-    public void visit(Node node, SymTab symTab) {
         switch (node.nodeType) {
             case prog:
-                visitProg(node, symTab);
+                visitProg(node, node.symTab);
                 break;
             case classDecl:
-                visitClassDecl(node, Visitor.symTabMap.get(getId(node)));
+                visitClassDecl(node, node.symTab);
                 break;
             case funcDef:
-                visitFuncDef(node, Visitor.symTabMap.get(getId(node)));
+                visitFuncDef(node, node.symTab);
                 break;
             case funcDecl:
                 break;
             default:
-                visitGeneral(node, symTab);
+                visitGeneral(node, node.symTab);
                 break;
         }
     }
@@ -41,7 +38,7 @@ public class TypeCheckingVisitor extends Visitor
             if (child.nodeType == NodeType.statBlock) {
                 visitGeneral(child, null);
             } else {
-                visit(child, symTab);
+                visit(child);
             }
             child = child.rightSib;
         }
@@ -84,7 +81,7 @@ public class TypeCheckingVisitor extends Visitor
 
         Node child = node.leftMostChild;
         while (child != null) {
-            visit(child, symTab);
+            visit(child);
             child = child.rightSib;
         }
     }
@@ -92,13 +89,13 @@ public class TypeCheckingVisitor extends Visitor
     private void checkReturnType(Node node, SymTab local) {
         local = local == null ? Visitor.symTabMap.get("program") : local;
         String returnType = getAParamType(node);
-        if ((returnType.equals("intNum") && !local.type.equals("integer") || (returnType.equals("floatNum") && local.type.equals("float")))){
+        if ((returnType.equals("intNum") && !local.symList.get(0).type.equals("integer") || (returnType.equals("floatNum") && local.symList.get(0).type.equals("float")))){
             Visitor.errors.add("Invalid return type for function " + local.name);
             return;
         }
 
         Optional<String> validType = local.symList.stream().filter(e -> e.name.equals(returnType)).map(e -> e.type).findFirst();
-        if (validType.isPresent() && !local.type.equals(validType.get())) {
+        if (validType.isPresent() && !local.symList.get(0).type.equals(validType.get())) {
             Visitor.errors.add("Invalid return type for function " + local.name);
         }
     }
@@ -107,7 +104,7 @@ public class TypeCheckingVisitor extends Visitor
         local = local == null ? Visitor.symTabMap.get("program") : local;
         Node callClass = node.getLeftMostSib();
         String fName = node.leftMostChild.data.toString();
-        SymTab symTab = null;
+        SymTabEntry symTabEntry = null;
         SymTab classTab = null;
         if (callClass.nodeType == NodeType.dataMember) {
             Optional<String> className = local.symList.stream().filter(e -> e.name.equals(callClass.leftMostChild.data.toString())).map(e -> e.type).findFirst();
@@ -119,12 +116,12 @@ public class TypeCheckingVisitor extends Visitor
         }
 
         if (classTab != null) {
-            symTab = classTab.symList.stream().filter(e -> e.name.equals(fName)).findFirst().orElse(null);
+            symTabEntry = classTab.symList.stream().filter(e -> e.name.equals(fName)).findFirst().orElse(null);
         }
 
-        if (symTab != null) {
+        if (symTabEntry != null) {
             String inputType = getAParamType(node.leftMostChild.rightSib);
-            Optional<String> requied = symTab.symList.stream().filter(e -> e.kind == SymTab.Kind.parameter).map(e -> e.type).findFirst();
+            Optional<String> requied = local.symList.stream().filter(e -> e.kind == SymTab.Kind.parameter).map(e -> e.type).findFirst();
             if ((inputType == null && requied.isPresent()) || (inputType != null && !requied.isPresent())) {
                 Visitor.errors.add("Invalid input type for function " + fName);
             }
@@ -133,14 +130,14 @@ public class TypeCheckingVisitor extends Visitor
                 return;
             }
 
-            if (inputType.equals("intNum") && symTab.symList.stream().noneMatch(e -> e.type.equals("integer")) ||
-                    inputType.equals("intNum") && symTab.symList.stream().noneMatch(e -> e.type.equals("float"))) {
+            if (inputType.equals("intNum") && local.symList.stream().noneMatch(e -> e.type.equals("integer")) ||
+                    inputType.equals("intNum") && local.symList.stream().noneMatch(e -> e.type.equals("float"))) {
                 Visitor.errors.add("Invalid input type for function " + fName);
                 return;
             }
 
             Optional<String> validType = local.symList.stream().filter(e -> e.name.equals(inputType)).map(e -> e.type).findFirst();
-            if (validType.isPresent() && symTab.symList.stream().noneMatch(e -> e.type.equals(validType.get()))) {
+            if (validType.isPresent() && local.symList.stream().noneMatch(e -> e.type.equals(validType.get()))) {
                 Visitor.errors.add("Invalid input type for function " + fName);
             }
         } else {

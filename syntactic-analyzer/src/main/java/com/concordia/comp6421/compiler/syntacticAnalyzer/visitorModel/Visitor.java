@@ -15,6 +15,5 @@ public abstract class Visitor {
 
     public abstract void visit(Node node);
 
-    public abstract void visit(Node node, SymTab symTab);
 
 }

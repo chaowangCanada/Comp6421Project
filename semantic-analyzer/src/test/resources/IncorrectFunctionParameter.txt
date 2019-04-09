@@ -1,0 +1,10 @@
+int add ( integer p1, integer p2 ) {
+    integer sum ;
+    sum = p1 + p2 ;
+    return ( sum ) ;
+} ;
+
+main {
+    integer x ;
+    x = add ( 1 ) ;
+} ;

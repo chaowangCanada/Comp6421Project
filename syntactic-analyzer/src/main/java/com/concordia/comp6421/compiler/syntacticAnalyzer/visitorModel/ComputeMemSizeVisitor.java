@@ -2,6 +2,7 @@ package com.concordia.comp6421.compiler.syntacticAnalyzer.visitorModel;
 
 import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.Node;
 import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.NodeType;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.SymTab;
 import com.concordia.comp6421.compiler.syntacticAnalyzer.treeModel.SymTabEntry;
 
 import java.util.Arrays;
@@ -67,6 +68,7 @@ public class ComputeMemSizeVisitor extends Visitor{
 //                child._accept(this);
 //        }
     }
+
 
     private void visitFuncDeclNode(Node p_node) {
         if (FUNCTION_DEFINITION_MAP.containsKey(p_node.symTabEntry.name) &&
