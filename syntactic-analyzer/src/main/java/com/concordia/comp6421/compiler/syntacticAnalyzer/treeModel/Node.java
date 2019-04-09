@@ -165,5 +165,11 @@ public class Node {
         System.out.println(sb);
     }
 
-
+    public Node getLeftMostSib() {
+        if (parent != null) {
+            return parent.leftMostChild;
+        } else {
+            return null;
+        }
+    }
 }

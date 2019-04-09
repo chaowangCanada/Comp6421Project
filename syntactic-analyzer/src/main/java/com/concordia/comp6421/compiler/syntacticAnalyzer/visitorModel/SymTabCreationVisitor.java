@@ -46,6 +46,11 @@ public class SymTabCreationVisitor extends Visitor{
             visitTypeListIdListPattern(node);
     }
 
+    @Override
+    public void visit(Node node, SymTab symTab) {
+
+    }
+
     private void visitIntFloatNode(Node node) {
         if(node.nodeType == NodeType.intNum)
             node.symTabEntry = new SymTabEntry("t"+ Default.tmpVarCount++ ,"litvar", "integer", null);
@@ -139,8 +144,11 @@ public class SymTabCreationVisitor extends Visitor{
         node.symTabEntry.name = name.toString();
         node.symTabEntry.type = type.toString();
         node.symTab.name = name.toString();
-        if(node.nodeType == NodeType.funcDef)
+        if(node.nodeType == NodeType.funcDef) {
             FUNCTION_DEFINITION_MAP.put(functionName, node);
+            String id = getId(node);
+            Visitor.symTabMap.put(id, node.symTab);
+        }
     }
 
     // add statblock vardecl to funcDef
@@ -168,7 +176,10 @@ public class SymTabCreationVisitor extends Visitor{
         node.symTabEntry = new SymTabEntry(className, "class" ,"", node.symTab);
 
         if(node.nodeType == NodeType.classDecl)
+        {
             CLASS_DEFINITION_MAP.put(node.symTab.name, node);
+            Visitor.symTabMap.put(className, node.symTab);
+        }
     }
 
     public void visitProgNode(Node node) {
@@ -188,6 +199,7 @@ public class SymTabCreationVisitor extends Visitor{
                 node.symTab.addEntry(new SymTabEntry(table.name, "function" ,"" , table));
             }
         }
+        Visitor.symTabMap.put("Global", node.symTab);
     }
     //statblock
     public void visitListPatternNode(Node node, String tableName) {
@@ -198,6 +210,11 @@ public class SymTabCreationVisitor extends Visitor{
                 node.symTab.symList.addAll(stat.symTab.symList);
             if(stat.symTabEntry != null)
                 node.symTab.addEntry(stat.symTabEntry);
+        }
+
+        if(node.nodeType == NodeType.statBlock) {
+            String id = getId(node);
+            Visitor.symTabMap.put(id, node.symTab);
         }
     }
 
@@ -233,5 +250,16 @@ public class SymTabCreationVisitor extends Visitor{
         return type;
     }
 
-
+    private String getId(Node node) {
+        String id = "";
+        Node child = node.leftMostChild;
+        while (child != null) {
+            if (child.nodeType == NodeType.id) {
+                id = child.data.toString();
+                break;
+            }
+            child = child.rightSib;
+        }
+        return id;
+    }
 }
