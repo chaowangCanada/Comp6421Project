@@ -16,7 +16,8 @@ public class SyntacticAnalyzer {
 
     Grammar grammar;
     private Stack<Symbol> stack;
-    private List<String> derivation;
+    public List<String> derivation;
+    public List<String> errors;
     private LexicalAnalyzer lex;
     private Stack<Node> nodeStack;
     @Getter
@@ -28,6 +29,7 @@ public class SyntacticAnalyzer {
         this.stack = new Stack<>();
         nodeStack = new Stack<>();
         this.derivation = new ArrayList<>();
+        this.errors = new ArrayList<>();
         grammar.buildFirst();
         grammar.buildFollow();
         grammar.buildTable();
@@ -358,6 +360,7 @@ public class SyntacticAnalyzer {
     }
 
     private void printDerivation() {
+        Util.log(SyntacticAnalyzerDriver.derivation_file, derivation, " ", true);
         System.out.println(derivation.stream().map(String::toString).collect(Collectors.joining(" ")));
     }
 
@@ -377,7 +380,9 @@ public class SyntacticAnalyzer {
     }
 
     private Optional<Token> skipErrors(Token token) throws IOException {
-        System.out.println("syntax error at " + token.getLocation() + " token value : " + token.getValue());
+        String error = "syntax error at " + token.getLocation() + " token value : " + token.getValue();
+        System.out.println(error);
+        errors.add(error);
         NonTerminal top;
         while (!(stack.peek() instanceof NonTerminal) && stack.peek() != DOLLAR) {
             stack.pop();

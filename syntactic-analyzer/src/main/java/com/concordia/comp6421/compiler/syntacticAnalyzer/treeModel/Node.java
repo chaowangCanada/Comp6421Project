@@ -143,9 +143,9 @@ public class Node {
         visitor.visit(this);
     }
 
-    public void printTable() {
+    public String printTable() {
         if(this.symTab == null || this.symTab.symList.size() == 0)
-            return ;
+            return "";
         String frame = String.join("", Collections.nCopies(126, "#")) + "\n";
         String line = "#" + String.join("", Collections.nCopies(125, "-")) + "#\n";
         String headFormat = "#Symbol table: %-50s|%-60s#\n";
@@ -163,6 +163,7 @@ public class Node {
         sb.append(frame);
         sb.append("\n");
         System.out.println(sb);
+        return sb.toString();
     }
 
     public Node getLeftMostSib() {

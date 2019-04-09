@@ -56,7 +56,6 @@ public class GenerateMoonCodeTest {
         String fileName = "test_read_write_1.txt";
         File file = new File(classLoader.getResource(fileName).getFile());
         codeGeneratorDriver.run(file);
-        Util.printSymbolTable(codeGeneratorDriver.getCodeGenerator().getTree());
         System.out.println(codeGeneratorDriver.getCodeGenerator().context.instructions.stream().map(each -> each.toString()).collect(Collectors.joining("\n")));
     }
 

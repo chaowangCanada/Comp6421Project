@@ -3,6 +3,7 @@ package com.concordia.comp6421.compiler.syntacticAnalyzer;
 import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.Token;
 import com.concordia.comp6421.compiler.syntacticAnalyzer.entity.TokenType;
 import com.concordia.comp6421.compiler.syntacticAnalyzer.utils.CompilerFileReader;
+import com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Util;
 import lombok.Getter;
 
 import java.io.File;
@@ -14,11 +15,15 @@ import java.util.List;
 import java.util.Optional;
 
 import static com.concordia.comp6421.compiler.syntacticAnalyzer.utils.Default.GRAMMAR_FILE;
+import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
 
 public class SyntacticAnalyzerDriver {
 
-    public final String error_file = "error.log";
-    public final String token_file = "output.log";
+    public static final String error_file = "error.log";
+    public static final String derivation_file = "output.log";
+    public static final String astfile = "ASTtree.log";
+
+
 
     @Getter
     private SyntacticAnalyzer syntacticAnalyzer;
@@ -37,6 +42,9 @@ public class SyntacticAnalyzerDriver {
             lexicalAnalyzer.setLineInfo(lineContent, lineNum);
             syntacticAnalyzer.parse(lexicalAnalyzer);
         }
+        Util.log(derivation_file, syntacticAnalyzer.derivation, " ", true);
+        Util.log(error_file, syntacticAnalyzer.errors);
+        Util.log(astfile, Util.stringBuilder);
     }
 
 }
