@@ -1,4 +1,4 @@
-int add ( integer p1, integer p2 ) {
+integer add ( integer p1 , integer p2 ) {
     integer sum ;
     sum = p1 + p2 ;
     return ( sum ) ;
@@ -6,5 +6,5 @@ int add ( integer p1, integer p2 ) {
 
 main {
     integer x ;
-    x = add ( 1 ) ;
+    x = add ( 1.5 ) ;
 } ;

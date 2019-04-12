@@ -22,7 +22,7 @@ public class MemoryAllocationTest {
     {
         String fileName = "test_offset_1.txt";
         File file = new File(classLoader.getResource(fileName).getFile());
-        codeGeneratorDriver.run(file);
+        codeGeneratorDriver.run(file, false);
 
         Util.printSymbolTable(codeGeneratorDriver.getCodeGenerator().getTree());
     }
@@ -32,7 +32,7 @@ public class MemoryAllocationTest {
     {
         String fileName = "test_offset_2.txt";
         File file = new File(classLoader.getResource(fileName).getFile());
-        codeGeneratorDriver.run(file);
+        codeGeneratorDriver.run(file ,false);
 
         Util.printSymbolTable(codeGeneratorDriver.getCodeGenerator().getTree());
     }
@@ -42,7 +42,7 @@ public class MemoryAllocationTest {
     {
         String fileName = "test_offset_3.txt";
         File file = new File(classLoader.getResource(fileName).getFile());
-        codeGeneratorDriver.run(file);
+        codeGeneratorDriver.run(file, false);
 
         Util.printSymbolTable(codeGeneratorDriver.getCodeGenerator().getTree());
     }

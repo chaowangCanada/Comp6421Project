@@ -12,11 +12,11 @@ funcDef -> funcHead funcBody SEMICOLON
 funcBody -> LCP funcBody_ ACT_statBlock RCP
 funcBody_ -> typeNumeric IDENTIFIER arraySize_list ACT_dimList ACT_varDecl SEMICOLON funcBody_ | IDENTIFIER ACT_indexList ACT_dataMember ACT_var varDeclStatement_tail | restOfStatment statement_list | EPSILON
 varDeclStatement_tail -> IDENTIFIER arraySize_list ACT_dimList ACT_varDecl SEMICOLON funcBody_ | indiceIdnestList_tail assignOp expr ACT_assignStat SEMICOLON statement_list
-indiceIdnestList_tail -> DOT IDENTIFIER ACT_dataMember indiceIdnestList_tail | LSP arithExpr RSP indiceIdnestList_tail | LP aParams RP DOT IDENTIFIER ACT_dataMember indiceIdnestList_tail | EPSILON
+indiceIdnestList_tail -> ACT_dataMember DOT IDENTIFIER indiceIdnestList_tail | LSP arithExpr RSP indiceIdnestList_tail | LP aParams RP ACT_dataMember DOT IDENTIFIER indiceIdnestList_tail | EPSILON
 statement_list -> statement statement_list | EPSILON
 arraySize_list -> arraySize arraySize_list | EPSILON
 statement -> assignStat ACT_assignStat SEMICOLON | restOfStatment
-restOfStatment -> IF LP expr RP THEN statBlock ELSE statBlock SEMICOLON | FOR LP type IDENTIFIER assignOp expr ACT_assignStat SEMICOLON relExpr SEMICOLON assignStat ACT_assignStat RP ACT_statBlockStart statBlock SEMICOLON ACT_forStat | READ LP variable RP SEMICOLON ACT_getStat |  WRITE LP expr RP SEMICOLON ACT_putStat | RETURN LP expr RP SEMICOLON ACT_returnStat
+restOfStatment -> IF LP expr RP THEN statBlock ELSE statBlock SEMICOLON ACT_ifStat | FOR LP type IDENTIFIER assignOp expr ACT_assignStat SEMICOLON relExpr SEMICOLON assignStat ACT_assignStat RP ACT_statBlockStart statBlock SEMICOLON ACT_forStat | READ LP variable RP SEMICOLON ACT_getStat |  WRITE LP expr RP SEMICOLON ACT_putStat | RETURN LP expr RP SEMICOLON ACT_returnStat
 assignStat -> variable assignOp expr
 statBlock -> LCP statement_list RCP ACT_statBlock | statement | EPSILON
 expr -> arithExpr expr_prime

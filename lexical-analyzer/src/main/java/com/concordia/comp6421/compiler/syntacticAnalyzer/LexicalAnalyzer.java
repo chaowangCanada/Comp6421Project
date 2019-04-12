@@ -16,7 +16,7 @@ public class LexicalAnalyzer {
 
     private boolean isBackup;
     private Character backupCharacter;
-    private Queue<Character> buffer;
+    public Queue<Character> buffer;
     private int location;
     private int handlingLocation  = 1;
     private int lineNum = 1;
@@ -71,6 +71,7 @@ public class LexicalAnalyzer {
     private Token nextTokenAux() throws NoSuchLexElemException {
         Token token = null;
         Character ch = nextChar();
+
 
         if (ch == null) {
             backupChar();

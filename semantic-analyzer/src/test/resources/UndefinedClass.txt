@@ -1,6 +1,6 @@
-program{
-    int x ;
+main {
+    integer x ;
     MyClass c ;
-    x = c.a ;
+    x = c . a ;
     x = add ( ) ;
 } ;

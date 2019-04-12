@@ -23,10 +23,11 @@ public class CodeGeneratorDriver {
         syntacticAnalyzerDriver = new SyntacticAnalyzerDriver();
         codeGenerator = new CodeGenerator();
     }
-    public void run(File inFile) throws Exception {
+    public void run(File inFile, boolean hasCodeGen) throws Exception {
         syntacticAnalyzerDriver.run(inFile);
         codeGenerator.buildTables(syntacticAnalyzerDriver.getSyntacticAnalyzer().getTree());
-        codeGenerator.generate();
+        if(hasCodeGen)
+            codeGenerator.generate();
         Util.printSymbolTable(codeGenerator.getTree());
         Util.log(table_file, Util.tableBuilder);
         Util.log(output_file, codeGenerator.context.instructions.stream().map(Object::toString).collect(Collectors.toList()));

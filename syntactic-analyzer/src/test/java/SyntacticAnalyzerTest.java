@@ -21,7 +21,7 @@ public class SyntacticAnalyzerTest {
     @Test
     public void testAnalyzer1() throws Exception
     {
-        String fileName = "test_program_1.txt";
+        String fileName = "test_program.txt";
         File file = new File(classLoader.getResource(fileName).getFile());
         syntacticAnalyzerDriver.run(file);
     }

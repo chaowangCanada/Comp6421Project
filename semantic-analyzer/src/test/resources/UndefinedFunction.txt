@@ -1,4 +1,0 @@
-main {
-    integer x ;
-    x = add() ;
-} ;

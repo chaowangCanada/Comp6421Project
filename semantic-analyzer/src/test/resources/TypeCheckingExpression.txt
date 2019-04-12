@@ -1,5 +1,5 @@
 main {
-    int x ;
+    integer x ;
     float y ;
     y = 1.2 ;
     x = y ;

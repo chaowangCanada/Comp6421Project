@@ -23,7 +23,7 @@ public class SemanticAnalyzerTest {
     {
         String fileName = "test_program_1.txt";
         File file = new File(classLoader.getResource(fileName).getFile());
-        semanticAnalyzerDriver.run(file);
+        semanticAnalyzerDriver.run(file,false);
     }
 
 
@@ -32,7 +32,7 @@ public class SemanticAnalyzerTest {
     {
         String fileName = "test_program_2.txt";
         File file = new File(classLoader.getResource(fileName).getFile());
-        semanticAnalyzerDriver.run(file);
+        semanticAnalyzerDriver.run(file,false);
     }
 
 
@@ -41,7 +41,61 @@ public class SemanticAnalyzerTest {
     {
         String fileName = "test_offset_1.txt";
         File file = new File(classLoader.getResource(fileName).getFile());
-        semanticAnalyzerDriver.run(file);
+        semanticAnalyzerDriver.run(file,false);
     }
 
+    @Test
+    public void testTypeCheckingAssignment() throws Exception
+    {
+        String fileName = "TypeCheckingAssignment.txt";
+        File file = new File(classLoader.getResource(fileName).getFile());
+        semanticAnalyzerDriver.run(file,true);
+    }
+
+    @Test
+    public void testTypeCheckingExpression() throws Exception
+    {
+        String fileName = "TypeCheckingExpression.txt";
+        File file = new File(classLoader.getResource(fileName).getFile());
+        semanticAnalyzerDriver.run(file, true);
+    }
+
+    @Test
+    public void testTypeCheckingReturn() throws Exception
+    {
+        String fileName = "TypeCheckingReturn.txt";
+        File file = new File(classLoader.getResource(fileName).getFile());
+        semanticAnalyzerDriver.run(file, true);
+    }
+
+    @Test
+    public void testIncorrectFunctionParam() throws Exception
+    {
+        String fileName = "IncorrectFunctionParameter.txt";
+        File file = new File(classLoader.getResource(fileName).getFile());
+        semanticAnalyzerDriver.run(file, true);
+    }
+
+//    @Test
+//    public void testIncorrectArrayDimension() throws Exception
+//    {
+//        String fileName = "IncorrectArrayDimension.txt";
+//        File file = new File(classLoader.getResource(fileName).getFile());
+//        semanticAnalyzerDriver.run(file);
+//    }
+    @Test
+    public void testUndefinedFunctionVariable() throws Exception
+    {
+        String fileName = "UndefinedFunctionVariable.txt";
+        File file = new File(classLoader.getResource(fileName).getFile());
+        semanticAnalyzerDriver.run(file, true);
+    }
+
+    @Test
+    public void testUndefinedClassMember() throws Exception
+    {
+        String fileName = "UndefinedClass.txt";
+        File file = new File(classLoader.getResource(fileName).getFile());
+        semanticAnalyzerDriver.run(file, true);
+    }
 }

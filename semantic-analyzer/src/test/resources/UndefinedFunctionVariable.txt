@@ -1,0 +1,6 @@
+main {
+    integer x ;
+    integer x ;
+    x = add () ;
+//    y = 6 ;
+} ;

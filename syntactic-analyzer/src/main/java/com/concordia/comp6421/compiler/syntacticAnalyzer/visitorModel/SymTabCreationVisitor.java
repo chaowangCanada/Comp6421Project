@@ -142,7 +142,7 @@ public class SymTabCreationVisitor extends Visitor{
         node.symTab.name = name.toString();
         if(node.nodeType == NodeType.funcDef) {
             FUNCTION_DEFINITION_MAP.put(functionName, node);
-            String id = getId(node);
+            String id = node.getChildren().get(1).data.toString();
             Visitor.symTabMap.put(id, node.symTab);
         }
     }
@@ -208,10 +208,10 @@ public class SymTabCreationVisitor extends Visitor{
                 node.symTab.addEntry(stat.symTabEntry);
         }
 
-        if(node.nodeType == NodeType.statBlock) {
-            String id = getId(node);
-            Visitor.symTabMap.put(id, node.symTab);
-        }
+//        if(node.nodeType == NodeType.statBlock) {
+//            String id = getId(node);
+//            Visitor.symTabMap.put(id, node.symTab);
+//        }
     }
 
     // Like varDecl

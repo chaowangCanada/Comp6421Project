@@ -1,0 +1,15 @@
+integer f ( integer n ) {
+    integer z ;
+    if ( n == 0 ) then {
+        return ( 1 ) ;
+    } else {
+        z = f ( n - 1 ) * n ;
+        return ( z ) ;
+    } ;
+} ;
+
+main {
+    integer x ;
+    x = f ( 4 ) ;
+    write ( x + 41 ) ;
+} ;

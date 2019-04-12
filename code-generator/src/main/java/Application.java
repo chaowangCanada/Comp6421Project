@@ -11,7 +11,7 @@ public class Application {
                 inFile = new File(args[0]);
                 CodeGeneratorDriver driver = new CodeGeneratorDriver();
                 option = args[1];
-                driver.run(inFile);
+                driver.run(inFile, option != null);
             } catch (Exception e) {
                 e.printStackTrace();
             }

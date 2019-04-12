@@ -28,4 +28,23 @@ public class SymTabEntry {
         this.offset = offset;
 
     }
+
+    public SymTabEntry(SymTabEntry symTabEntry) {
+        this.name = symTabEntry.name;
+        this.kind = symTabEntry.kind;
+        this.type = symTabEntry.type;
+        this.thisTable = symTabEntry.thisTable;
+        this.size = symTabEntry.size;
+        this.offset = symTabEntry.offset;
+    }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return this.name.equalsIgnoreCase(((SymTabEntry)obj).name);
+    }
 }

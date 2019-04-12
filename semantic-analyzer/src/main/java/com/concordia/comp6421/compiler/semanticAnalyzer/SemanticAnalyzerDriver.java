@@ -18,13 +18,14 @@ public class SemanticAnalyzerDriver {
         syntacticAnalyzerDriver = new SyntacticAnalyzerDriver();
         semanticAnalyzer = new SemanticAnalyzer();
     }
-    public void run(File inFile) throws Exception {
+    public void run(File inFile, boolean hasCheck) throws Exception {
         syntacticAnalyzerDriver.run(inFile);
-        semanticAnalyzer.validate(syntacticAnalyzerDriver.getSyntacticAnalyzer().getTree());
-        Util.printLevelOrder(semanticAnalyzer.getTree());
-        Util.printSymbolTable(semanticAnalyzer.getTree());
+        semanticAnalyzer.validate(syntacticAnalyzerDriver.getSyntacticAnalyzer().getTree(), hasCheck);
+        Util.printLevelOrder(semanticAnalyzer.tree);
+        Util.printSymbolTable(semanticAnalyzer.tree);
 
         Util.log(table_output_file, Util.tableBuilder);
         Util.log(type_check_error_file, semanticAnalyzer.typeCheckingVisitor.errors);
+        semanticAnalyzer.typeCheckingVisitor.errors.forEach(x -> System.out.println(x));
     }
 }

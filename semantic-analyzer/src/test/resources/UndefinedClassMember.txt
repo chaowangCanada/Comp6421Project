@@ -5,11 +5,11 @@ class MyClass {
 
 class MyClass1 {
     integer x ;
-    MyClass y ;
+    integer mc1f1 ( integer p1 , MyClass p2 [ 3 ] ) ;
 } ;
 
 main {
     integer x ;
     MyClass1 c ;
-    x = c.y.b ;
+    x = c .y .b ;
 } ;

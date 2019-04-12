@@ -4,6 +4,6 @@ main {
     integer z ;
     x  = 2 ;
     y = 34 ;
-    z = x + y * x ;
+    z = x + y * x > 5;
     write ( z - 8 ) ;
 } ;

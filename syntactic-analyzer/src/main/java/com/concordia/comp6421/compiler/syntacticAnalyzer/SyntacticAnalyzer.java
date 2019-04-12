@@ -408,8 +408,8 @@ public class SyntacticAnalyzer {
             while (!containsToken(first, lookahead.get()) ||
                     (first.contains(EPSILON) && !containsToken(follow, lookahead.get()))) {
                 lookahead = lex.nextToken();
-                if (!lookahead.isPresent()) {
-                    continue;
+                if (lex.buffer.size() == 0) {
+                    break;
                 }
             }
         }
