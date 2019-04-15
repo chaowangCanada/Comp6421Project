@@ -30,6 +30,8 @@ public class CodeGenerator {
 
     public ComputeMemSizeVisitor computeMemSizeVisitor;
 
+    public ReverseOffsetVisitor reverseOffsetVisitor;
+
     public StackBasedCodeGenerationVisitor stackBasedCodeGenerationVisitor;
 
     public CodeGenerateContext context ;
@@ -40,6 +42,7 @@ public class CodeGenerator {
     public CodeGenerator() {
         symTabCreationVisitor = new SymTabCreationVisitor();
         computeMemSizeVisitor = new ComputeMemSizeVisitor();
+        reverseOffsetVisitor = new ReverseOffsetVisitor();
         context = new CodeGenerateContext();
         stackBasedCodeGenerationVisitor = new StackBasedCodeGenerationVisitor(this.context);
 //        output = new StringBuilder();
@@ -53,6 +56,7 @@ public class CodeGenerator {
         tree = incomeTree;
         tree.accept(symTabCreationVisitor);
         tree.accept(computeMemSizeVisitor);
+//        tree.accept(reverseOffsetVisitor);
         registerTable(tree);
     }
 

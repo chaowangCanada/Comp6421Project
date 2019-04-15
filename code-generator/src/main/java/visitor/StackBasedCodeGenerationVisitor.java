@@ -102,7 +102,7 @@ public class StackBasedCodeGenerationVisitor extends Visitor {
 
         // call jump and link instruction
         String label = LabelGenerator.function_pointer_table.get(p_node.leftMostChild.data.toString());
-        context.appendInstruction(new JumpAndLinkInstruction(Register.RETURN, LabelGenerator.function_pointer_table.get(p_node.data.toString()))
+        context.appendInstruction(new JumpAndLinkInstruction(Register.RETURN, label)
                 .setComment("store return address and jump to " +  LabelGenerator.function_pointer_table.get(p_node.data.toString())));
     }
 
@@ -135,7 +135,7 @@ public class StackBasedCodeGenerationVisitor extends Visitor {
         int labelId = LabelGenerator.instance.getUniqueLabel();
         String funcLabel = "f1149672465" + labelId;
 
-        LabelGenerator.function_pointer_table.put(currentSymTab.name.split(" ")[0], funcLabel);
+        LabelGenerator.function_pointer_table.put(p_node.getChildren().get(1).data.toString(), funcLabel);
 
         context.appendInstruction(new SWInstruction(4, Register.FRAME_POINTER, Register.RETURN)
                 .setComment("store return address").setLabel(funcLabel));

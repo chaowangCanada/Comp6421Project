@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 public class CodeGeneratorDriver {
     public final String table_file = "table.log";
-    public final String output_file = "moon.log";
+    public final String output_file = "moon.m";
     private SyntacticAnalyzerDriver syntacticAnalyzerDriver;
     private CodeGenerator codeGenerator;
 

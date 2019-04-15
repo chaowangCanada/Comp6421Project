@@ -1,9 +1,7 @@
 main {
     integer x ;
     integer y ;
-    integer z ;
-    x  = 2 ;
-    y = 34 ;
-    z = x + y * x > 5;
-    write ( z - 8 ) ;
+    x  = 60 ;
+    y = 5 ;
+    write ( x + y ) ;
 } ;

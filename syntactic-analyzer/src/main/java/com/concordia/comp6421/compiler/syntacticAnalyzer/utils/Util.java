@@ -84,7 +84,7 @@ public class Util {
 
     public static void log(String fileName, Collection<String> lines) {
         File f = new File(fileName);
-        try (BufferedWriter wr = new BufferedWriter(new FileWriter(f,true))) {
+        try (BufferedWriter wr = new BufferedWriter(new FileWriter(f))) {
             for (String l : lines){
                 wr.write(l + "\n");
             }
