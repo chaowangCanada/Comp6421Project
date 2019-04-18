@@ -15,7 +15,7 @@ import model.Register;
 import instruction.BranchInstruction.*;
 
 import java.awt.*;
-import java.util.Arrays;
+import java.util.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -78,15 +78,17 @@ public class StackBasedCodeGenerationVisitor extends Visitor {
         Register localReg = context.registerManager.getAvailableRegister();
 
         SymTab funcTab = LabelGenerator.Table_Definition_Map.get(new Pair<>(p_node.leftMostChild.data.toString(), NodeType.funcDef));
-        int indexofparam = 0;
+//        int indexofparam = 0;
+        int argumentOffset = -4;
 
         for(Node param : p_node.getChildren().get(1).getChildren()) {
             context.appendInstruction(new LWInstruction(localReg, Register.FRAME_POINTER, currentSymTab.lookUp(param.leftMostChild.leftMostChild.data.toString()).offset));
-            int offsetofparam = currentSymTab.size + funcTab.symList.get(indexofparam).offset;
-            context.appendInstruction(new SWInstruction(offsetofparam, Register.FRAME_POINTER, localReg).setComment("add parameter"));
-            indexofparam ++;
+//            int offsetofparam = currentSymTab.size + funcTab.symList.get(indexofparam).offset;
+            context.appendInstruction(new SWInstruction(argumentOffset, Register.STACK_POINTER, localReg).setComment("add parameter"));
+            argumentOffset -= 4;
+//            indexofparam ++;
         }
-        int argumentOffset = -4 - (indexofparam) * 4;
+
         context.appendInstruction(new SWInstruction(
                 argumentOffset-4, Register.STACK_POINTER, Register.FRAME_POINTER
         ).setComment("store the previous frame pointer"));
@@ -94,7 +96,7 @@ public class StackBasedCodeGenerationVisitor extends Visitor {
                 MathOpt.ADD.immediateOpcode, Register.FRAME_POINTER, Register.STACK_POINTER, argumentOffset-4
         ).setComment("update the frame pointer"));
 
-        int varOffset = funcTab.size - (Math.abs(argumentOffset - 4) + 8);
+        int varOffset = Math.abs(funcTab.size) - (Math.abs(argumentOffset - 4) + 8);
 
         context.appendInstruction(new MathOptImmInstruction(
                 MathOpt.ADD.immediateOpcode, Register.STACK_POINTER, Register.FRAME_POINTER, varOffset
@@ -103,7 +105,7 @@ public class StackBasedCodeGenerationVisitor extends Visitor {
         // call jump and link instruction
         String label = LabelGenerator.function_pointer_table.get(p_node.leftMostChild.data.toString());
         context.appendInstruction(new JumpAndLinkInstruction(Register.RETURN, label)
-                .setComment("store return address and jump to " +  LabelGenerator.function_pointer_table.get(p_node.data.toString())));
+                .setComment("store return address and jump to " +  LabelGenerator.function_pointer_table.get(p_node.leftMostChild.data.toString())));
     }
 
 
@@ -140,6 +142,23 @@ public class StackBasedCodeGenerationVisitor extends Visitor {
         context.appendInstruction(new SWInstruction(4, Register.FRAME_POINTER, Register.RETURN)
                 .setComment("store return address").setLabel(funcLabel));
 
+        //load argument to var node;
+        Map<String, Integer> paramMap = new HashMap<>();
+        for (SymTabEntry entry : p_node.symTab.symList){
+            if(entry.kind.equalsIgnoreCase("fParam")){
+                paramMap.put(entry.name, Math.abs(entry.offset));
+            }
+
+            if(entry.kind.equalsIgnoreCase("var")){
+                if(paramMap.containsKey(entry.name)){
+                    Register localReg = context.registerManager.getAvailableRegister();
+                    context.appendInstruction(new LWInstruction(localReg, Register.FRAME_POINTER, paramMap.get(entry.name)));
+                    context.appendInstruction(new SWInstruction(entry.offset, Register.FRAME_POINTER, localReg));
+                    context.registerManager.freeRegister(localReg);
+                }
+            }
+        }
+
         propogateChild(p_node);
 
         // get the return address
@@ -152,7 +171,7 @@ public class StackBasedCodeGenerationVisitor extends Visitor {
                 .setComment("load the previous frame pointer address"));
         context.appendInstruction(new MathOptImmInstruction(
                 MathOpt.ADD.immediateOpcode, Register.STACK_POINTER,
-                Register.STACK_POINTER, currentSymTab.size)
+                Register.STACK_POINTER, Math.abs(p_node.symTab.size))
                 .setComment("reset the stack pointer"));
 
         // jump back to the calling place
@@ -349,8 +368,11 @@ public class StackBasedCodeGenerationVisitor extends Visitor {
 
         if(p_node.getChildren().get(1).nodeType == NodeType.fCall)
         {
-            context.appendInstruction(new SWInstruction(-4, Register.FRAME_POINTER, localReg));
-            context.registerManager.freeRegister(localReg);
+            SymTabEntry tmpEntry;
+            String name = p_node.getChildren().get(0).symTabEntry == null ? p_node.leftMostChild.leftMostChild.leftMostChild.data.toString() :
+                    p_node.getChildren().get(0).symTabEntry.name;
+            tmpEntry = currentSymTab.lookUp(name);
+            context.appendInstruction(new SWInstruction(tmpEntry.offset, Register.FRAME_POINTER, Register.RETURN));
             return;
         }
 

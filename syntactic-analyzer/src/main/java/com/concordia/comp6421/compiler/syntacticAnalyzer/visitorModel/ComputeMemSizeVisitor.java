@@ -92,7 +92,7 @@ public class ComputeMemSizeVisitor extends Visitor{
         // stack frame contains the return value at the bottom of the stack
         node.symTab.size -= sizeOfTypeNod(node.getChildren().get(0));
         //then is the return addess is stored on the stack frame
-//        node.symTab.size -= 4;
+        node.symTab.size -= 4;
         for(SymTabEntry entry : node.symTab.symList){
             entry.offset = node.symTab.size ;
             node.symTab.size -= entry.size;

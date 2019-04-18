@@ -10,9 +10,16 @@ import java.util.Arrays;
 public class ReverseOffsetVisitor extends Visitor{
     @Override
     public void visit(Node p_node) {
-        if (Arrays.asList(NodeType.needTableType).contains(p_node.nodeType)){
+        if (p_node.nodeType == NodeType.prog ||  p_node.nodeType == NodeType.classDecl ||
+                (p_node.nodeType == NodeType.statBlock && p_node.parent.nodeType == NodeType.prog)){
             for (SymTabEntry entry : p_node.symTab.symList){
                 entry.offset = p_node.symTab.size - entry.offset;
+            }
+        }
+        else if(p_node.nodeType == NodeType.funcDef){
+            for (SymTabEntry entry : p_node.symTab.symList){
+                if(!entry.kind.equalsIgnoreCase("fParam"))
+                    entry.offset = p_node.symTab.size - entry.offset;
             }
         }
     }

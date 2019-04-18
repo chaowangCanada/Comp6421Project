@@ -56,7 +56,7 @@ public class CodeGenerator {
         tree = incomeTree;
         tree.accept(symTabCreationVisitor);
         tree.accept(computeMemSizeVisitor);
-//        tree.accept(reverseOffsetVisitor);
+        tree.accept(reverseOffsetVisitor);
         registerTable(tree);
     }
 
